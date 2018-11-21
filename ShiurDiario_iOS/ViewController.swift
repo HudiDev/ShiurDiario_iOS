@@ -16,14 +16,16 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-    
         
-      addPanGesture(view: self.view)
+        addPanGesture(view: self.view)
+        addEdgePanGesture(view: self.view)
         
         NotificationCenter.default.addObserver(self, selector: #selector(hideSideMenu), name: NSNotification.Name("hideMenu"), object: nil)
         
-//        NotificationCenter.default.addObserver(self,
-//                                               selector: #selector(toggleMenu), name: NSNotification.Name("ToggleSideMenu"), object: nil)
+        
+        
+        
+     
     }
     
     @objc func hideSideMenu() {
@@ -34,7 +36,6 @@ class ViewController: UIViewController {
         let pan = UIPanGestureRecognizer(target: self, action: #selector(handlePan(sender:)))
         view.addGestureRecognizer(pan)
     }
-    
     
     @objc func handlePan(sender: UIPanGestureRecognizer) {
         var getInitialX: CGFloat = 0.0
@@ -54,6 +55,23 @@ class ViewController: UIViewController {
             
         default:
             print("fingers off the screen")
+        }
+    }
+    
+    
+    func addEdgePanGesture(view: UIView) {
+        let edgePan = UIScreenEdgePanGestureRecognizer(target: self, action: #selector(handleEdgePan(sender:)))
+        edgePan.edges = .left
+        view.addGestureRecognizer(edgePan)
+    }
+    
+    
+    @objc func handleEdgePan(sender: UIScreenEdgePanGestureRecognizer) {
+        if sender.state == .recognized {
+            UIView.animate(withDuration: 0.4) {
+                self.sideMenuConstraint.constant = 0
+                self.view.layoutIfNeeded()
+            }
         }
     }
     
