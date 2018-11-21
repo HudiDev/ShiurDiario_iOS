@@ -29,8 +29,6 @@ class DafHayomiVC: UIViewController, UICollectionViewDelegate, UICollectionViewD
         if let layout = self.collectionView.collectionViewLayout as? UICollectionViewFlowLayout {
             layout.estimatedItemSize = UICollectionViewFlowLayoutAutomaticSize
         }
-        
-        
     }
     
     
@@ -52,34 +50,4 @@ class DafHayomiVC: UIViewController, UICollectionViewDelegate, UICollectionViewD
         return cell
     }
     
-
-    
-    
-    
-    
-    
-    
-    
-    
-    @IBAction func menuBtn(_ sender: Any) {
-        toggleMenu()
-        print("menu btn in daf hayomi screen toggled")
-    }
-    
-    
-    func toggleMenu() {
-        isSideMenuOpened = !isSideMenuOpened
-    
-        if isSideMenuOpened {
-            UIView.animate(withDuration: 0.4) {
-                self.menuBarConstraint.constant = -300
-                self.view.layoutIfNeeded()
-            }
-        } else {
-            UIView.animate(withDuration: 0.4) {
-                self.menuBarConstraint.constant = 0
-                self.view.layoutIfNeeded()
-            }
-        }
-    }
 }

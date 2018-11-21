@@ -46,7 +46,7 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" title="Home" id="BH6-Gy-Uan">
-                        <barButtonItem key="rightBarButtonItem" title="Item" image="menu_bar_icon" id="Luu-am-gvZ">
+                        <barButtonItem key="leftBarButtonItem" title="Item" image="menu_bar_icon" id="Luu-am-gvZ">
                             <connections>
                                 <action selector="menuBtn:" destination="BYZ-38-t0r" id="zE0-KB-3ji"/>
                             </connections>
@@ -109,34 +109,13 @@
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
-                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Hjt-kY-5kj">
-                                <rect key="frame" x="-300" y="64" width="300" height="603"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="300" id="nFP-9E-afT"/>
-                                </constraints>
-                                <connections>
-                                    <segue destination="7Bn-R1-IEz" kind="embed" id="8el-Ev-hmP"/>
-                                </connections>
-                            </containerView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <constraints>
-                            <constraint firstItem="Hjt-kY-5kj" firstAttribute="leading" secondItem="wRf-v0-RXz" secondAttribute="leading" constant="-300" id="8ir-Td-frz"/>
-                            <constraint firstItem="Hjt-kY-5kj" firstAttribute="bottom" secondItem="B0F-9s-s3o" secondAttribute="bottom" id="EB1-z1-fei"/>
-                            <constraint firstItem="Hjt-kY-5kj" firstAttribute="top" secondItem="B0F-9s-s3o" secondAttribute="top" id="Mwa-YY-LF5"/>
-                        </constraints>
                         <viewLayoutGuide key="safeArea" id="B0F-9s-s3o"/>
                     </view>
-                    <navigationItem key="navigationItem" title="DAF HAYOMI" id="5Ix-Hd-LpE">
-                        <barButtonItem key="rightBarButtonItem" title="Item" image="menu_bar_icon" id="fd6-mn-iq5">
-                            <connections>
-                                <action selector="menuBtn:" destination="3sy-Iw-KwW" id="3hJ-Lt-MWI"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" title="DAF HAYOMI" id="5Ix-Hd-LpE"/>
                     <connections>
                         <outlet property="collectionView" destination="JsU-Fo-QvO" id="MZi-2t-u1y"/>
-                        <outlet property="menuBarConstraint" destination="8ir-Td-frz" id="dj9-qP-JyM"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OSs-56-CuU" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -205,7 +184,4 @@
         <image name="menu_bar_icon" width="24" height="24"/>
         <image name="talmud copy" width="600" height="450"/>
     </resources>
-    <inferredMetricsTieBreakers>
-        <segue reference="8el-Ev-hmP"/>
-    </inferredMetricsTieBreakers>
 </document>
