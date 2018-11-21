@@ -1,16 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="RvS-WT-wcT">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Home-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ShiurDiario_iOS" customModuleProvider="target" sceneMemberID="viewController">
@@ -18,8 +19,16 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bh6-33-voH">
+                                <rect key="frame" x="130" y="318" width="115" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="move To next VC"/>
+                                <connections>
+                                    <segue destination="3sy-Iw-KwW" kind="show" id="WM9-9t-1c8"/>
+                                </connections>
+                            </button>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4OS-K6-vVs">
-                                <rect key="frame" x="-300" y="0.0" width="300" height="667"/>
+                                <rect key="frame" x="-300" y="64" width="300" height="603"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="300" id="h1z-7k-rj4"/>
                                 </constraints>
@@ -27,96 +36,129 @@
                                     <segue destination="7Bn-R1-IEz" kind="embed" id="LMY-fn-YUR"/>
                                 </connections>
                             </containerView>
-                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6KT-h2-IY5">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                                <connections>
-                                    <segue destination="MSw-s0-s8j" kind="embed" id="cKf-5P-0MM"/>
-                                </connections>
-                            </containerView>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.53201586010000002" green="0.34543830809999998" blue="0.1582935208" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
-                            <constraint firstItem="6KT-h2-IY5" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="3Td-dX-exg"/>
-                            <constraint firstItem="6KT-h2-IY5" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="6QE-jw-Ir7"/>
-                            <constraint firstItem="6KT-h2-IY5" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="DyB-9C-bjc"/>
-                            <constraint firstItem="6KT-h2-IY5" firstAttribute="leading" secondItem="4OS-K6-vVs" secondAttribute="trailing" id="Fu6-EN-ePi"/>
-                            <constraint firstItem="4OS-K6-vVs" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="a9L-8b-m9x"/>
-                            <constraint firstItem="4OS-K6-vVs" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="mgI-hL-iqW"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="4OS-K6-vVs" secondAttribute="bottom" id="Fi3-DC-pIi"/>
+                            <constraint firstItem="4OS-K6-vVs" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="PBd-vO-U9y"/>
                             <constraint firstItem="4OS-K6-vVs" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="-300" id="wAh-yR-FEI"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <navigationItem key="navigationItem" title="Home" id="BH6-Gy-Uan">
+                        <barButtonItem key="rightBarButtonItem" title="Item" image="menu_bar_icon" id="Luu-am-gvZ">
+                            <connections>
+                                <action selector="menuBtn:" destination="BYZ-38-t0r" id="zE0-KB-3ji"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="sideMenuConstraint" destination="wAh-yR-FEI" id="zhj-KE-1x7"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="208.80000000000001" y="133.5832083958021"/>
+            <point key="canvasLocation" x="-290.39999999999998" y="157.87106446776613"/>
         </scene>
-        <!--Home-->
-        <scene sceneID="qVM-dM-i4i">
-            <objects>
-                <viewController id="i5N-hf-Tme" customClass="HomeVC" customModule="ShiurDiario_iOS" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="oEK-Te-aB8">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="X96-tt-nAa">
-                                <rect key="frame" x="90" y="318" width="195" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="move to next view Controller"/>
-                                <connections>
-                                    <segue destination="3sy-Iw-KwW" kind="show" id="p87-Oa-gfM"/>
-                                </connections>
-                            </button>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <viewLayoutGuide key="safeArea" id="LfE-aD-FtV"/>
-                    </view>
-                    <navigationItem key="navigationItem" title="Home" id="IVD-cV-IYb">
-                        <barButtonItem key="rightBarButtonItem" title="Item" image="menu_bar_icon" style="plain" id="RuV-Sa-9XF">
-                            <connections>
-                                <action selector="menuBtn:" destination="i5N-hf-Tme" id="ZER-m1-4sP"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="nVJ-0e-2SE" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="851" y="982"/>
-        </scene>
-        <!--View Controller-->
+        <!--DAF HAYOMI-->
         <scene sceneID="63h-kH-7tm">
             <objects>
-                <viewController id="3sy-Iw-KwW" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="dafHayomi" id="3sy-Iw-KwW" customClass="DafHayomiVC" customModule="ShiurDiario_iOS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="wRf-v0-RXz">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="JsU-Fo-QvO">
+                                <rect key="frame" x="0.0" y="64" width="375" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="zup-BB-ClH">
+                                    <size key="itemSize" width="250" height="50"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="titleCell" id="Y3z-7c-sUh" customClass="TitleCell" customModule="ShiurDiario_iOS" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="250" height="50"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                            <rect key="frame" x="0.0" y="0.0" width="250" height="50"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pAx-7f-Vtt">
+                                                    <rect key="frame" x="13" y="13.5" width="224" height="23"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" relation="lessThanOrEqual" constant="300" id="80J-3s-9ON"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </view>
+                                        <constraints>
+                                            <constraint firstItem="pAx-7f-Vtt" firstAttribute="top" secondItem="Y3z-7c-sUh" secondAttribute="topMargin" constant="5" id="Iwx-UY-vRO"/>
+                                            <constraint firstItem="pAx-7f-Vtt" firstAttribute="leading" secondItem="Y3z-7c-sUh" secondAttribute="leadingMargin" constant="5" id="XHu-pc-tqA"/>
+                                            <constraint firstAttribute="trailingMargin" secondItem="pAx-7f-Vtt" secondAttribute="trailing" constant="5" id="fLQ-eQ-0vq"/>
+                                            <constraint firstAttribute="bottomMargin" secondItem="pAx-7f-Vtt" secondAttribute="bottom" constant="5" id="uSJ-2C-U19"/>
+                                        </constraints>
+                                        <connections>
+                                            <outlet property="titleLabel" destination="pAx-7f-Vtt" id="EwC-bE-ubb"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Hjt-kY-5kj">
+                                <rect key="frame" x="-300" y="64" width="300" height="603"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="300" id="nFP-9E-afT"/>
+                                </constraints>
+                                <connections>
+                                    <segue destination="7Bn-R1-IEz" kind="embed" id="8el-Ev-hmP"/>
+                                </connections>
+                            </containerView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Hjt-kY-5kj" firstAttribute="leading" secondItem="wRf-v0-RXz" secondAttribute="leading" constant="-300" id="8ir-Td-frz"/>
+                            <constraint firstItem="Hjt-kY-5kj" firstAttribute="bottom" secondItem="B0F-9s-s3o" secondAttribute="bottom" id="EB1-z1-fei"/>
+                            <constraint firstItem="Hjt-kY-5kj" firstAttribute="top" secondItem="B0F-9s-s3o" secondAttribute="top" id="Mwa-YY-LF5"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="B0F-9s-s3o"/>
                     </view>
+                    <navigationItem key="navigationItem" title="DAF HAYOMI" id="5Ix-Hd-LpE">
+                        <barButtonItem key="rightBarButtonItem" title="Item" image="menu_bar_icon" id="fd6-mn-iq5">
+                            <connections>
+                                <action selector="menuBtn:" destination="3sy-Iw-KwW" id="3hJ-Lt-MWI"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="collectionView" destination="JsU-Fo-QvO" id="MZi-2t-u1y"/>
+                        <outlet property="menuBarConstraint" destination="8ir-Td-frz" id="dj9-qP-JyM"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OSs-56-CuU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1518" y="983"/>
+            <point key="canvasLocation" x="189.59999999999999" y="985.45727136431788"/>
         </scene>
         <!--Side MenuVC-->
         <scene sceneID="u1h-JA-D9p">
             <objects>
                 <viewController id="7Bn-R1-IEz" customClass="SideMenuVC" customModule="ShiurDiario_iOS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="AG6-Od-T7H">
-                        <rect key="frame" x="0.0" y="0.0" width="300" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="300" height="603"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="wJF-OF-b2u">
-                                <rect key="frame" x="0.0" y="180" width="300" height="487"/>
+                                <rect key="frame" x="0.0" y="200" width="300" height="403"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </tableView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="talmud copy" translatesAutoresizingMaskIntoConstraints="NO" id="lFn-p8-cbl">
-                                <rect key="frame" x="0.0" y="0.0" width="300" height="180"/>
+                                <rect key="frame" x="0.0" y="0.0" width="300" height="200"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="180" id="zrV-jc-88V"/>
+                                    <constraint firstAttribute="height" constant="200" id="zrV-jc-88V"/>
                                 </constraints>
                             </imageView>
                         </subviews>
@@ -138,29 +180,32 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SHr-Sb-CDc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-603.20000000000005" y="986.35682158920542"/>
+            <point key="canvasLocation" x="-978" y="957"/>
         </scene>
         <!--Navigation Controller-->
-        <scene sceneID="pvP-0K-tsg">
+        <scene sceneID="NZ7-AH-Nts">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="MSw-s0-s8j" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="RvS-WT-wcT" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="NcB-pn-uBI">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="YNK-XR-29E">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="i5N-hf-Tme" kind="relationship" relationship="rootViewController" id="3Nx-M8-kln"/>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="jbS-ON-edg"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="q4l-JQ-jeE" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ifh-Ff-pX3" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="209" y="983"/>
+            <point key="canvasLocation" x="-2001" y="158"/>
         </scene>
     </scenes>
     <resources>
         <image name="menu_bar_icon" width="24" height="24"/>
         <image name="talmud copy" width="600" height="450"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="8el-Ev-hmP"/>
+    </inferredMetricsTieBreakers>
 </document>

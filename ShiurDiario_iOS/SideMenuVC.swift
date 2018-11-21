@@ -39,6 +39,14 @@ class SideMenuVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         print("item \(indexPath.row) has been clicked")
+        
+        if indexPath.row == 1 {
+            let vc = storyboard?.instantiateViewController(withIdentifier: "dafHayomi")
+            show(vc!, sender: self)
+            NotificationCenter.default.post(name: NSNotification.Name("hideMenu"), object: nil)
+        }
+       
+        
     }
     
     
