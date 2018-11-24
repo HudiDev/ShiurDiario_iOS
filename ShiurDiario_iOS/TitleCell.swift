@@ -11,4 +11,14 @@ import UIKit
 class TitleCell: UICollectionViewCell {
     
     @IBOutlet weak var titleLabel: UILabel!
+    
+    @IBOutlet weak var selectIndicator: UIView!
+    
+    override var isSelected: Bool {
+        didSet{
+            self.selectIndicator.backgroundColor = isSelected ? UIColor.blue : UIColor.white
+        }
+    }
+    
+    
 }
