@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		11065CFF21A6F557002621AE /* pageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11065CFE21A6F557002621AE /* pageVC.swift */; };
+		11065D0121A6F95C002621AE /* TabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11065D0021A6F95C002621AE /* TabView.swift */; };
+		11065D0421A82E64002621AE /* Text_VC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11065D0321A82E64002621AE /* Text_VC.swift */; };
+		11065D0621A82E74002621AE /* Video_VC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11065D0521A82E74002621AE /* Video_VC.swift */; };
+		11065D0821A82E88002621AE /* PreviousShiurim_VC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11065D0721A82E88002621AE /* PreviousShiurim_VC.swift */; };
+		11065D0A21A82E9A002621AE /* AllMasechtot_VC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11065D0921A82E9A002621AE /* AllMasechtot_VC.swift */; };
 		110F930F21A41CF000A50EDE /* DafHayomiVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 110F930E21A41CF000A50EDE /* DafHayomiVC.swift */; };
 		114C9CC021A1661C00D5713E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 114C9CBF21A1661C00D5713E /* AppDelegate.swift */; };
 		114C9CC221A1661C00D5713E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 114C9CC121A1661C00D5713E /* ViewController.swift */; };
@@ -18,6 +24,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		11065CFE21A6F557002621AE /* pageVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = pageVC.swift; sourceTree = "<group>"; };
+		11065D0021A6F95C002621AE /* TabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabView.swift; sourceTree = "<group>"; };
+		11065D0321A82E64002621AE /* Text_VC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Text_VC.swift; sourceTree = "<group>"; };
+		11065D0521A82E74002621AE /* Video_VC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Video_VC.swift; sourceTree = "<group>"; };
+		11065D0721A82E88002621AE /* PreviousShiurim_VC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviousShiurim_VC.swift; sourceTree = "<group>"; };
+		11065D0921A82E9A002621AE /* AllMasechtot_VC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllMasechtot_VC.swift; sourceTree = "<group>"; };
 		110F930E21A41CF000A50EDE /* DafHayomiVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DafHayomiVC.swift; sourceTree = "<group>"; };
 		114C9CBC21A1661C00D5713E /* ShiurDiario_iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ShiurDiario_iOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		114C9CBF21A1661C00D5713E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -41,6 +53,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		11065D0221A82E1C002621AE /* Page_viewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				11065D0321A82E64002621AE /* Text_VC.swift */,
+				11065D0521A82E74002621AE /* Video_VC.swift */,
+				11065D0721A82E88002621AE /* PreviousShiurim_VC.swift */,
+				11065D0921A82E9A002621AE /* AllMasechtot_VC.swift */,
+			);
+			path = Page_viewControllers;
+			sourceTree = "<group>";
+		};
 		114C9CB321A1661C00D5713E = {
 			isa = PBXGroup;
 			children = (
@@ -60,6 +83,7 @@
 		114C9CBE21A1661C00D5713E /* ShiurDiario_iOS */ = {
 			isa = PBXGroup;
 			children = (
+				11065D0221A82E1C002621AE /* Page_viewControllers */,
 				114C9CBF21A1661C00D5713E /* AppDelegate.swift */,
 				114C9CC121A1661C00D5713E /* ViewController.swift */,
 				114C9CC321A1661C00D5713E /* Main.storyboard */,
@@ -69,6 +93,8 @@
 				11F874F021A36BCF00CA11B4 /* SideMenuVC.swift */,
 				110F930E21A41CF000A50EDE /* DafHayomiVC.swift */,
 				11A59EB721A474F7003FD0B0 /* TitleCell.swift */,
+				11065CFE21A6F557002621AE /* pageVC.swift */,
+				11065D0021A6F95C002621AE /* TabView.swift */,
 			);
 			path = ShiurDiario_iOS;
 			sourceTree = "<group>";
@@ -148,7 +174,13 @@
 				114C9CC221A1661C00D5713E /* ViewController.swift in Sources */,
 				11A59EB821A474F7003FD0B0 /* TitleCell.swift in Sources */,
 				11F874F121A36BCF00CA11B4 /* SideMenuVC.swift in Sources */,
+				11065D0621A82E74002621AE /* Video_VC.swift in Sources */,
+				11065D0121A6F95C002621AE /* TabView.swift in Sources */,
+				11065D0A21A82E9A002621AE /* AllMasechtot_VC.swift in Sources */,
+				11065D0421A82E64002621AE /* Text_VC.swift in Sources */,
 				114C9CC021A1661C00D5713E /* AppDelegate.swift in Sources */,
+				11065CFF21A6F557002621AE /* pageVC.swift in Sources */,
+				11065D0821A82E88002621AE /* PreviousShiurim_VC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
