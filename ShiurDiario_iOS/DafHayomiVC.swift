@@ -8,46 +8,26 @@
 
 import UIKit
 
-class DafHayomiVC: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
-
-    @IBOutlet weak var collectionView: UICollectionView!
+class DafHayomiVC: UIViewController {
     
-    @IBOutlet weak var menuBarConstraint: NSLayoutConstraint!
-    
-    var isSideMenuOpened = false
-    
-    
-    let titles = ["VIDEO", "GEMARA TEXT", "PREVIOUS DAPIM", "ALL MASECHTOT"]
-    
+    @IBOutlet weak var tabsView: TabView!
     
     override func viewDidLoad() {
-        super.viewDidLoad()
+        super.viewDidLoad()    
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
-        collectionView.delegate = self
-        collectionView.dataSource = self
-        
-        if let layout = self.collectionView.collectionViewLayout as? UICollectionViewFlowLayout {
-            layout.estimatedItemSize = UICollectionViewFlowLayoutAutomaticSize
+        if segue.identifier == "containerVCsegue" {
+            if let vc = segue.destination as? pageVC {
+                vc.tabsView = self.tabsView
+            }
         }
-    }
-    
-    
-    func numberOfSections(in collectionView: UICollectionView) -> Int {
-        return 1
-    }
-    
-   
-    
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return titles.count
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "titleCell", for: indexPath) as! TitleCell
         
-        cell.titleLabel.text = titles[indexPath.item]
-        
-        return cell
     }
-    
 }
+
+
+
+
+
