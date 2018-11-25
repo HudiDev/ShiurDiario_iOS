@@ -12,7 +12,7 @@ class TitleCell: UICollectionViewCell {
     
     @IBOutlet weak var titleLabel: UILabel!
     
-    @IBOutlet weak var: UIView!
+    @IBOutlet weak var selectIndicator: UIView!
     
     override var isSelected: Bool {
         didSet{

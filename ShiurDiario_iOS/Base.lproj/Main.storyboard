@@ -162,34 +162,61 @@
             </objects>
             <point key="canvasLocation" x="45.600000000000001" y="956.67166416791611"/>
         </scene>
-        <!--TextVC-->
+        <!--VideoVC-->
         <scene sceneID="dPT-bQ-PAI">
             <objects>
-                <viewController storyboardIdentifier="text_VC" id="GQ6-0k-IU9" customClass="Text_VC" customModule="ShiurDiario_iOS" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="text_VC" id="GQ6-0k-IU9" customClass="Video_VC" customModule="ShiurDiario_iOS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Bzf-20-Hge">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Text" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ovl-dU-Px8">
-                                <rect key="frame" x="171" y="323" width="33" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="12c-JO-FHS">
+                                <rect key="frame" x="0.0" y="90" width="375" height="330"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Menachot_96" translatesAutoresizingMaskIntoConstraints="NO" id="JiR-Bp-ycW">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="330"/>
+                                    </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="avp-TN-bFS">
+                                        <rect key="frame" x="139.5" y="117.5" width="95" height="95"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="95" id="EbC-ei-NY6"/>
+                                            <constraint firstAttribute="width" constant="95" id="rcA-Mf-ihj"/>
+                                        </constraints>
+                                        <state key="normal" title="Button" image="play_btn_icon"/>
+                                        <connections>
+                                            <action selector="playVideoBtn:" destination="GQ6-0k-IU9" eventType="touchUpInside" id="HqT-XT-tle"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="JiR-Bp-ycW" secondAttribute="trailing" id="1Ja-J7-IaR"/>
+                                    <constraint firstAttribute="bottom" secondItem="JiR-Bp-ycW" secondAttribute="bottom" id="3gQ-jQ-fyM"/>
+                                    <constraint firstItem="avp-TN-bFS" firstAttribute="centerX" secondItem="12c-JO-FHS" secondAttribute="centerX" id="9gq-YT-Bdm"/>
+                                    <constraint firstAttribute="height" constant="330" id="Fdf-Ec-0N8"/>
+                                    <constraint firstItem="avp-TN-bFS" firstAttribute="centerY" secondItem="12c-JO-FHS" secondAttribute="centerY" id="oZi-nM-BBO"/>
+                                    <constraint firstItem="JiR-Bp-ycW" firstAttribute="leading" secondItem="12c-JO-FHS" secondAttribute="leading" id="oev-Ae-4PW"/>
+                                    <constraint firstItem="JiR-Bp-ycW" firstAttribute="top" secondItem="12c-JO-FHS" secondAttribute="top" id="uEj-XK-bjp"/>
+                                </constraints>
+                            </view>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="0.028078071959999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="12c-JO-FHS" firstAttribute="leading" secondItem="nhc-71-qQr" secondAttribute="leading" id="3Ig-wG-6Rn"/>
+                            <constraint firstItem="12c-JO-FHS" firstAttribute="trailing" secondItem="nhc-71-qQr" secondAttribute="trailing" id="Fwh-z6-a9C"/>
+                            <constraint firstItem="12c-JO-FHS" firstAttribute="top" secondItem="nhc-71-qQr" secondAttribute="top" constant="70" id="qwU-Ss-yXR"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="nhc-71-qQr"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KdB-CG-tWj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="734" y="1730"/>
+            <point key="canvasLocation" x="584.79999999999995" y="1727.5862068965519"/>
         </scene>
-        <!--VideoVC-->
+        <!--TextVC-->
         <scene sceneID="4qK-UY-snn">
             <objects>
-                <viewController storyboardIdentifier="video_VC" id="4V8-YO-dUX" customClass="Video_VC" customModule="ShiurDiario_iOS" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="video_VC" id="4V8-YO-dUX" customClass="Text_VC" customModule="ShiurDiario_iOS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Y2F-DD-GqH">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -208,7 +235,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9D0-23-BEj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1421.5999999999999" y="1729.385307346327"/>
+            <point key="canvasLocation" x="1343" y="1728"/>
         </scene>
         <!--Previous ShiurimVC-->
         <scene sceneID="tml-VL-6ct">
@@ -325,7 +352,9 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Menachot_96" width="480" height="360"/>
         <image name="menu_bar_icon" width="24" height="24"/>
+        <image name="play_btn_icon" width="512" height="512"/>
         <image name="talmud copy" width="600" height="450"/>
     </resources>
 </document>

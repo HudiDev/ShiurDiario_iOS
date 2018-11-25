@@ -7,18 +7,28 @@
 //
 
 import UIKit
+import AVKit
 
 class Video_VC: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    }
+    
+    
+    @IBAction func playVideoBtn(_ sender: Any) {
+        guard let url = URL(string: "http://shiurdiario.com/media/video/Menachot_95.mp4") else { return }
+        let video = AVPlayer(url: url)
+        let videoPlayer = AVPlayerViewController()
+        videoPlayer.player = video
+        
+        present(videoPlayer, animated: true) {
+            video.play()
+        }
     }
 
 }

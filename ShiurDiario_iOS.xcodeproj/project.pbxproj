@@ -56,8 +56,8 @@
 		11065D0221A82E1C002621AE /* Page_viewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				11065D0321A82E64002621AE /* Text_VC.swift */,
 				11065D0521A82E74002621AE /* Video_VC.swift */,
+				11065D0321A82E64002621AE /* Text_VC.swift */,
 				11065D0721A82E88002621AE /* PreviousShiurim_VC.swift */,
 				11065D0921A82E9A002621AE /* AllMasechtot_VC.swift */,
 			);

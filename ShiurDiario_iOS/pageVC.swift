@@ -85,10 +85,10 @@ extension pageVC: UIPageViewControllerDataSource, UIPageViewControllerDelegate {
         guard let vc = pageViewController.viewControllers?.first else {return}
         
         switch vc {
-        case is Text_VC:
+        case is Video_VC:
             currentIndex = 0
             break
-        case is Video_VC:
+        case is Text_VC:
             currentIndex = 1
             break
         case is PreviousShiurim_VC:
