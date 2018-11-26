@@ -69,4 +69,13 @@ extension AllMasechtot_VC: UICollectionViewDelegate, UICollectionViewDataSource 
         
         return cell
     }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        if let vc = storyboard?.instantiateViewController(withIdentifier: "previousShiurim_VC") as? PreviousShiurim_VC {
+            vc.urlString = "http://ws.shiurdiario.com/masechet.php?m=\(masechtot[indexPath.item].masechet)"
+            vc.isLoadedFromMasechtotVC = true
+            show(vc, sender: self)
+        }
+        
+    }
 }
