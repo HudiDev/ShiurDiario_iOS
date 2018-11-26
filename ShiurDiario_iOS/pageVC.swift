@@ -47,6 +47,7 @@ class pageVC: UIPageViewController {
         case is PreviousShiurim_VC:
             let castedVC = vc as! PreviousShiurim_VC
             castedVC.sqldate = self.sqldate
+            castedVC.isLoadedFromMasechtotVC = false
             return castedVC
         case is AllMasechtot_VC:
             let castedVC = vc as! AllMasechtot_VC
