@@ -13,21 +13,34 @@ class PreviousShiurim_VC: UIViewController {
     @IBOutlet weak var collectionView: UICollectionView!
     var dapim: [DafModel] = []
     var sqldate: String?
+    var urlString: String?
+    var isLoadedFromMasechtotVC: Bool!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        retrieveData()
+        
         collectionView.delegate = self
         collectionView.dataSource = self
-    }
-    
-    
-    func retrieveData() {
         
         if sqldate == nil {
             sqldate = "2018-11-25"
         }
-        guard let url = URL(string: "http://ws.shiurdiario.com/dafyomi.php?date=\(sqldate!)") else { return }
+        
+        if urlString == nil {
+            urlString = "http://ws.shiurdiario.com/dafyomi.php?date=\(sqldate!)"
+        }
+        if isLoadedFromMasechtotVC {
+            retrieveData(modelClass: ShiurDafResponse.self, urlString: urlString!)
+        } else {
+            retrieveData(modelClass: PreviousDafResponse.self, urlString: urlString!)
+        }
+        
+    }
+    
+    
+    func retrieveData<T: Codable>(modelClass: T.Type, urlString: String) {
+        
+        guard let url = URL(string: urlString) else { return }
         
         URLSession.shared.dataTask(with: url) { (data, response, err) in
             if err != nil {
@@ -37,11 +50,23 @@ class PreviousShiurim_VC: UIViewController {
             guard let data = data else { return }
             
             do {
-                let dapim = try JSONDecoder().decode(DafResponse.self, from: data)
+                let dapim = try JSONDecoder().decode(modelClass, from: data)
                 print("DAPIM ARE: \(dapim)")
                 
                 DispatchQueue.main.async {
-                    self.dapim = dapim.past_pages
+                    switch dapim {
+                        case is ShiurDafResponse:
+                            let casted_dapim = dapim as! ShiurDafResponse
+                            self.dapim = casted_dapim.dapim
+                            break
+                        case is PreviousDafResponse:
+                            let casted_dapim = dapim as! PreviousDafResponse
+                            self.dapim = casted_dapim.past_pages
+                            break
+                        default:
+                            print("MODEL CLASS IS NO TYPE!!")
+                            break
+                    }
                     self.collectionView.reloadData()
                 }
                 
