@@ -10,6 +10,8 @@ import UIKit
 import AVKit
 
 class Video_VC: UIViewController {
+    
+    var prefix: String?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,7 +23,11 @@ class Video_VC: UIViewController {
     
     
     @IBAction func playVideoBtn(_ sender: Any) {
-        guard let url = URL(string: "http://shiurdiario.com/media/video/Menachot_95.mp4") else { return }
+        if prefix == nil {
+            prefix = "Menachot_95"
+        }
+        print("PREFIX OF VIDEO IS: \(prefix!)")
+        guard let url = URL(string: "http://shiurdiario.com/media/video/\(prefix!).mp4") else { return }
         let video = AVPlayer(url: url)
         let videoPlayer = AVPlayerViewController()
         videoPlayer.player = video

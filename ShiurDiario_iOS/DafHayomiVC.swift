@@ -11,9 +11,15 @@ import UIKit
 class DafHayomiVC: UIViewController {
     
     @IBOutlet weak var tabsView: TabView!
+    var prefix: String?
+    var sqldate: String?
     
     override func viewDidLoad() {
-        super.viewDidLoad()    
+        super.viewDidLoad()
+        
+        print("PREFIX IS: \(prefix)")
+        print("SQLDATE IS: \(sqldate)")
+        
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -21,6 +27,8 @@ class DafHayomiVC: UIViewController {
         if segue.identifier == "containerVCsegue" {
             if let vc = segue.destination as? pageVC {
                 vc.tabsView = self.tabsView
+                vc.prefix = prefix
+                vc.sqldate = sqldate
             }
         }
         

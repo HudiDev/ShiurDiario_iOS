@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import PDFKit
 
 class SideMenuVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
@@ -16,7 +17,7 @@ class SideMenuVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+      
         tableView.delegate = self
         tableView.dataSource = self
         
@@ -42,6 +43,7 @@ class SideMenuVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         
         if indexPath.row == 1 {
             let vc = storyboard?.instantiateViewController(withIdentifier: "dafHayomi")
+            
             show(vc!, sender: self)
             NotificationCenter.default.post(name: NSNotification.Name("hideMenu"), object: nil)
         }

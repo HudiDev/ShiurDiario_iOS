@@ -46,7 +46,7 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" title="Home" id="BH6-Gy-Uan">
-                        <barButtonItem key="rightBarButtonItem" title="Item" image="menu_bar_icon" id="Luu-am-gvZ">
+                        <barButtonItem key="leftBarButtonItem" title="Item" image="menu_bar_icon" id="Luu-am-gvZ">
                             <connections>
                                 <action selector="menuBtn:" destination="BYZ-38-t0r" id="zE0-KB-3ji"/>
                             </connections>
@@ -165,7 +165,7 @@
         <!--VideoVC-->
         <scene sceneID="dPT-bQ-PAI">
             <objects>
-                <viewController storyboardIdentifier="text_VC" id="GQ6-0k-IU9" customClass="Video_VC" customModule="ShiurDiario_iOS" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="video_VC" id="GQ6-0k-IU9" customClass="Video_VC" customModule="ShiurDiario_iOS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Bzf-20-Hge">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -216,22 +216,29 @@
         <!--TextVC-->
         <scene sceneID="4qK-UY-snn">
             <objects>
-                <viewController storyboardIdentifier="video_VC" id="4V8-YO-dUX" customClass="Text_VC" customModule="ShiurDiario_iOS" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="text_VC" id="4V8-YO-dUX" customClass="Text_VC" customModule="ShiurDiario_iOS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Y2F-DD-GqH">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Video" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="64n-Mq-WiW">
-                                <rect key="frame" x="165" y="323" width="44" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="TJn-eE-3D1">
+                                <rect key="frame" x="177" y="323" width="20" height="20"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="20" id="qmc-b4-oFt"/>
+                                    <constraint firstAttribute="height" constant="20" id="tlg-Ae-4pn"/>
+                                </constraints>
+                            </activityIndicatorView>
                         </subviews>
-                        <color key="backgroundColor" red="0.2901960784" green="0.6705882353" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="TJn-eE-3D1" firstAttribute="centerY" secondItem="Y2F-DD-GqH" secondAttribute="centerY" id="Hrh-LQ-fdr"/>
+                            <constraint firstItem="TJn-eE-3D1" firstAttribute="centerX" secondItem="Y2F-DD-GqH" secondAttribute="centerX" id="zsX-gM-wzl"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="W1V-lT-q4a"/>
                     </view>
+                    <connections>
+                        <outlet property="indicatorBar" destination="TJn-eE-3D1" id="XIl-6i-uTj"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9D0-23-BEj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -245,21 +252,98 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Previous Dapim" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KnV-e2-Cn6">
-                                <rect key="frame" x="127" y="323" width="120" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Xs6-kX-HAd">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="ryc-hw-znd">
+                                    <size key="itemSize" width="375" height="120"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="daf_cell" id="brH-HC-cLX" customClass="DafCell" customModule="ShiurDiario_iOS" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="120"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="120"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Menachot_96" translatesAutoresizingMaskIntoConstraints="NO" id="JiC-pe-ULh">
+                                                    <rect key="frame" x="8" y="4" width="110" height="96"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                </imageView>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="play_btn_icon" translatesAutoresizingMaskIntoConstraints="NO" id="J3r-Rj-zBz">
+                                                    <rect key="frame" x="46" y="30" width="46" height="42"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                </imageView>
+                                                <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" distribution="equalSpacing" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="IGo-sN-s5G">
+                                                    <rect key="frame" x="129" y="10" width="116.5" height="81"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Menachot 98" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sac-5x-088">
+                                                            <rect key="frame" x="0.0" y="0.0" width="116.5" height="18"/>
+                                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Duration: 1:20:30" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pw8-qs-esj">
+                                                            <rect key="frame" x="0.0" y="21" width="116.5" height="18"/>
+                                                            <fontDescription key="fontDescription" type="system" weight="thin" pointSize="15"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Marcheshvan 25" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sFp-QP-uaG">
+                                                            <rect key="frame" x="0.0" y="42" width="116.5" height="18"/>
+                                                            <fontDescription key="fontDescription" type="system" weight="ultraLight" pointSize="15"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="5779" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kho-38-Def">
+                                                            <rect key="frame" x="0.0" y="63" width="116.5" height="18"/>
+                                                            <fontDescription key="fontDescription" type="system" weight="thin" pointSize="15"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                </stackView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="07/11/2018" textAlignment="natural" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0c6-dp-RNg">
+                                                    <rect key="frame" x="283" y="12" width="72" height="16"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="13"/>
+                                                    <color key="textColor" red="0.25626949627904327" green="0.23609144256069525" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </view>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <connections>
+                                            <outlet property="dafName_label" destination="Sac-5x-088" id="J8T-Se-2ID"/>
+                                            <outlet property="date_label" destination="0c6-dp-RNg" id="p9v-Hk-M9f"/>
+                                            <outlet property="duration_label" destination="pw8-qs-esj" id="aYA-WD-Fsn"/>
+                                            <outlet property="hebMonthDay_label" destination="sFp-QP-uaG" id="qhr-9a-Ug6"/>
+                                            <outlet property="hebYear_label" destination="kho-38-Def" id="hBw-oP-1Aj"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
                         </subviews>
-                        <color key="backgroundColor" red="0.061757965210000001" green="1" blue="0.097408145769999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Xs6-kX-HAd" firstAttribute="trailing" secondItem="SDo-iC-jQ5" secondAttribute="trailing" id="9di-br-aQX"/>
+                            <constraint firstItem="Xs6-kX-HAd" firstAttribute="bottom" secondItem="SDo-iC-jQ5" secondAttribute="bottom" id="BB7-mc-e3F"/>
+                            <constraint firstItem="Xs6-kX-HAd" firstAttribute="leading" secondItem="SDo-iC-jQ5" secondAttribute="leading" id="WHn-Vp-pUW"/>
+                            <constraint firstItem="Xs6-kX-HAd" firstAttribute="top" secondItem="SDo-iC-jQ5" secondAttribute="top" id="b4x-BF-ZYj"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="SDo-iC-jQ5"/>
                     </view>
+                    <connections>
+                        <outlet property="collectionView" destination="Xs6-kX-HAd" id="mvX-Kh-Gt7"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="p0o-2w-g6v" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2106" y="1729"/>
+            <point key="canvasLocation" x="2104.8000000000002" y="1728.4857571214395"/>
         </scene>
         <!--All MasechtotVC-->
         <scene sceneID="Sac-YA-xhx">
@@ -269,21 +353,58 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="All Shiurim" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LAZ-wf-vPQ">
-                                <rect key="frame" x="146" y="323" width="82" height="21"/>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="g5M-l6-9Hd">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="2SX-cG-o59">
+                                    <size key="itemSize" width="375" height="80"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="masechta_cell" id="wyp-P1-xTx" customClass="MasechtaCell" customModule="ShiurDiario_iOS" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="80"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="80"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="masechet_icon" translatesAutoresizingMaskIntoConstraints="NO" id="OFb-mc-9Ms">
+                                                    <rect key="frame" x="20" y="19" width="43" height="43"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                </imageView>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="icons8-chevron-right-26" translatesAutoresizingMaskIntoConstraints="NO" id="f5F-T5-SR6">
+                                                    <rect key="frame" x="300" y="20" width="45" height="40"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Masechta" textAlignment="natural" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Su-a7-Gui">
+                                                    <rect key="frame" x="78" y="26" width="149" height="28"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </view>
+                                        <connections>
+                                            <outlet property="masechtaLabel" destination="1Su-a7-Gui" id="Gxj-UM-c7y"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
                         </subviews>
-                        <color key="backgroundColor" red="0.60000002379999995" green="0.40000000600000002" blue="0.20000000300000001" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="X0p-Wp-PF3"/>
                     </view>
+                    <connections>
+                        <outlet property="collectionView" destination="g5M-l6-9Hd" id="LCe-xI-f79"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="H5r-xw-ts4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2788" y="1729"/>
+            <point key="canvasLocation" x="2788" y="1728.4857571214395"/>
         </scene>
         <!--PageVC-->
         <scene sceneID="ety-nQ-i73">
@@ -353,6 +474,8 @@
     </scenes>
     <resources>
         <image name="Menachot_96" width="480" height="360"/>
+        <image name="icons8-chevron-right-26" width="26" height="26"/>
+        <image name="masechet_icon" width="512" height="512"/>
         <image name="menu_bar_icon" width="24" height="24"/>
         <image name="play_btn_icon" width="512" height="512"/>
         <image name="talmud copy" width="600" height="450"/>

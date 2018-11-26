@@ -12,6 +12,8 @@ class pageVC: UIPageViewController {
     
     var tabsView: TabView!
     var currentIndex: Int = 0
+    var prefix: String?
+    var sqldate: String?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,12 +28,32 @@ class pageVC: UIPageViewController {
     }
     
     private(set) lazy var orderedViewControllers: [UIViewController] = {
-        return [generateVC(id: "text"), generateVC(id: "video"), generateVC(id: "previousShiurim"), generateVC(id: "allMasechtot")]
+        return [generateVC(id: "video"), generateVC(id: "text"), generateVC(id: "previousShiurim"), generateVC(id: "allMasechtot")]
     }()
     
     func generateVC(id: String) -> UIViewController {
-        return UIStoryboard.init(name: "Main", bundle: nil)
+        let vc = UIStoryboard.init(name: "Main", bundle: nil)
             .instantiateViewController(withIdentifier: "\(id)_VC" )
+        
+        switch vc {
+        case is Video_VC:
+            let castedVC = vc as! Video_VC
+            castedVC.prefix = self.prefix
+            return castedVC
+        case is Text_VC:
+            let castedVC = vc as! Text_VC
+            castedVC.prefix = self.prefix
+            return castedVC
+        case is PreviousShiurim_VC:
+            let castedVC = vc as! PreviousShiurim_VC
+            castedVC.sqldate = self.sqldate
+            return castedVC
+        case is AllMasechtot_VC:
+            let castedVC = vc as! AllMasechtot_VC
+            return castedVC
+        default:
+            return vc
+        }
     }
 }
 
