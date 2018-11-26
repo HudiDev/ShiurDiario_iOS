@@ -47,10 +47,5 @@ class SideMenuVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
             show(vc!, sender: self)
             NotificationCenter.default.post(name: NSNotification.Name("hideMenu"), object: nil)
         }
-       
-        
     }
-    
-    
- 
 }

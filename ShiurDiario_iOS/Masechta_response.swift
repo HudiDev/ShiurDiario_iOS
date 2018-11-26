@@ -13,7 +13,5 @@ struct MasechtaResponse: Codable {
 }
 
 struct d: Codable{
-    
-    
     let masechtot: [MasechtaModel]
 }

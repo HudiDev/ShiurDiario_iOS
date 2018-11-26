@@ -8,6 +8,11 @@
 
 import UIKit
 
-struct DafResponse: Codable {
+struct PreviousDafResponse: Codable {
     let past_pages: [DafModel]
+}
+
+
+struct ShiurDafResponse: Codable {
+    let dapim: [DafModel]
 }
