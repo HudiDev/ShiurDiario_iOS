@@ -10,27 +10,63 @@ import UIKit
 
 class AllMasechtot_VC: UIViewController {
     
-
+    var masechtot: [MasechtaModel] = []
+    
+    @IBOutlet weak var collectionView: UICollectionView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+        
+        collectionView.delegate = self
+        collectionView.dataSource = self
+        
+        retrieveData()
+        
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    func retrieveData() {
+        
+        guard let url = URL(string: "http://ws.shiurdiario.com/dafyomi.php?date=2018-11-25") else { return }
+        
+        URLSession.shared.dataTask(with: url) { (data, response, err) in
+            
+            if err != nil {
+                print("ERROR IS: \(err?.localizedDescription)")
+            }
+            
+            guard let data = data else { return }
+            
+            do {
+                 let masechtot = try JSONDecoder().decode(MasechtaResponse.self, from: data)
+                
+                DispatchQueue.main.async {
+                    self.masechtot = masechtot.d.masechtot
+                    self.collectionView.reloadData()
+                }
+            } catch let jsonError {
+                print("JSON-ERROR IS: \(jsonError)")
+            }
+        }.resume()
     }
-    */
+}
 
+
+
+
+
+
+extension AllMasechtot_VC: UICollectionViewDelegate, UICollectionViewDataSource {
+    
+    
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return masechtot.count
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "masechta_cell", for: indexPath) as! MasechtaCell
+        
+        cell.masechtaLabel.text = masechtot[indexPath.item].masechet
+        
+        return cell
+    }
 }

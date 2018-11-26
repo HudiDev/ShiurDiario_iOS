@@ -10,4 +10,6 @@ import UIKit
 
 class MasechtaCell: UICollectionViewCell {
     
+    @IBOutlet weak var masechtaLabel: UILabel!
+    
 }

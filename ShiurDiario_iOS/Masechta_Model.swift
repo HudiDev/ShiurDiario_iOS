@@ -6,4 +6,8 @@
 //  Copyright © 2018 Hudi Ilfeld. All rights reserved.
 //
 
-import Foundation
+import UIKit
+
+struct MasechtaModel: Codable{
+    let masechet: String
+}

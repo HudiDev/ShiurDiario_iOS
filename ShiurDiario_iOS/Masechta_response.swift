@@ -6,4 +6,14 @@
 //  Copyright © 2018 Hudi Ilfeld. All rights reserved.
 //
 
-import Foundation
+import UIKit
+
+struct MasechtaResponse: Codable {
+    let d: d
+}
+
+struct d: Codable{
+    
+    
+    let masechtot: [MasechtaModel]
+}
