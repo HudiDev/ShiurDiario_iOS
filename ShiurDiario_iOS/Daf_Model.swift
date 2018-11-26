@@ -15,11 +15,12 @@ struct DafModel: Codable{
     
     let masechet: String
     let daf: String
-    let date: String
+    let date: String?
+    let dafdate: String?
     let duration: String
-    let hebmonth: String
-    let hebdate: String
-    let hebyear: String
+    let hebmonth: String?
+    let hebdate: String?
+    let hebyear: String?
     let prefix: String
     let sqldate: String
 }
