@@ -39,13 +39,19 @@ class SideMenuVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        print("item \(indexPath.row) has been clicked")
         
-        if indexPath.row == 1 {
+        switch indexPath.row {
+        case 1:
             let vc = storyboard?.instantiateViewController(withIdentifier: "dafHayomi")
-            
             show(vc!, sender: self)
             NotificationCenter.default.post(name: NSNotification.Name("hideMenu"), object: nil)
+            break
+        case 2:
+            let vc = storyboard?.instantiateViewController(withIdentifier: "allMasechtot_VC")
+            show(vc!, sender: self)
+            break
+        default:
+            print("No such ROW")
         }
     }
 }
