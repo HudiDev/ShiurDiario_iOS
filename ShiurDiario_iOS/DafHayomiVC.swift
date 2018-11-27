@@ -25,7 +25,7 @@ class DafHayomiVC: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
         if segue.identifier == "containerVCsegue" {
-            if let vc = segue.destination as? pageVC {
+            if let vc = segue.destination as? PageVC {
                 vc.tabsView = self.tabsView
                 vc.prefix = prefix
                 vc.sqldate = sqldate
