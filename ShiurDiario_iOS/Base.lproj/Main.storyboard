@@ -19,14 +19,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bh6-33-voH">
-                                <rect key="frame" x="130" y="318" width="115" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="move To next VC"/>
-                                <connections>
-                                    <segue destination="3sy-Iw-KwW" kind="show" id="WM9-9t-1c8"/>
-                                </connections>
-                            </button>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4OS-K6-vVs">
                                 <rect key="frame" x="-300" y="64" width="300" height="603"/>
                                 <constraints>
@@ -37,7 +29,7 @@
                                 </connections>
                             </containerView>
                         </subviews>
-                        <color key="backgroundColor" red="0.53201586010000002" green="0.34543830809999998" blue="0.1582935208" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="4OS-K6-vVs" secondAttribute="bottom" id="Fi3-DC-pIi"/>
                             <constraint firstItem="4OS-K6-vVs" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="PBd-vO-U9y"/>
@@ -68,14 +60,21 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="y0n-gx-JQy">
+                                <rect key="frame" x="177" y="323" width="20" height="20"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="20" id="7D1-YG-2x0"/>
+                                    <constraint firstAttribute="width" constant="20" id="iuT-EE-GQP"/>
+                                </constraints>
+                            </activityIndicatorView>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iP4-wz-2Nt">
-                                <rect key="frame" x="0.0" y="114" width="375" height="553"/>
+                                <rect key="frame" x="0.0" y="70" width="375" height="597"/>
                                 <connections>
                                     <segue destination="h9q-tP-Cak" kind="embed" identifier="containerVCsegue" id="d4Q-zN-zh1"/>
                                 </connections>
                             </containerView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gld-zE-C9M" customClass="TabView" customModule="ShiurDiario_iOS" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="64" width="375" height="50"/>
+                                <rect key="frame" x="0.0" y="20" width="375" height="50"/>
                                 <subviews>
                                     <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="JsU-Fo-QvO">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="50"/>
@@ -149,15 +148,18 @@
                             <constraint firstItem="gld-zE-C9M" firstAttribute="trailing" secondItem="B0F-9s-s3o" secondAttribute="trailing" id="3st-MZ-6YG"/>
                             <constraint firstItem="iP4-wz-2Nt" firstAttribute="trailing" secondItem="B0F-9s-s3o" secondAttribute="trailing" id="4lG-hX-iGn"/>
                             <constraint firstItem="gld-zE-C9M" firstAttribute="top" secondItem="B0F-9s-s3o" secondAttribute="top" id="CbC-Ei-o4w"/>
+                            <constraint firstItem="y0n-gx-JQy" firstAttribute="centerY" secondItem="wRf-v0-RXz" secondAttribute="centerY" id="FeF-JZ-NdS"/>
                             <constraint firstItem="iP4-wz-2Nt" firstAttribute="bottom" secondItem="B0F-9s-s3o" secondAttribute="bottom" id="GXV-1s-u1f"/>
                             <constraint firstItem="iP4-wz-2Nt" firstAttribute="top" secondItem="gld-zE-C9M" secondAttribute="bottom" id="Wyo-ea-r8m"/>
                             <constraint firstItem="iP4-wz-2Nt" firstAttribute="leading" secondItem="B0F-9s-s3o" secondAttribute="leading" id="X98-9s-zrE"/>
+                            <constraint firstItem="y0n-gx-JQy" firstAttribute="centerX" secondItem="wRf-v0-RXz" secondAttribute="centerX" id="q5e-wa-CQz"/>
                             <constraint firstItem="gld-zE-C9M" firstAttribute="leading" secondItem="B0F-9s-s3o" secondAttribute="leading" id="v1x-lU-zCj"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="B0F-9s-s3o"/>
                     </view>
                     <navigationItem key="navigationItem" title="DAF HAYOMI" id="5Ix-Hd-LpE"/>
                     <connections>
+                        <outlet property="progressIndicator" destination="y0n-gx-JQy" id="c35-Ep-TeW"/>
                         <outlet property="tabsView" destination="gld-zE-C9M" id="ena-2g-rAE"/>
                     </connections>
                 </viewController>
@@ -214,7 +216,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KdB-CG-tWj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="584.79999999999995" y="1727.5862068965519"/>
+            <point key="canvasLocation" x="89" y="1728"/>
         </scene>
         <!--TextVC-->
         <scene sceneID="4qK-UY-snn">
@@ -245,7 +247,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9D0-23-BEj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1343" y="1728"/>
+            <point key="canvasLocation" x="786" y="1728"/>
         </scene>
         <!--DapimVC-->
         <scene sceneID="tml-VL-6ct">
@@ -355,7 +357,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="p0o-2w-g6v" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2104.8000000000002" y="1728.4857571214395"/>
+            <point key="canvasLocation" x="1481" y="1728"/>
         </scene>
         <!--All MasechtotVC-->
         <scene sceneID="Sac-YA-xhx">
@@ -421,7 +423,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="H5r-xw-ts4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2788" y="1728.4857571214395"/>
+            <point key="canvasLocation" x="2198" y="1728"/>
         </scene>
         <!--PageVC-->
         <scene sceneID="ety-nQ-i73">
@@ -429,7 +431,7 @@
                 <pageViewController autoresizesArchivedViewToFullSize="NO" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="h9q-tP-Cak" customClass="PageVC" customModule="ShiurDiario_iOS" customModuleProvider="target" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uui-p4-96E" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1818" y="957"/>
+            <point key="canvasLocation" x="1137" y="957"/>
         </scene>
         <!--Side MenuVC-->
         <scene sceneID="u1h-JA-D9p">

@@ -14,6 +14,7 @@ class PageVC: UIPageViewController {
     var currentIndex: Int = 0
     var prefix: String?
     var sqldate: String?
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,7 +29,9 @@ class PageVC: UIPageViewController {
             }
         } else {
             retrieveCurrentPrefix { (prefix) in
+                
                 DispatchQueue.main.async {
+                    
                     self.prefix = prefix
                     if let firstVC = self.orderedViewControllers.first {
                         self.setViewControllers([firstVC], direction: .forward, animated: true, completion: nil)

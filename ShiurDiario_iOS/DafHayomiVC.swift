@@ -14,12 +14,12 @@ class DafHayomiVC: UIViewController {
     var prefix: String?
     var sqldate: String?
     
+    @IBOutlet weak var progressIndicator: UIActivityIndicatorView!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        print("PREFIX IS: \(prefix)")
-        print("SQLDATE IS: \(sqldate)")
-        
+        progressIndicator.startAnimating()
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -31,7 +31,10 @@ class DafHayomiVC: UIViewController {
                 vc.sqldate = sqldate
             }
         }
-        
+    }
+    
+    @objc func stopIndicatorAnimation() {
+        progressIndicator.stopAnimating()
     }
 }
 
