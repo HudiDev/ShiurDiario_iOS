@@ -44,7 +44,7 @@ class Dapim_VC: UIViewController {
         
         URLSession.shared.dataTask(with: url) { (data, response, err) in
             if err != nil {
-                print("ERROR IS: \(err?.localizedDescription)")
+                print("ERROR IS: \(err!.localizedDescription)")
             }
             
             guard let data = data else { return }
