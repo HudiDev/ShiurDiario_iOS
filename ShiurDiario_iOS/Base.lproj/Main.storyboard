@@ -423,7 +423,7 @@
         <!--PageVC-->
         <scene sceneID="ety-nQ-i73">
             <objects>
-                <pageViewController autoresizesArchivedViewToFullSize="NO" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="h9q-tP-Cak" customClass="pageVC" customModule="ShiurDiario_iOS" customModuleProvider="target" sceneMemberID="viewController"/>
+                <pageViewController autoresizesArchivedViewToFullSize="NO" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="h9q-tP-Cak" customClass="PageVC" customModule="ShiurDiario_iOS" customModuleProvider="target" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uui-p4-96E" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1818" y="957"/>
