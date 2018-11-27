@@ -359,10 +359,10 @@
             </objects>
             <point key="canvasLocation" x="1481" y="1728"/>
         </scene>
-        <!--All MasechtotVC-->
+        <!--MasechtotVC-->
         <scene sceneID="Sac-YA-xhx">
             <objects>
-                <viewController storyboardIdentifier="allMasechtot_VC" id="1C1-La-pys" customClass="AllMasechtot_VC" customModule="ShiurDiario_iOS" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="allMasechtot_VC" id="1C1-La-pys" customClass="Masechtot_VC" customModule="ShiurDiario_iOS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="9wO-jh-XLw">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

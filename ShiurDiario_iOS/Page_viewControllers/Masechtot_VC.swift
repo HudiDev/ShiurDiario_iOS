@@ -8,7 +8,7 @@
 
 import UIKit
 
-class AllMasechtot_VC: UIViewController {
+class Masechtot_VC: UIViewController {
     
     var masechtot: [MasechtaModel] = []
     
@@ -31,7 +31,7 @@ class AllMasechtot_VC: UIViewController {
         URLSession.shared.dataTask(with: url) { (data, response, err) in
             
             if err != nil {
-                print("ERROR IS: \(err?.localizedDescription)")
+                print("ERROR IS: \(err!.localizedDescription)")
             }
             
             guard let data = data else { return }
@@ -55,7 +55,7 @@ class AllMasechtot_VC: UIViewController {
 
 
 
-extension AllMasechtot_VC: UICollectionViewDelegate, UICollectionViewDataSource {
+extension Masechtot_VC: UICollectionViewDelegate, UICollectionViewDataSource {
     
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {

@@ -12,7 +12,7 @@
 		11065D0421A82E64002621AE /* Text_VC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11065D0321A82E64002621AE /* Text_VC.swift */; };
 		11065D0621A82E74002621AE /* Video_VC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11065D0521A82E74002621AE /* Video_VC.swift */; };
 		11065D0821A82E88002621AE /* Dapim_VC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11065D0721A82E88002621AE /* Dapim_VC.swift */; };
-		11065D0A21A82E9A002621AE /* AllMasechtot_VC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11065D0921A82E9A002621AE /* AllMasechtot_VC.swift */; };
+		11065D0A21A82E9A002621AE /* Masechtot_VC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11065D0921A82E9A002621AE /* Masechtot_VC.swift */; };
 		110F930F21A41CF000A50EDE /* DafHayomiVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 110F930E21A41CF000A50EDE /* DafHayomiVC.swift */; };
 		114C9CC021A1661C00D5713E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 114C9CBF21A1661C00D5713E /* AppDelegate.swift */; };
 		114C9CC221A1661C00D5713E /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 114C9CC121A1661C00D5713E /* HomeVC.swift */; };
@@ -35,7 +35,7 @@
 		11065D0321A82E64002621AE /* Text_VC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Text_VC.swift; sourceTree = "<group>"; };
 		11065D0521A82E74002621AE /* Video_VC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Video_VC.swift; sourceTree = "<group>"; };
 		11065D0721A82E88002621AE /* Dapim_VC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dapim_VC.swift; sourceTree = "<group>"; };
-		11065D0921A82E9A002621AE /* AllMasechtot_VC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllMasechtot_VC.swift; sourceTree = "<group>"; };
+		11065D0921A82E9A002621AE /* Masechtot_VC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Masechtot_VC.swift; sourceTree = "<group>"; };
 		110F930E21A41CF000A50EDE /* DafHayomiVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DafHayomiVC.swift; sourceTree = "<group>"; };
 		114C9CBC21A1661C00D5713E /* ShiurDiario_iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ShiurDiario_iOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		114C9CBF21A1661C00D5713E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -71,7 +71,7 @@
 				11065D0521A82E74002621AE /* Video_VC.swift */,
 				11065D0321A82E64002621AE /* Text_VC.swift */,
 				11065D0721A82E88002621AE /* Dapim_VC.swift */,
-				11065D0921A82E9A002621AE /* AllMasechtot_VC.swift */,
+				11065D0921A82E9A002621AE /* Masechtot_VC.swift */,
 			);
 			path = Page_viewControllers;
 			sourceTree = "<group>";
@@ -198,7 +198,7 @@
 				11A4724F21AAE79C001F54F6 /* Masechta_response.swift in Sources */,
 				11065D0621A82E74002621AE /* Video_VC.swift in Sources */,
 				11065D0121A6F95C002621AE /* TabView.swift in Sources */,
-				11065D0A21A82E9A002621AE /* AllMasechtot_VC.swift in Sources */,
+				11065D0A21A82E9A002621AE /* Masechtot_VC.swift in Sources */,
 				11065D0421A82E64002621AE /* Text_VC.swift in Sources */,
 				11A4724921AABD35001F54F6 /* Daf_response.swift in Sources */,
 				114C9CC021A1661C00D5713E /* AppDelegate.swift in Sources */,

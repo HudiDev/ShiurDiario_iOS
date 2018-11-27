@@ -66,8 +66,8 @@ class PageVC: UIPageViewController {
             castedVC.sqldate = self.sqldate
             castedVC.isLoadedFromMasechtotVC = false
             return castedVC
-        case is AllMasechtot_VC:
-            let castedVC = vc as! AllMasechtot_VC
+        case is Masechtot_VC:
+            let castedVC = vc as! Masechtot_VC
             return castedVC
         default:
             return vc
@@ -162,7 +162,7 @@ extension PageVC: UIPageViewControllerDataSource, UIPageViewControllerDelegate {
         case is Dapim_VC:
             currentIndex = 2
             break
-        case is AllMasechtot_VC:
+        case is Masechtot_VC:
             currentIndex = 3
             break
         default:
