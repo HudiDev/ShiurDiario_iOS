@@ -44,8 +44,8 @@ class pageVC: UIPageViewController {
             let castedVC = vc as! Text_VC
             castedVC.prefix = self.prefix
             return castedVC
-        case is PreviousShiurim_VC:
-            let castedVC = vc as! PreviousShiurim_VC
+        case is Dapim_VC:
+            let castedVC = vc as! Dapim_VC
             castedVC.sqldate = self.sqldate
             castedVC.isLoadedFromMasechtotVC = false
             return castedVC
@@ -114,7 +114,7 @@ extension pageVC: UIPageViewControllerDataSource, UIPageViewControllerDelegate {
         case is Text_VC:
             currentIndex = 1
             break
-        case is PreviousShiurim_VC:
+        case is Dapim_VC:
             currentIndex = 2
             break
         case is AllMasechtot_VC:

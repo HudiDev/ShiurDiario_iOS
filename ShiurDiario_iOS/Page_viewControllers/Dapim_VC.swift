@@ -1,5 +1,5 @@
 //
-//  PreviousShiurim_VC.swift
+//  Dapim_VC.swift
 //  ShiurDiario_iOS
 //
 //  Created by Hudi Ilfeld on 11/23/18.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class PreviousShiurim_VC: UIViewController {
+class Dapim_VC: UIViewController {
     
     @IBOutlet weak var collectionView: UICollectionView!
     var dapim: [DafModel] = []
@@ -82,7 +82,7 @@ class PreviousShiurim_VC: UIViewController {
 
 
 
-extension PreviousShiurim_VC: UICollectionViewDelegate, UICollectionViewDataSource {
+extension Dapim_VC: UICollectionViewDelegate, UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return dapim.count
