@@ -94,7 +94,9 @@ extension Dapim_VC: UICollectionViewDelegate, UICollectionViewDataSource {
         
         cell.dafName_label.text = "\(dapim[indexPath.item].masechet) \(dapim[indexPath.item].daf)"
         cell.duration_label.text = "Duration: \(dapim[indexPath.item].duration)"
-        cell.hebMonthDay_label.text = "\(dapim[indexPath.item].hebmonth) \(dapim[indexPath.item].hebdate)"
+        if let hebMonth = dapim[indexPath.item].hebmonth, let hebDay = dapim[indexPath.item].hebdate {
+            cell.hebMonthDay_label.text = "\(hebMonth) \(hebDay)"
+        }
         cell.hebYear_label.text = dapim[indexPath.item].hebyear
         cell.date_label.text = dapim[indexPath.item].date
         
