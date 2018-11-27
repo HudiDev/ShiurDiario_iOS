@@ -8,7 +8,7 @@
 
 import UIKit
 
-class pageVC: UIPageViewController {
+class PageVC: UIPageViewController {
     
     var tabsView: TabView!
     var currentIndex: Int = 0
@@ -21,10 +21,14 @@ class pageVC: UIPageViewController {
         self.dataSource = self
         self.delegate = self
         tabsView.menuDelegate = self
-       
-        if let firstVC = orderedViewControllers.first {
-            setViewControllers([firstVC], direction: .forward, animated: true, completion: nil)
+        
+        retrieveCurrentPrefix { (prefix) in
+            self.prefix = prefix
+            if let firstVC = self.orderedViewControllers.first {
+                self.setViewControllers([firstVC], direction: .forward, animated: true, completion: nil)
+            }
         }
+       
     }
     
     private(set) lazy var orderedViewControllers: [UIViewController] = {
@@ -56,12 +60,40 @@ class pageVC: UIPageViewController {
             return vc
         }
     }
+    
+    
+    
+    func retrieveCurrentPrefix(completion: @escaping (_ prefixResult: String) -> Void) {
+        
+        guard let url = URL(string: "http://ws.shiurdiario.com/dafyomi.php?date=\(getCurrentDate())") else { return }
+        
+        URLSession.shared.dataTask(with: url) { (data, response, err) in
+            if err != nil {
+                print("ERR IS: \(err!.localizedDescription)")
+            }
+            
+            do {
+                let currentPrefix = try JSONDecoder().decode(MasechtaResponse.self, from: data!)
+                completion(currentPrefix.d.prefix)
+            } catch let jsonErr {
+                print("JSON ERR IS: \(jsonErr)")
+            }
+        }
+    }
+    
+    func getCurrentDate() -> String {
+        let currentDate = Date()
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "yyyy-MM-dd"
+        let dateInFormat = dateFormatter.string(from: currentDate)
+        return dateInFormat
+    }
 }
 
 
 
 
-extension pageVC: UIPageViewControllerDataSource, UIPageViewControllerDelegate {
+extension PageVC: UIPageViewControllerDataSource, UIPageViewControllerDelegate {
     
     func pageViewController(_ pageViewController: UIPageViewController, viewControllerBefore viewController: UIViewController) -> UIViewController? {
         guard let viewControllerIndex = orderedViewControllers.index(of: viewController) else {
@@ -134,7 +166,7 @@ extension pageVC: UIPageViewControllerDataSource, UIPageViewControllerDelegate {
 }
 
 
-extension pageVC: MenuBarDelegate {
+extension PageVC: MenuBarDelegate {
     func menuBarDidSelectItemAt(menu: TabView, index: Int) {
         if currentIndex != index {
             setViewControllers([orderedViewControllers[index]], direction: .forward, animated: false, completion: nil)
