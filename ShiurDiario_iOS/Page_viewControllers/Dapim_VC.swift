@@ -98,7 +98,13 @@ extension Dapim_VC: UICollectionViewDelegate, UICollectionViewDataSource {
             cell.hebMonthDay_label.text = "\(hebMonth) \(hebDay)"
         }
         cell.hebYear_label.text = dapim[indexPath.item].hebyear
-        cell.date_label.text = dapim[indexPath.item].date
+        if let date = dapim[indexPath.item].date{
+            cell.date_label.text = date
+        }
+        if let dafdate = dapim[indexPath.item].dafdate {
+            cell.date_label.text = dafdate
+        }
+        
         
         return cell
     }
