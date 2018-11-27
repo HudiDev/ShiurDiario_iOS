@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class HomeVC: UIViewController {
 
     @IBOutlet weak var sideMenuConstraint: NSLayoutConstraint!
     

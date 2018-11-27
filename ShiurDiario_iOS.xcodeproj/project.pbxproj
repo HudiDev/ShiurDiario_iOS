@@ -15,7 +15,7 @@
 		11065D0A21A82E9A002621AE /* AllMasechtot_VC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11065D0921A82E9A002621AE /* AllMasechtot_VC.swift */; };
 		110F930F21A41CF000A50EDE /* DafHayomiVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 110F930E21A41CF000A50EDE /* DafHayomiVC.swift */; };
 		114C9CC021A1661C00D5713E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 114C9CBF21A1661C00D5713E /* AppDelegate.swift */; };
-		114C9CC221A1661C00D5713E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 114C9CC121A1661C00D5713E /* ViewController.swift */; };
+		114C9CC221A1661C00D5713E /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 114C9CC121A1661C00D5713E /* HomeVC.swift */; };
 		114C9CC521A1661C00D5713E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 114C9CC321A1661C00D5713E /* Main.storyboard */; };
 		114C9CC721A1661E00D5713E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 114C9CC621A1661E00D5713E /* Assets.xcassets */; };
 		114C9CCA21A1661E00D5713E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 114C9CC821A1661E00D5713E /* LaunchScreen.storyboard */; };
@@ -39,7 +39,7 @@
 		110F930E21A41CF000A50EDE /* DafHayomiVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DafHayomiVC.swift; sourceTree = "<group>"; };
 		114C9CBC21A1661C00D5713E /* ShiurDiario_iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ShiurDiario_iOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		114C9CBF21A1661C00D5713E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		114C9CC121A1661C00D5713E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		114C9CC121A1661C00D5713E /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
 		114C9CC421A1661C00D5713E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		114C9CC621A1661E00D5713E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		114C9CC921A1661E00D5713E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -97,7 +97,7 @@
 			children = (
 				11065D0221A82E1C002621AE /* Page_viewControllers */,
 				114C9CBF21A1661C00D5713E /* AppDelegate.swift */,
-				114C9CC121A1661C00D5713E /* ViewController.swift */,
+				114C9CC121A1661C00D5713E /* HomeVC.swift */,
 				114C9CC321A1661C00D5713E /* Main.storyboard */,
 				114C9CC621A1661E00D5713E /* Assets.xcassets */,
 				114C9CC821A1661E00D5713E /* LaunchScreen.storyboard */,
@@ -189,7 +189,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				110F930F21A41CF000A50EDE /* DafHayomiVC.swift in Sources */,
-				114C9CC221A1661C00D5713E /* ViewController.swift in Sources */,
+				114C9CC221A1661C00D5713E /* HomeVC.swift in Sources */,
 				11A59EB821A474F7003FD0B0 /* TitleCell.swift in Sources */,
 				11A4725321AAE93E001F54F6 /* Masechta_Model.swift in Sources */,
 				11A4724D21AAE6D2001F54F6 /* MasechtaCell.swift in Sources */,
