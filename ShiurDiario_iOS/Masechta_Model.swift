@@ -10,4 +10,5 @@ import UIKit
 
 struct MasechtaModel: Codable{
     let masechet: String
+    let masechetlink: String
 }

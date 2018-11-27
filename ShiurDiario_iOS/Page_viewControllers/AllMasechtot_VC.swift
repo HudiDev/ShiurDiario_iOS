@@ -72,7 +72,7 @@ extension AllMasechtot_VC: UICollectionViewDelegate, UICollectionViewDataSource 
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         if let vc = storyboard?.instantiateViewController(withIdentifier: "previousShiurim_VC") as? Dapim_VC {
-            vc.urlString = "http://ws.shiurdiario.com/masechet.php?m=\(masechtot[indexPath.item].masechet)"
+            vc.urlString = "http://ws.shiurdiario.com/masechet.php?m=\(masechtot[indexPath.item].masechetlink)"
             vc.isLoadedFromMasechtotVC = true
             show(vc, sender: self)
         }
