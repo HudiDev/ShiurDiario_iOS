@@ -99,28 +99,52 @@
 		114C9CBE21A1661C00D5713E /* ShiurDiario_iOS */ = {
 			isa = PBXGroup;
 			children = (
-				11065D0221A82E1C002621AE /* Page_viewControllers */,
+				11F800C721AF0698004614E8 /* Views */,
+				11F800C621AF068C004614E8 /* ViewModels */,
+				11F800C521AF0679004614E8 /* Model */,
 				114C9CBF21A1661C00D5713E /* AppDelegate.swift */,
-				114C9CC121A1661C00D5713E /* HomeVC.swift */,
 				114C9CC321A1661C00D5713E /* Main.storyboard */,
 				114C9CC621A1661E00D5713E /* Assets.xcassets */,
 				114C9CC821A1661E00D5713E /* LaunchScreen.storyboard */,
 				114C9CCB21A1661E00D5713E /* Info.plist */,
-				11F874F021A36BCF00CA11B4 /* SideMenuVC.swift */,
-				110F930E21A41CF000A50EDE /* DafHayomiVC.swift */,
-				11A59EB721A474F7003FD0B0 /* TitleCell.swift */,
-				11065CFE21A6F557002621AE /* pageVC.swift */,
-				11065D0021A6F95C002621AE /* TabView.swift */,
-				11A4724621AABA0A001F54F6 /* Daf_Model.swift */,
-				11A4724821AABD35001F54F6 /* Daf_response.swift */,
-				11A4724A21AABE27001F54F6 /* DafCell.swift */,
-				11A4724C21AAE6D2001F54F6 /* MasechtaCell.swift */,
-				11A4724E21AAE79C001F54F6 /* Masechta_response.swift */,
-				11A4725221AAE93E001F54F6 /* Masechta_Model.swift */,
-				11F800C121ADCBD6004614E8 /* DedicationVC.swift */,
-				11F800C321AEDEE6004614E8 /* ContactVC.swift */,
 			);
 			path = ShiurDiario_iOS;
+			sourceTree = "<group>";
+		};
+		11F800C521AF0679004614E8 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				11A4724621AABA0A001F54F6 /* Daf_Model.swift */,
+				11A4724821AABD35001F54F6 /* Daf_response.swift */,
+				11A4724E21AAE79C001F54F6 /* Masechta_response.swift */,
+				11A4725221AAE93E001F54F6 /* Masechta_Model.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		11F800C621AF068C004614E8 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		11F800C721AF0698004614E8 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				114C9CC121A1661C00D5713E /* HomeVC.swift */,
+				11F800C321AEDEE6004614E8 /* ContactVC.swift */,
+				11F800C121ADCBD6004614E8 /* DedicationVC.swift */,
+				11A4724C21AAE6D2001F54F6 /* MasechtaCell.swift */,
+				11A4724A21AABE27001F54F6 /* DafCell.swift */,
+				11A59EB721A474F7003FD0B0 /* TitleCell.swift */,
+				11065D0021A6F95C002621AE /* TabView.swift */,
+				11065CFE21A6F557002621AE /* pageVC.swift */,
+				110F930E21A41CF000A50EDE /* DafHayomiVC.swift */,
+				11F874F021A36BCF00CA11B4 /* SideMenuVC.swift */,
+				11065D0221A82E1C002621AE /* Page_viewControllers */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
