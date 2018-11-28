@@ -13,40 +13,34 @@ class DedicationVC: UIViewController {
     @IBOutlet weak var mainLabel: UILabel!
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var nameLabel: UILabel!
-    //@IBOutlet weak var nameContainer: UIView!
-   
+    @IBOutlet weak var container: UIView!
+    
     
     var gradientLayer: CAGradientLayer!
     override func viewDidLoad() {
         super.viewDidLoad()
         
         addBorder()
-        
-        //addLabels()
-        
+     
         retrieveData { (arr) in
             DispatchQueue.main.async {
                 self.titleLabel.text = "A ELEVAÇÃO DA ALMA DE:"
                 self.nameLabel.text = arr[1]
             }
         }
-        createGradient()
     }
     
     func addBorder() {
-        mainLabel.layer.borderWidth = 0.5
-        mainLabel.layer.borderColor = UIColor.white.cgColor
-        
-        nameLabel.layer.borderWidth = 0.5
-        nameLabel.layer.borderColor = UIColor.white.cgColor
+        container.layer.borderWidth = 0.5
+        container.layer.borderColor = UIColor.black.cgColor
     }
 
-    func createGradient() {
-        gradientLayer = CAGradientLayer()
-        gradientLayer.frame = self.view.bounds
-        gradientLayer.colors = [UIColor.black.cgColor, UIColor.blue.cgColor]
-        self.view.layer.insertSublayer(gradientLayer, at: 0)
-    }
+//    func createGradient() {
+//        gradientLayer = CAGradientLayer()
+//        gradientLayer.frame = self.view.bounds
+//        gradientLayer.colors = [UIColor.black.cgColor, UIColor.blue.cgColor]
+//        self.view.layer.insertSublayer(gradientLayer, at: 0)
+//    }
     
     func addLabels() {
         titleLabel = UILabel(frame: CGRect(x: 50, y: 30, width: 70, height: 20))
