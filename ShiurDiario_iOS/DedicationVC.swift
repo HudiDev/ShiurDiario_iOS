@@ -35,24 +35,6 @@ class DedicationVC: UIViewController {
         container.layer.borderColor = UIColor.black.cgColor
     }
 
-//    func createGradient() {
-//        gradientLayer = CAGradientLayer()
-//        gradientLayer.frame = self.view.bounds
-//        gradientLayer.colors = [UIColor.black.cgColor, UIColor.blue.cgColor]
-//        self.view.layer.insertSublayer(gradientLayer, at: 0)
-//    }
-    
-    func addLabels() {
-        titleLabel = UILabel(frame: CGRect(x: 50, y: 30, width: 70, height: 20))
-        nameLabel = UILabel(frame: CGRect(x: 50, y: 80, width: 70, height: 20))
-        titleLabel?.text = "HELLO WORLD"
-        titleLabel?.textColor = .white
-        nameLabel?.text = "YO YO YO"
-        nameLabel?.textColor = .white
-        self.view.addSubview(titleLabel!)
-        self.view.addSubview(nameLabel!)
-    }
-    
     func retrieveData(completion: @escaping (_ dedicationName: [String]) -> Void) {
         
         guard let url = URL(string: "http://ws.shiurdiario.com/dafyomi.php?date=\(getCurrentDate())") else {return}
