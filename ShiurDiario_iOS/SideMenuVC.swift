@@ -54,6 +54,10 @@ class SideMenuVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
             let vc = storyboard?.instantiateViewController(withIdentifier: "dedication_VC")
             show(vc!, sender: self)
             break
+        case 4:
+            let vc = storyboard?.instantiateViewController(withIdentifier: "contact_VC")
+            show(vc!, sender: self)
+            break
         default:
             print("No such ROW")
         }

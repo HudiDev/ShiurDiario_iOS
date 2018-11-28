@@ -163,10 +163,10 @@
             </objects>
             <point key="canvasLocation" x="664.79999999999995" y="157.87106446776613"/>
         </scene>
-        <!--View Controller-->
+        <!--ContactVC-->
         <scene sceneID="bLh-ds-QuE">
             <objects>
-                <viewController id="8vQ-a9-gJT" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="contact_VC" id="8vQ-a9-gJT" customClass="ContactVC" customModule="ShiurDiario_iOS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="k57-LM-toH">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

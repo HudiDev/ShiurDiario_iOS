@@ -27,6 +27,7 @@
 		11A4725321AAE93E001F54F6 /* Masechta_Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11A4725221AAE93E001F54F6 /* Masechta_Model.swift */; };
 		11A59EB821A474F7003FD0B0 /* TitleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11A59EB721A474F7003FD0B0 /* TitleCell.swift */; };
 		11F800C221ADCBD6004614E8 /* DedicationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11F800C121ADCBD6004614E8 /* DedicationVC.swift */; };
+		11F800C421AEDEE6004614E8 /* ContactVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11F800C321AEDEE6004614E8 /* ContactVC.swift */; };
 		11F874F121A36BCF00CA11B4 /* SideMenuVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11F874F021A36BCF00CA11B4 /* SideMenuVC.swift */; };
 /* End PBXBuildFile section */
 
@@ -53,6 +54,7 @@
 		11A4725221AAE93E001F54F6 /* Masechta_Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Masechta_Model.swift; sourceTree = "<group>"; };
 		11A59EB721A474F7003FD0B0 /* TitleCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleCell.swift; sourceTree = "<group>"; };
 		11F800C121ADCBD6004614E8 /* DedicationVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DedicationVC.swift; sourceTree = "<group>"; };
+		11F800C321AEDEE6004614E8 /* ContactVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactVC.swift; sourceTree = "<group>"; };
 		11F874F021A36BCF00CA11B4 /* SideMenuVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -116,6 +118,7 @@
 				11A4724E21AAE79C001F54F6 /* Masechta_response.swift */,
 				11A4725221AAE93E001F54F6 /* Masechta_Model.swift */,
 				11F800C121ADCBD6004614E8 /* DedicationVC.swift */,
+				11F800C321AEDEE6004614E8 /* ContactVC.swift */,
 			);
 			path = ShiurDiario_iOS;
 			sourceTree = "<group>";
@@ -206,6 +209,7 @@
 				11065D0421A82E64002621AE /* Text_VC.swift in Sources */,
 				11A4724921AABD35001F54F6 /* Daf_response.swift in Sources */,
 				114C9CC021A1661C00D5713E /* AppDelegate.swift in Sources */,
+				11F800C421AEDEE6004614E8 /* ContactVC.swift in Sources */,
 				11A4724721AABA0A001F54F6 /* Daf_Model.swift in Sources */,
 				11065CFF21A6F557002621AE /* pageVC.swift in Sources */,
 				11065D0821A82E88002621AE /* Dapim_VC.swift in Sources */,
