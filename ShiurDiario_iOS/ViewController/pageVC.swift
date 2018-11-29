@@ -23,7 +23,7 @@ class PageVC: UIPageViewController {
         self.delegate = self
         tabsView.menuDelegate = self
         
-        if let prefix = self.prefix {
+        if self.prefix != nil {
             if let firstVC = self.orderedViewControllers.first {
                 self.setViewControllers([firstVC], direction: .forward, animated: true, completion: nil)
             }
@@ -33,6 +33,7 @@ class PageVC: UIPageViewController {
                 DispatchQueue.main.async {
                     
                     self.prefix = prefix
+                    self.sqldate = Utils.getCurrentDate()
                     if let firstVC = self.orderedViewControllers.first {
                         self.setViewControllers([firstVC], direction: .forward, animated: true, completion: nil)
                     }
