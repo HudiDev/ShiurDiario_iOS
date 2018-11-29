@@ -15,17 +15,31 @@ class DedicationVC: UIViewController {
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var container: UIView!
     
+    let viewModel: DedicationViewModel = DedicationViewModel()
     
-    var gradientLayer: CAGradientLayer!
     override func viewDidLoad() {
         super.viewDidLoad()
         
         addBorder()
-     
-        retrieveData { (arr) in
+        bindViewModel()
+        viewModel.getData()
+    }
+    
+    func bindViewModel() {
+        viewModel.dedicationItem.bindAndFire {  [weak self]  (dataType) in
             DispatchQueue.main.async {
-                self.titleLabel.text = "A ELEVAÇÃO DA ALMA DE:"
-                self.nameLabel.text = arr[1]
+                switch dataType {
+                case .normal(let dedicationStr):
+                    self?.titleLabel.text = "A ELEVAÇÃO DA ALMA DE:"
+                    self?.nameLabel.text = dedicationStr
+                    break
+                case .error(let err):
+                    self?.nameLabel.text = err.localizedDescription
+                    break
+                case .empty:
+                    self?.nameLabel.text = "No Data Available at this moment"
+                    break
+                }
             }
         }
     }

@@ -8,50 +8,27 @@
 
 import Foundation
 
-struct Animal {
-    var breed: String
-    var gender: String
-}
 
 class DedicationViewModel {
     
-    private var dedicationName: String
+    let dedicationRepo = DedicationRepo()
     
-    init() {
-        retrieveData { (arr) in
-            dedicationName = arr[1]
-        }
-    }
-}
-
-
-
-
-
-extension DedicationViewModel {
+    let dedicationItem = Bindable(ItemType<String>.normal(viewModelData: ""))
     
-    func retrieveData(completion: @escaping (_ dedicationName: [String]) -> Void) {
-        
-        guard let url = URL(string: "http://ws.shiurdiario.com/dafyomi.php?date=\(Utils.getCurrentDate())") else {return}
-        
-        URLSession.shared.dataTask(with: url) { (data, response, err) in
-            if err != nil {
-                print("URLSession ERR IS: \(err!.localizedDescription)")
-                return
-            }
-            
-            if let data = data {
-                do {
-                    let name = try JSONDecoder().decode(MasechtaResponse.self, from: data)
-                    let dedicationArr =  name.d.dedication.components(separatedBy: ":")
-                    completion(dedicationArr)
-                } catch let jsonError {
-                    print("JSON_ERR IS: \(jsonError)")
+    func getData() {
+        dedicationRepo.retrieveData { (result) in
+            switch result {
+            case .success(let dedicationStr):
+                guard dedicationStr.count > 0 else {
+                    self.dedicationItem.value = .empty
+                    return
                 }
-            } else {
-                print("NO DATA COMING BACK FROM SERVER")
+                self.dedicationItem.value = .normal(viewModelData: dedicationStr)
+                break
+            case .failure(let error):
+                self.dedicationItem.value = .error(message: error)
+                break
             }
-            
-            }.resume()
+        }
     }
 }

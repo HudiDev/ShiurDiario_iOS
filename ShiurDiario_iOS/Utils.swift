@@ -7,3 +7,15 @@
 //
 
 import Foundation
+
+
+class Utils {
+    
+    public static func getCurrentDate() -> String{
+        let currentDate = Date()
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "yyyy-MM-dd"
+        let dateInFormat = dateFormatter.string(from: currentDate)
+        return dateInFormat
+    }
+}
