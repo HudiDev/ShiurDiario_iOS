@@ -12,4 +12,8 @@ class MasechtaCell: UICollectionViewCell {
     
     @IBOutlet weak var masechtaLabel: UILabel!
     
+    override func layoutSubviews() {
+        self.addBorder(width: 0.5, color: UIColor.black.cgColor)
+    }
+    
 }

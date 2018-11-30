@@ -16,9 +16,17 @@ class TitleCell: UICollectionViewCell {
     
     override var isSelected: Bool {
         didSet{
-            self.selectIndicator.backgroundColor = isSelected ? UIColor.blue : UIColor.white
+//            self.selectIndicator.backgroundColor = isSelected ? UIColor.blue : UIColor.white
+            titleLabel.layer.borderWidth = 0.8
+            
+            titleLabel.layer.borderColor = isSelected ? UIColor.black.cgColor : UIColor.white.cgColor
+            
         }
     }
     
+//    override func layoutSubviews() {
+//        //self.addBorder(width: 0.5, color: UIColor.black.cgColor)
+//    }
+//    
     
 }

@@ -13,8 +13,10 @@ class Video_VC: UIViewController {
     
     var prefix: String?
 
+    @IBOutlet weak var viewContainer: UIView!
     override func viewDidLoad() {
         super.viewDidLoad()
+        viewContainer.addBorder(width: 0.5, color: UIColor.black.cgColor)
     }
 
     override func didReceiveMemoryWarning() {

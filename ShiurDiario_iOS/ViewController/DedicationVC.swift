@@ -20,7 +20,7 @@ class DedicationVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        addBorder()
+        container.addBorder(width: 0.5, color: UIColor.black.cgColor)
         bindViewModel()
         viewModel.getData()
     }
@@ -43,9 +43,5 @@ class DedicationVC: UIViewController {
             }
         }
     }
-    
-    func addBorder() {
-        container.layer.borderWidth = 0.5
-        container.layer.borderColor = UIColor.black.cgColor
-    }
+
 }

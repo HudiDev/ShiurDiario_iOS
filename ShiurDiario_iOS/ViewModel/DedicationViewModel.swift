@@ -23,7 +23,8 @@ class DedicationViewModel {
                     self.dedicationItem.value = .empty
                     return
                 }
-                self.dedicationItem.value = .normal(viewModelData: dedicationStr)
+                let name = dedicationStr.components(separatedBy: ":")
+                self.dedicationItem.value = .normal(viewModelData: name[1])
                 break
             case .failure(let error):
                 self.dedicationItem.value = .error(message: error)

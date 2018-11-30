@@ -9,14 +9,24 @@
 import UIKit
 
 class HomeVC: UIViewController {
-
+    @IBOutlet weak var titleContainer: UIView!
+    
+    @IBOutlet weak var introText: UILabel!
     @IBOutlet weak var sideMenuConstraint: NSLayoutConstraint!
+    
+    @IBOutlet weak var firstSubTitleView: UIView!
+    
+    @IBOutlet weak var secondSubTitleView: UIView!
     
     var isSideMenuOpened = true
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        firstSubTitleView.addBorder(width: 0.5, color: UIColor.black.cgColor)
+        
+        secondSubTitleView.addBorder(width: 0.5, color: UIColor.black.cgColor)
+        titleContainer.addBorder(width: 0.5, color: UIColor.black.cgColor)
         addPanGesture(view: self.view)
         addEdgePanGesture(view: self.view)
         
