@@ -79,9 +79,7 @@ class PageVC: UIPageViewController {
     
     func retrieveCurrentPrefix(completion: @escaping (_ prefixResult: String) -> Void) {
         
-        let pre = getCurrentDate()
-       
-        guard let url = URL(string: "http://ws.shiurdiario.com/dafyomi.php?date=\(pre)") else { return }
+        guard let url = URL(string: "http://ws.shiurdiario.com/dafyomi.php?date=\(getCurrentDate())") else { return }
         URLSession.shared.dataTask(with: url) { (data, response, err) in
             if err != nil {
                 print("ERR IS: \(err!.localizedDescription)")
@@ -188,6 +186,4 @@ extension PageVC: MenuBarDelegate {
             tabsView.tabsCollectionView.scrollToItem(at: IndexPath.init(item: index, section: 0), at: .centeredHorizontally, animated: true)
         }
     }
-    
-    
 }
