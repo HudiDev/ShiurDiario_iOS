@@ -41,12 +41,9 @@ class Text_VC: UIViewController {
     }
     
     func addConstraints() {
-        
         pdfView.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(pdfView)
-        
         pdfView.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor).isActive = true
-        //pdfView.widthAnchor.constraint(equalToConstant: 400).isActive = true
         pdfView.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor).isActive = true
         pdfView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor).isActive = true
         pdfView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor).isActive = true
