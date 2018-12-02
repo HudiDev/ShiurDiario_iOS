@@ -20,13 +20,38 @@ class DafCell: UICollectionViewCell {
     
     @IBOutlet weak var date_label: UILabel!
     
+
+    
+    var viewModel: ItemType<DafViewModel>? {
+        didSet{
+            if let viewModel = viewModel {
+                bindViewModel(vm: viewModel)
+            }
+            
+        }
+    }
+    
     override func layoutSubviews() {
-//        self.layer.masksToBounds = false
-//        self.layer.shadowOffset = CGSize(width: 0, height: 3)
-//        self.layer.shadowColor = UIColor.lightGray.cgColor
-//        self.layer.shadowOpacity = 1.0
-//        self.layer.shadowRadius = 2.0
         self.contentView.layer.borderWidth = 0.5
         self.contentView.layer.borderColor = UIColor.black.cgColor
     }
+    
+    func bindViewModel(vm: ItemType<DafViewModel>) {
+        switch vm {
+        case .normal(let dafViewModel):
+            
+            dafName_label.text = dafViewModel.dafName
+            duration_label.text = dafViewModel.durationText
+            hebMonthDay_label.text = dafViewModel.monthDay
+            hebYear_label.text = dafViewModel.year
+            date_label.text = dafViewModel.dateVM
+        case .empty:
+            dafName_label.text = "No data avialable"
+            
+        case .error(let err):
+            dafName_label.text = err.localizedDescription
+        }
+    }
+    
+    
 }

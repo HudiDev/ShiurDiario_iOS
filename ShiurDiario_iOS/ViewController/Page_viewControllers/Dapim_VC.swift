@@ -11,10 +11,11 @@ import UIKit
 class Dapim_VC: UIViewController {
     
     @IBOutlet weak var collectionView: UICollectionView!
-    var dapim: [DafModel] = []
+    
     var sqldate: String?
     var urlString: String?
     var isLoadedFromMasechtotVC: Bool!
+    let viewModel: DapimViewModel = DapimViewModel()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,59 +23,31 @@ class Dapim_VC: UIViewController {
         collectionView.delegate = self
         collectionView.dataSource = self
         
-        if sqldate == nil {
-            sqldate = "2018-11-25"
-        }
-        
+      
         if urlString == nil {
             urlString = "http://ws.shiurdiario.com/dafyomi.php?date=\(sqldate!)"
         }
+        
+        bindViewModel()
+        
         if isLoadedFromMasechtotVC {
-            retrieveData(modelClass: ShiurDafResponse.self, urlString: urlString!)
+            viewModel.getData(modelClass: ShiurDafResponse.self, urlString: urlString!)
         } else {
-            retrieveData(modelClass: PreviousDafResponse.self, urlString: urlString!)
+            viewModel.getData(modelClass: PreviousDafResponse.self, urlString: urlString!)
         }
-        
+    }
+    
+    func bindViewModel() {
+        viewModel.dapimData.bindAndFire { (data) in
+            DispatchQueue.main.async {
+                //print("DATA is: \(data)")
+                self.collectionView.reloadData()
+            }
+        }
     }
     
     
-    func retrieveData<T: Codable>(modelClass: T.Type, urlString: String) {
-        
-        guard let url = URL(string: urlString) else { return }
-        
-        URLSession.shared.dataTask(with: url) { (data, response, err) in
-            if err != nil {
-                print("ERROR IS: \(err!.localizedDescription)")
-            }
-            
-            guard let data = data else { return }
-            
-            do {
-                let dapim = try JSONDecoder().decode(modelClass, from: data)
-                print("DAPIM ARE: \(dapim)")
-                
-                DispatchQueue.main.async {
-                    switch dapim {
-                        case is ShiurDafResponse:
-                            let casted_dapim = dapim as! ShiurDafResponse
-                            self.dapim = casted_dapim.dapim
-                            break
-                        case is PreviousDafResponse:
-                            let casted_dapim = dapim as! PreviousDafResponse
-                            self.dapim = casted_dapim.past_pages
-                            break
-                        default:
-                            print("MODEL CLASS IS NO TYPE!!")
-                            break
-                    }
-                    self.collectionView.reloadData()
-                }
-                
-            } catch let jsonErr{
-                print("JSON ERROR is: \(jsonErr)")
-            }
-        }.resume()
-    }
+    
     
     
 }
@@ -85,27 +58,15 @@ class Dapim_VC: UIViewController {
 extension Dapim_VC: UICollectionViewDelegate, UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return dapim.count
+        return viewModel.dapimData.value.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "daf_cell", for: indexPath) as! DafCell
         
-        cell.dafName_label.text = "\(dapim[indexPath.item].masechet) \(dapim[indexPath.item].daf)"
-        cell.duration_label.text = "Duration: \(dapim[indexPath.item].duration)"
-        if let hebMonth = dapim[indexPath.item].hebmonth, let hebDay = dapim[indexPath.item].hebdate {
-            cell.hebMonthDay_label.text = "\(hebMonth) \(hebDay)"
-        }
-        cell.hebYear_label.text = dapim[indexPath.item].hebyear
-        if let date = dapim[indexPath.item].date{
-            cell.date_label.text = date
-        }
-        if let dafdate = dapim[indexPath.item].dafdate {
-            cell.date_label.text = dafdate
-        }
-        
-        
+        cell.viewModel = viewModel.dapimData.value[indexPath.item]
+
         return cell
     }
     
@@ -114,9 +75,16 @@ extension Dapim_VC: UICollectionViewDelegate, UICollectionViewDataSource {
         
         if let vc = storyboard?.instantiateViewController(withIdentifier: "dafHayomi") as? DafHayomiVC {
             
-            vc.prefix = dapim[indexPath.item].prefix
-            vc.sqldate = dapim[indexPath.item].sqldate
-            show(vc, sender: self)
+            switch viewModel.dapimData.value[indexPath.item] {
+            case .normal(let daf):
+                vc.prefix = daf.prefixVM
+                vc.sqldate = daf.sqlDateVM
+                show(vc, sender: self)
+                break
+            default:
+                break
+            }
+            
         }
         
         
