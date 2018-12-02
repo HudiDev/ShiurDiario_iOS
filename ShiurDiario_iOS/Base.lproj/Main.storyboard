@@ -17,11 +17,11 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="HomeVC" customModule="ShiurDiario_iOS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="1300"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="1236"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cI8-Ke-MTf">
-                                <rect key="frame" x="0.0" y="64" width="375" height="1236"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="1236"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ATe-zG-B2O" userLabel="ContentView">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="1225.5"/>
@@ -144,7 +144,7 @@ Clique AQUI para mais informações.</string>
                                 </constraints>
                             </scrollView>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4OS-K6-vVs">
-                                <rect key="frame" x="-300" y="64" width="300" height="1236"/>
+                                <rect key="frame" x="-300" y="0.0" width="300" height="1236"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="300" id="h1z-7k-rj4"/>
                                 </constraints>
@@ -182,7 +182,7 @@ Clique AQUI para mais informações.</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-290.39999999999998" y="157.42128935532236"/>
+            <point key="canvasLocation" x="-1436" y="178"/>
         </scene>
         <!--DedicationVC-->
         <scene sceneID="91o-6a-ES3">
@@ -867,16 +867,17 @@ Clique AQUI para mais informações.</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SHr-Sb-CDc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1061" y="210"/>
+            <point key="canvasLocation" x="-670" y="177"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="NZ7-AH-Nts">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="RvS-WT-wcT" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="YNK-XR-29E">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" id="YNK-XR-29E">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -885,7 +886,7 @@ Clique AQUI para mais informações.</string>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ifh-Ff-pX3" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1854" y="158"/>
+            <point key="canvasLocation" x="-2191" y="-107"/>
         </scene>
     </scenes>
     <resources>
