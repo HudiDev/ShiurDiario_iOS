@@ -13,10 +13,26 @@ class Video_VC: UIViewController {
     
     var prefix: String?
 
+    @IBOutlet weak var playBtn: UIImageView!
+    @IBOutlet weak var containerUiVIew: UIView!
+    @IBOutlet weak var imageBG: UIImageView!
+    
     @IBOutlet weak var viewContainer: UIView!
+    
+    @IBOutlet weak var btnContainer: UIView!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        viewContainer.addBorder(width: 0.5, color: UIColor.black.cgColor)
+        
+        imageBG.alpha = CGFloat(0.8)
+        
+        containerUiVIew.addBorder(width: 0.5, color: UIColor.white.cgColor)
+        
+        btnContainer.addBorder(width: 1.5, color: UIColor.black.cgColor)
+        btnContainer.layer.cornerRadius = 15
+        
+        containerUiVIew.alpha = CGFloat(0.5)
     }
 
     override func didReceiveMemoryWarning() {
