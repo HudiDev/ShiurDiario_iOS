@@ -10,9 +10,10 @@ import UIKit
 
 class Masechtot_VC: UIViewController {
     
-    var masechtot: [MasechtaModel] = []
     
     @IBOutlet weak var collectionView: UICollectionView!
+    
+    var viewModel: MasechtotViewModel = MasechtotViewModel()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,62 +21,58 @@ class Masechtot_VC: UIViewController {
         collectionView.delegate = self
         collectionView.dataSource = self
         
-        retrieveData()
+        bindViewModel()
+        viewModel.getData()
         
     }
     
-    func retrieveData() {
-        
-        guard let url = URL(string: "http://ws.shiurdiario.com/dafyomi.php?date=2018-11-25") else { return }
-        
-        URLSession.shared.dataTask(with: url) { (data, response, err) in
-            
-            if err != nil {
-                print("ERROR IS: \(err!.localizedDescription)")
+    func bindViewModel() {
+        viewModel.masechtaData.bindAndFire { (_) in
+            DispatchQueue.main.async {
+                self.collectionView.reloadData()
             }
-            
-            guard let data = data else { return }
-            
-            do {
-                 let masechtot = try JSONDecoder().decode(MasechtaResponse.self, from: data)
-                
-                DispatchQueue.main.async {
-                    self.masechtot = masechtot.d.masechtot
-                    self.collectionView.reloadData()
-                }
-            } catch let jsonError {
-                print("JSON-ERROR IS: \(jsonError)")
-            }
-        }.resume()
+        }
     }
+    
+    
 }
 
 
 
 
-
-
-extension Masechtot_VC: UICollectionViewDelegate, UICollectionViewDataSource {
-    
+extension Masechtot_VC: UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return masechtot.count
+        return viewModel.masechtaData.value.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "masechta_cell", for: indexPath) as! MasechtaCell
         
-        cell.masechtaLabel.text = masechtot[indexPath.item].masechet
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "masechta_cell", for: indexPath) as? MasechtaCell else { return UICollectionViewCell() }
+        
+        cell.viewModel = viewModel.masechtaData.value[indexPath.item]
         
         return cell
     }
     
+}
+
+
+
+extension Masechtot_VC: UICollectionViewDelegate {
+
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         if let vc = storyboard?.instantiateViewController(withIdentifier: "previousShiurim_VC") as? Dapim_VC {
-            vc.urlString = "http://ws.shiurdiario.com/masechet.php?m=\(masechtot[indexPath.item].masechetlink)"
-            vc.isLoadedFromMasechtotVC = true
-            show(vc, sender: self)
+            switch viewModel.masechtaData.value[indexPath.item] {
+            case .normal(let masechta):
+                vc.urlString = "http://ws.shiurdiario.com/masechet.php?m=\(masechta.masechetlink)"
+                vc.isLoadedFromMasechtotVC = true
+                show(vc, sender: self)
+                break
+            default:
+                break
+            }
+           
         }
-        
     }
 }
