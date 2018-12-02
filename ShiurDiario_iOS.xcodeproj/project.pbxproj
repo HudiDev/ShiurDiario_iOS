@@ -19,6 +19,7 @@
 		114C9CC521A1661C00D5713E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 114C9CC321A1661C00D5713E /* Main.storyboard */; };
 		114C9CC721A1661E00D5713E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 114C9CC621A1661E00D5713E /* Assets.xcassets */; };
 		114C9CCA21A1661E00D5713E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 114C9CC821A1661E00D5713E /* LaunchScreen.storyboard */; };
+		11959C7D21B3E35300BEFCC6 /* DapimViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11959C7C21B3E35300BEFCC6 /* DapimViewModel.swift */; };
 		11A4724721AABA0A001F54F6 /* Daf_Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11A4724621AABA0A001F54F6 /* Daf_Model.swift */; };
 		11A4724921AABD35001F54F6 /* DafResponse_Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11A4724821AABD35001F54F6 /* DafResponse_Model.swift */; };
 		11A4724B21AABE27001F54F6 /* DafCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11A4724A21AABE27001F54F6 /* DafCell.swift */; };
@@ -32,6 +33,9 @@
 		11DA70A621B014EC00294E14 /* Bindable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11DA70A521B014EC00294E14 /* Bindable.swift */; };
 		11DA70AA21B03B6C00294E14 /* ItemType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11DA70A921B03B6C00294E14 /* ItemType.swift */; };
 		11DA70AC21B0743600294E14 /* extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11DA70AB21B0743600294E14 /* extensions.swift */; };
+		11E58B1F21B1633500EBF17D /* DapimRepo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11E58B1E21B1633500EBF17D /* DapimRepo.swift */; };
+		11E58B2121B1662100EBF17D /* MasechtotViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11E58B2021B1662100EBF17D /* MasechtotViewModel.swift */; };
+		11E58B2321B16A3900EBF17D /* Daf_ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11E58B2221B16A3900EBF17D /* Daf_ViewModel.swift */; };
 		11F800C221ADCBD6004614E8 /* DedicationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11F800C121ADCBD6004614E8 /* DedicationVC.swift */; };
 		11F800C421AEDEE6004614E8 /* ContactVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11F800C321AEDEE6004614E8 /* ContactVC.swift */; };
 		11F800C921AF098E004614E8 /* DedicationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11F800C821AF098E004614E8 /* DedicationViewModel.swift */; };
@@ -54,6 +58,7 @@
 		114C9CC621A1661E00D5713E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		114C9CC921A1661E00D5713E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		114C9CCB21A1661E00D5713E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		11959C7C21B3E35300BEFCC6 /* DapimViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DapimViewModel.swift; sourceTree = "<group>"; };
 		11A4724621AABA0A001F54F6 /* Daf_Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Daf_Model.swift; sourceTree = "<group>"; };
 		11A4724821AABD35001F54F6 /* DafResponse_Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DafResponse_Model.swift; sourceTree = "<group>"; };
 		11A4724A21AABE27001F54F6 /* DafCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DafCell.swift; sourceTree = "<group>"; };
@@ -67,6 +72,9 @@
 		11DA70A521B014EC00294E14 /* Bindable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bindable.swift; sourceTree = "<group>"; };
 		11DA70A921B03B6C00294E14 /* ItemType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemType.swift; sourceTree = "<group>"; };
 		11DA70AB21B0743600294E14 /* extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = extensions.swift; sourceTree = "<group>"; };
+		11E58B1E21B1633500EBF17D /* DapimRepo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DapimRepo.swift; sourceTree = "<group>"; };
+		11E58B2021B1662100EBF17D /* MasechtotViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasechtotViewModel.swift; sourceTree = "<group>"; };
+		11E58B2221B16A3900EBF17D /* Daf_ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Daf_ViewModel.swift; sourceTree = "<group>"; };
 		11F800C121ADCBD6004614E8 /* DedicationVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DedicationVC.swift; sourceTree = "<group>"; };
 		11F800C321AEDEE6004614E8 /* ContactVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactVC.swift; sourceTree = "<group>"; };
 		11F800C821AF098E004614E8 /* DedicationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DedicationViewModel.swift; sourceTree = "<group>"; };
@@ -149,6 +157,7 @@
 			children = (
 				11DA709E21AFE26C00294E14 /* DedicationRepo.swift */,
 				11DA70A021AFE2AC00294E14 /* MasechtotRepo.swift */,
+				11E58B1E21B1633500EBF17D /* DapimRepo.swift */,
 			);
 			path = Repository;
 			sourceTree = "<group>";
@@ -179,7 +188,10 @@
 		11F800C621AF068C004614E8 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				11E58B2221B16A3900EBF17D /* Daf_ViewModel.swift */,
 				11F800C821AF098E004614E8 /* DedicationViewModel.swift */,
+				11E58B2021B1662100EBF17D /* MasechtotViewModel.swift */,
+				11959C7C21B3E35300BEFCC6 /* DapimViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -269,9 +281,11 @@
 				110F930F21A41CF000A50EDE /* DafHayomiVC.swift in Sources */,
 				114C9CC221A1661C00D5713E /* HomeVC.swift in Sources */,
 				11A59EB821A474F7003FD0B0 /* TitleCell.swift in Sources */,
+				11959C7D21B3E35300BEFCC6 /* DapimViewModel.swift in Sources */,
 				11A4725321AAE93E001F54F6 /* Masechta_Model.swift in Sources */,
 				11F800C921AF098E004614E8 /* DedicationViewModel.swift in Sources */,
 				11F800C221ADCBD6004614E8 /* DedicationVC.swift in Sources */,
+				11E58B2321B16A3900EBF17D /* Daf_ViewModel.swift in Sources */,
 				11DA70A421AFEBE000294E14 /* Result.swift in Sources */,
 				11A4724D21AAE6D2001F54F6 /* MasechtaCell.swift in Sources */,
 				11A4724B21AABE27001F54F6 /* DafCell.swift in Sources */,
@@ -279,12 +293,14 @@
 				11A4724F21AAE79C001F54F6 /* MasechtaResponse_Model.swift in Sources */,
 				11065D0621A82E74002621AE /* Video_VC.swift in Sources */,
 				11DA70A121AFE2AC00294E14 /* MasechtotRepo.swift in Sources */,
+				11E58B2121B1662100EBF17D /* MasechtotViewModel.swift in Sources */,
 				11065D0121A6F95C002621AE /* TabView.swift in Sources */,
 				11DA70AC21B0743600294E14 /* extensions.swift in Sources */,
 				11DA70AA21B03B6C00294E14 /* ItemType.swift in Sources */,
 				11065D0A21A82E9A002621AE /* Masechtot_VC.swift in Sources */,
 				11065D0421A82E64002621AE /* Text_VC.swift in Sources */,
 				11A4724921AABD35001F54F6 /* DafResponse_Model.swift in Sources */,
+				11E58B1F21B1633500EBF17D /* DapimRepo.swift in Sources */,
 				114C9CC021A1661C00D5713E /* AppDelegate.swift in Sources */,
 				11F800C421AEDEE6004614E8 /* ContactVC.swift in Sources */,
 				11F800CB21AF0B7C004614E8 /* Utils.swift in Sources */,
