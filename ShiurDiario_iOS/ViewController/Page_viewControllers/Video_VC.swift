@@ -13,34 +13,22 @@ class Video_VC: UIViewController {
     
     var prefix: String?
 
-    @IBOutlet weak var playBtn: UIImageView!
+    
+    @IBOutlet weak var playBtn: UIButton!
     @IBOutlet weak var containerUiVIew: UIView!
     @IBOutlet weak var imageBG: UIImageView!
-    
-    @IBOutlet weak var viewContainer: UIView!
-    
     @IBOutlet weak var btnContainer: UIView!
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        imageBG.alpha = CGFloat(0.8)
-        
-        containerUiVIew.addBorder(width: 0.5, color: UIColor.white.cgColor)
-        
-        btnContainer.addBorder(width: 1.5, color: UIColor.black.cgColor)
-        btnContainer.layer.cornerRadius = 15
-        
-        containerUiVIew.alpha = CGFloat(0.5)
+        UIDesigns()
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-    }
-    
     
     @IBAction func playVideoBtn(_ sender: Any) {
+        playBtn.alpha = 0.15
         if prefix == nil {
             prefix = "Menachot_95"
         }
@@ -49,10 +37,19 @@ class Video_VC: UIViewController {
         let video = AVPlayer(url: url)
         let videoPlayer = AVPlayerViewController()
         videoPlayer.player = video
-        
+
         present(videoPlayer, animated: true) {
             video.play()
         }
     }
-
+    
+    func UIDesigns() {
+        imageBG.alpha = CGFloat(0.8)
+        
+        containerUiVIew.addBorder(width: 0.5, color: UIColor.white.cgColor)
+        containerUiVIew.alpha = CGFloat(0.5)
+        
+        btnContainer.addBorder(width: 1.5, color: UIColor.black.cgColor)
+        btnContainer.layer.cornerRadius = 15
+    }
 }

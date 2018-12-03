@@ -167,8 +167,8 @@
 			children = (
 				11F800CA21AF0B7C004614E8 /* Utils.swift */,
 				11DA70A321AFEBE000294E14 /* Result.swift */,
-				11DA70A521B014EC00294E14 /* Bindable.swift */,
 				11DA70A921B03B6C00294E14 /* ItemType.swift */,
+				11DA70A521B014EC00294E14 /* Bindable.swift */,
 				11DA70AB21B0743600294E14 /* extensions.swift */,
 			);
 			path = helpers;

@@ -115,12 +115,12 @@ Clique AQUI para mais informações.</string>
                                                     <constraint firstAttribute="width" constant="340" id="sfe-zD-r5g"/>
                                                 </constraints>
                                             </view>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Hf0-vm-04n">
-                                                <rect key="frame" x="107" y="628" width="160" height="2"/>
+                                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Hf0-vm-04n">
+                                                <rect key="frame" x="107" y="628" width="160" height="4"/>
                                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="160" id="2E9-SL-kHT"/>
-                                                    <constraint firstAttribute="height" constant="2" id="uiN-M8-bFw"/>
+                                                    <constraint firstAttribute="height" constant="4" id="uiN-M8-bFw"/>
                                                 </constraints>
                                             </view>
                                         </subviews>
@@ -134,7 +134,6 @@ Clique AQUI para mais informações.</string>
                                             <constraint firstAttribute="bottom" secondItem="GiF-aU-kLB" secondAttribute="bottom" constant="100" id="JNo-va-Tpu"/>
                                             <constraint firstItem="qYE-9Q-Oqm" firstAttribute="top" secondItem="xZa-tX-fvD" secondAttribute="bottom" constant="8" id="KGZ-Zw-LeB"/>
                                             <constraint firstItem="hdf-AW-xVU" firstAttribute="centerX" secondItem="ATe-zG-B2O" secondAttribute="centerX" id="Lzj-SV-QIg"/>
-                                            <constraint firstItem="Hf0-vm-04n" firstAttribute="centerX" secondItem="ATe-zG-B2O" secondAttribute="centerX" id="Njq-0L-zQv"/>
                                             <constraint firstItem="hdf-AW-xVU" firstAttribute="top" secondItem="7P9-Y5-jcc" secondAttribute="bottom" constant="47" id="WSK-yU-GdU"/>
                                             <constraint firstItem="7P9-Y5-jcc" firstAttribute="centerX" secondItem="ATe-zG-B2O" secondAttribute="centerX" id="ZnU-TT-e9y"/>
                                             <constraint firstItem="piy-GK-wm0" firstAttribute="top" secondItem="ATe-zG-B2O" secondAttribute="top" constant="80" id="pNn-KA-yjc"/>
@@ -421,7 +420,7 @@ Clique AQUI para mais informações.</string>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pAx-7f-Vtt">
-                                                            <rect key="frame" x="13" y="13.5" width="224" height="28.5"/>
+                                                            <rect key="frame" x="13" y="13.5" width="224" height="43.5"/>
                                                             <color key="backgroundColor" red="0.062274225056171417" green="0.25529485940933228" blue="0.23560461401939392" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="width" relation="lessThanOrEqual" constant="300" id="80J-3s-9ON"/>
@@ -431,7 +430,7 @@ Clique AQUI para mais informações.</string>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fJv-dG-elI">
-                                                            <rect key="frame" x="13" y="47.5" width="224" height="1"/>
+                                                            <rect key="frame" x="13" y="62.5" width="224" height="1"/>
                                                             <color key="backgroundColor" red="0.062274225056171417" green="0.25529485940933228" blue="0.23560461401939392" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="1" id="bjs-e6-XcJ"/>
@@ -506,11 +505,11 @@ Clique AQUI para mais informações.</string>
                                 <rect key="frame" x="0.0" y="20" width="375" height="647"/>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AOq-xG-fUf">
-                                <rect key="frame" x="7.5" y="120" width="360" height="290"/>
+                                <rect key="frame" x="37.5" y="120" width="300" height="290"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="290" id="aLx-DQ-7bV"/>
-                                    <constraint firstAttribute="width" constant="360" id="r68-Tv-KyO"/>
+                                    <constraint firstAttribute="width" constant="300" id="r68-Tv-KyO"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="x8P-SE-a7N">
@@ -529,7 +528,7 @@ Clique AQUI para mais informações.</string>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tMR-YC-em8">
                                                 <rect key="frame" x="0.0" y="0.0" width="70" height="70"/>
-                                                <state key="normal" title="Button" image="icons8-play-filled-501"/>
+                                                <state key="normal" image="icons8-play-filled-501"/>
                                                 <connections>
                                                     <action selector="playVideoBtn:" destination="GQ6-0k-IU9" eventType="touchUpInside" id="WYf-Mg-DoC"/>
                                                 </connections>
@@ -575,6 +574,7 @@ Clique AQUI para mais informações.</string>
                         <outlet property="btnContainer" destination="9ma-0L-OOx" id="CEb-dn-uNx"/>
                         <outlet property="containerUiVIew" destination="AOq-xG-fUf" id="amq-Xm-f0X"/>
                         <outlet property="imageBG" destination="2P6-BA-eDO" id="HRg-wV-mOG"/>
+                        <outlet property="playBtn" destination="tMR-YC-em8" id="LgV-Wr-0dL"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KdB-CG-tWj" userLabel="First Responder" sceneMemberID="firstResponder"/>
