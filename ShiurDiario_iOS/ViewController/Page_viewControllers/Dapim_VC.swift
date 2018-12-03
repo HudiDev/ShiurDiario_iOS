@@ -79,6 +79,7 @@ extension Dapim_VC: UICollectionViewDelegate, UICollectionViewDataSource {
             case .normal(let daf):
                 vc.prefix = daf.prefixVM
                 vc.sqldate = daf.sqlDateVM
+                vc.dafName = daf.dafName
                 show(vc, sender: self)
                 break
             default:

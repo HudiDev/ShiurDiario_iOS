@@ -483,7 +483,9 @@ Clique AQUI para mais informações.</string>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="B0F-9s-s3o"/>
                     </view>
-                    <navigationItem key="navigationItem" title="DAF HAYOMI" id="5Ix-Hd-LpE"/>
+                    <navigationItem key="navigationItem" title="DAF HAYOMI" id="5Ix-Hd-LpE">
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="t0X-eA-2K5"/>
+                    </navigationItem>
                     <connections>
                         <outlet property="progressIndicator" destination="y0n-gx-JQy" id="c35-Ep-TeW"/>
                         <outlet property="tabsView" destination="gld-zE-C9M" id="ena-2g-rAE"/>
@@ -515,10 +517,10 @@ Clique AQUI para mais informações.</string>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="x8P-SE-a7N">
                                 <rect key="frame" x="67" y="150" width="240" height="250"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="DAF VIDEO" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7f3-iq-ZQa">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="DAF VIDEO" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7f3-iq-ZQa">
                                         <rect key="frame" x="0.0" y="0.0" width="240" height="70"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="70" id="Gu5-t7-Zdq"/>
+                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="70" id="Gu5-t7-Zdq"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" weight="black" pointSize="37"/>
                                         <nil key="highlightedColor"/>
@@ -575,6 +577,7 @@ Clique AQUI para mais informações.</string>
                         <outlet property="containerUiVIew" destination="AOq-xG-fUf" id="amq-Xm-f0X"/>
                         <outlet property="imageBG" destination="2P6-BA-eDO" id="HRg-wV-mOG"/>
                         <outlet property="playBtn" destination="tMR-YC-em8" id="LgV-Wr-0dL"/>
+                        <outlet property="videoTitle" destination="7f3-iq-ZQa" id="wxt-SS-X8u"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KdB-CG-tWj" userLabel="First Responder" sceneMemberID="firstResponder"/>

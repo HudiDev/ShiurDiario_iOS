@@ -13,6 +13,8 @@ struct MasechtaResponse: Codable {
 }
 
 struct d: Codable{
+    let masechet: String
+    let daf: String
     let prefix: String
     let dedication: String
     let masechtot: [MasechtaModel]

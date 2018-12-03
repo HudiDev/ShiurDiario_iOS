@@ -14,6 +14,7 @@ class PageVC: UIPageViewController {
     var currentIndex: Int = 0
     var prefix: String?
     var sqldate: String?
+    var dafName: String?
 
     
     override func viewDidLoad() {
@@ -28,11 +29,12 @@ class PageVC: UIPageViewController {
                 self.setViewControllers([firstVC], direction: .forward, animated: true, completion: nil)
             }
         } else {
-            retrieveCurrentPrefix { (prefix) in
+            retrieveCurrentPrefix { (result) in
                 
                 DispatchQueue.main.async {
                     
-                    self.prefix = prefix
+                    self.prefix = result.prefix
+                    self.dafName = result.masechet + " " + result.daf
                     self.sqldate = Utils.getCurrentDate()
                     if let firstVC = self.orderedViewControllers.first {
                         self.setViewControllers([firstVC], direction: .forward, animated: true, completion: nil)
@@ -57,6 +59,8 @@ class PageVC: UIPageViewController {
         case is Video_VC:
             let castedVC = vc as! Video_VC
             castedVC.prefix = self.prefix
+            castedVC.dafName = self.dafName
+            
             return castedVC
         case is Text_VC:
             let castedVC = vc as! Text_VC
@@ -77,7 +81,7 @@ class PageVC: UIPageViewController {
     
     
     
-    func retrieveCurrentPrefix(completion: @escaping (_ prefixResult: String) -> Void) {
+    func retrieveCurrentPrefix(completion: @escaping (_ prefixResult: d) -> Void) {
         
         guard let url = URL(string: "http://ws.shiurdiario.com/dafyomi.php?date=\(getCurrentDate())") else { return }
         URLSession.shared.dataTask(with: url) { (data, response, err) in
@@ -86,7 +90,7 @@ class PageVC: UIPageViewController {
             }
             do {
                 let currentPrefix = try JSONDecoder().decode(MasechtaResponse.self, from: data!)
-                completion(currentPrefix.d.prefix)
+                completion(currentPrefix.d)
             } catch let jsonErr {
                 print("JSON ERR IS: \(jsonErr)")
             }

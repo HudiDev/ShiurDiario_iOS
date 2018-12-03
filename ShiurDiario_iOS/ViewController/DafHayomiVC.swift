@@ -13,6 +13,7 @@ class DafHayomiVC: UIViewController {
     @IBOutlet weak var tabsView: TabView!
     var prefix: String?
     var sqldate: String?
+    var dafName: String?
     
     @IBOutlet weak var progressIndicator: UIActivityIndicatorView!
     
@@ -27,8 +28,9 @@ class DafHayomiVC: UIViewController {
         if segue.identifier == "containerVCsegue" {
             if let vc = segue.destination as? PageVC {
                 vc.tabsView = self.tabsView
-                vc.prefix = prefix
-                vc.sqldate = sqldate
+                vc.prefix = self.prefix
+                vc.sqldate = self.sqldate
+                vc.dafName = self.dafName
             }
         }
     }

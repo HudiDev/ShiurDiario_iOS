@@ -12,8 +12,9 @@ import AVKit
 class Video_VC: UIViewController {
     
     var prefix: String?
+    var dafName: String!
 
-    
+    @IBOutlet weak var videoTitle: UILabel!
     @IBOutlet weak var playBtn: UIButton!
     @IBOutlet weak var containerUiVIew: UIView!
     @IBOutlet weak var imageBG: UIImageView!
@@ -24,6 +25,7 @@ class Video_VC: UIViewController {
         super.viewDidLoad()
         
         UIDesigns()
+        videoTitle.text = dafName
     }
 
     
