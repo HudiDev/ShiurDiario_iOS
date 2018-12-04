@@ -595,25 +595,43 @@ Clique AQUI para mais informações.</string>
                             <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="TJn-eE-3D1">
                                 <rect key="frame" x="177.5" y="323.5" width="20" height="20"/>
                                 <constraints>
+                                    <constraint firstAttribute="width" constant="20" id="GEA-NU-c1F"/>
+                                    <constraint firstAttribute="height" constant="20" id="WtV-hA-fRQ"/>
                                     <constraint firstAttribute="width" constant="20" id="qmc-b4-oFt"/>
                                     <constraint firstAttribute="height" constant="20" id="tlg-Ae-4pn"/>
                                 </constraints>
                             </activityIndicatorView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rYl-W3-PcJ">
+                                <rect key="frame" x="62.5" y="302" width="250" height="62"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="62" id="0OU-mM-hRV"/>
+                                    <constraint firstAttribute="width" constant="250" id="nIi-Va-gdx"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="TJn-eE-3D1" firstAttribute="centerY" secondItem="Y2F-DD-GqH" secondAttribute="centerY" id="1gi-oU-DbI"/>
+                            <constraint firstItem="rYl-W3-PcJ" firstAttribute="centerY" secondItem="Y2F-DD-GqH" secondAttribute="centerY" id="CyI-vA-CRF"/>
+                            <constraint firstItem="rYl-W3-PcJ" firstAttribute="centerX" secondItem="Y2F-DD-GqH" secondAttribute="centerX" id="EFD-5f-t4E"/>
                             <constraint firstItem="TJn-eE-3D1" firstAttribute="centerY" secondItem="Y2F-DD-GqH" secondAttribute="centerY" id="Hrh-LQ-fdr"/>
+                            <constraint firstItem="TJn-eE-3D1" firstAttribute="centerX" secondItem="Y2F-DD-GqH" secondAttribute="centerX" id="QOl-kZ-3my"/>
                             <constraint firstItem="TJn-eE-3D1" firstAttribute="centerX" secondItem="Y2F-DD-GqH" secondAttribute="centerX" id="zsX-gM-wzl"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="W1V-lT-q4a"/>
                     </view>
                     <connections>
+                        <outlet property="errorLabel" destination="rYl-W3-PcJ" id="Cy4-R3-n7y"/>
                         <outlet property="indicatorBar" destination="TJn-eE-3D1" id="XIl-6i-uTj"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9D0-23-BEj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="786" y="1728"/>
+            <point key="canvasLocation" x="784.79999999999995" y="1727.5862068965519"/>
         </scene>
         <!--DapimVC-->
         <scene sceneID="tml-VL-6ct">

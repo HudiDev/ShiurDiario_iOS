@@ -14,6 +14,7 @@ class Text_VC: UIViewController {
     let pdfView = PDFView()
     var prefix: String?
     
+    @IBOutlet weak var errorLabel: UILabel!
     @IBOutlet weak var indicatorBar: UIActivityIndicatorView!
     
     override func viewDidLoad() {
@@ -35,6 +36,13 @@ class Text_VC: UIViewController {
                     print("PDF DATA IS: \(document)")
                     self.pdfView.document = document
                     self.pdfView.autoScales = true
+                }
+            } else {
+                DispatchQueue.main.async {
+                    self.indicatorBar.stopAnimating()
+                    self.indicatorBar.isHidden = true
+                    self.errorLabel.addBorder(width: 0.5, color: UIColor.black.cgColor)
+                    self.errorLabel.text = "Page is unavailable at this moment"
                 }
             }
         }
