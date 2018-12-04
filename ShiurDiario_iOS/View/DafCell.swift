@@ -50,6 +50,7 @@ class DafCell: UICollectionViewCell {
             
         case .error(let err):
             dafName_label.text = err.localizedDescription
+            print("error is: \(err.localizedDescription)")
         }
     }
     

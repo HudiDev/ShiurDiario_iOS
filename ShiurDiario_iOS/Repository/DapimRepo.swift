@@ -13,7 +13,7 @@ class DapimRepo {
 
     
     typealias getDataResult = Result<[DafModel]>
-    typealias getDataCompletion = ((_ result: getDataResult) -> Void)
+    typealias getDataCompletion = ((_ result: getDataResult, _ maxNumPages: Int?) -> Void)
 
    
     func retrieveData<T: Codable>(modelClass: T.Type, urlString: String, completion: @escaping getDataCompletion) {
@@ -22,7 +22,7 @@ class DapimRepo {
         
         URLSession.shared.dataTask(with: url) { (data, response, err) in
             guard err == nil else {
-                completion(.failure(err!))
+                completion(.failure(err!), nil)
                 return
             }
             
@@ -35,18 +35,18 @@ class DapimRepo {
                 switch dapim {
                 case is ShiurDafResponse:
                     let casted_dapim = dapim as! ShiurDafResponse
-                    completion(.success(payload: casted_dapim.dapim))
+                    completion(.success(payload: casted_dapim.dapim), casted_dapim.pages.count)
                     break
                 case is PreviousDafResponse:
                     let casted_dapim = dapim as! PreviousDafResponse
-                    completion(.success(payload: casted_dapim.past_pages))
+                    completion(.success(payload: casted_dapim.past_pages), nil)
                     break
                 default:
                     break
                 }
 
             } catch let jsonErr{
-                completion(.failure(jsonErr))
+                completion(.failure(jsonErr), nil)
             }
             
         }.resume()

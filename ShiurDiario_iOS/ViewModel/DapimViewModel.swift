@@ -12,30 +12,75 @@ import Foundation
 
 class DapimViewModel {
     
+    enum DafType {
+        case shiur(type: [ItemType<DafViewModel>])
+        case previousDaf(type: ([ItemType<DafViewModel>], Int))
+    }
+    
     let dapimRepository = DapimRepo()
     
-    let dapimData = Bindable([ItemType<DafViewModel>]())
+    var dapimTuple: ([ItemType<DafViewModel>], Int?) = (data: [ItemType<DafViewModel>](), maxNum: 0)
+    
+    let dapim: Bindable<([ItemType<DafViewModel>], Int?)>
+    
+    init() {
+        dapimTuple = ([ItemType<DafViewModel>](), 0)
+        dapim = Bindable(dapimTuple)
+    }
     
     func getData<T: Codable>(modelClass: T.Type, urlString: String) {
+        
         dapimRepository.retrieveData(modelClass: modelClass, urlString: urlString)
-        { (result) in
+        { result, maxNumPages  in
+            
             switch result {
                 
             case .success(let dapimResult):
                 
                 guard dapimResult.count > 0 else {
-                    self.dapimData.value = [.empty]
+                    self.dapim.value = ([.empty], 0)
                     return
                 }
                 
-                self.dapimData.value = dapimResult.compactMap {
+                let dataArr: [ItemType<DafViewModel>] = dapimResult.compactMap {
+                    .normal(viewModelData: $0 as DafViewModel)
+                }
+                self.dapim.value = (dataArr, maxNumPages)
+                
+            case .failure(let error):
+                self.dapim.value = ([.error(message: error)], 0)
+            }
+        }
+    }
+    
+    func getNextDapim<T: Codable>(modelClass: T.Type, urlString: String, page: Int) {
+        
+        guard page > 0 else { return }
+        
+        let urlStr = urlString + "&p=\(page)"
+        
+        dapimRepository.retrieveData(modelClass: modelClass, urlString: urlStr)
+        { (result, maxNumPages) in
+            
+            switch result {
+                
+            case .success(let dapimResult):
+                
+                guard dapimResult.count > 0 else {
+                    self.dapim.value.0.append(contentsOf: [.empty])
+                    return
+                }
+                
+                let dataArr: [ItemType<DafViewModel>] = dapimResult.compactMap {
                     .normal(viewModelData: $0 as DafViewModel)
                 }
                 
+                self.dapim.value.0.append(contentsOf: dataArr)
+                
             case .failure(let error):
-                self.dapimData.value = [.error(message: error)]
+                self.dapim.value.0.append(contentsOf: [.error(message: error)])
             }
-            
         }
     }
+    
 }

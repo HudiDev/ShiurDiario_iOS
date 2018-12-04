@@ -15,6 +15,9 @@ class Dapim_VC: UIViewController {
     var sqldate: String?
     var urlString: String?
     var isLoadedFromMasechtotVC: Bool!
+    var pageNum = 1
+    var maxNumPages = 0
+    
     let viewModel: DapimViewModel = DapimViewModel()
     
     override func viewDidLoad() {
@@ -24,6 +27,8 @@ class Dapim_VC: UIViewController {
         collectionView.dataSource = self
         
       
+        // TODO: create *2* urlStrings
+        
         if urlString == nil {
             urlString = "http://ws.shiurdiario.com/dafyomi.php?date=\(sqldate!)"
         }
@@ -38,16 +43,15 @@ class Dapim_VC: UIViewController {
     }
     
     func bindViewModel() {
-        viewModel.dapimData.bindAndFire { (data) in
+        viewModel.dapim.bindAndFire { (data) in
             DispatchQueue.main.async {
-                //print("DATA is: \(data)")
                 self.collectionView.reloadData()
+                if let maxNumPages = self.viewModel.dapim.value.1 {
+                    self.maxNumPages = maxNumPages
+                }
             }
         }
     }
-    
-    
-    
     
     
 }
@@ -55,27 +59,33 @@ class Dapim_VC: UIViewController {
 
 
 
-extension Dapim_VC: UICollectionViewDelegate, UICollectionViewDataSource {
+extension Dapim_VC: UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return viewModel.dapimData.value.count
+        return viewModel.dapim.value.0.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "daf_cell", for: indexPath) as! DafCell
         
-        cell.viewModel = viewModel.dapimData.value[indexPath.item]
+        cell.viewModel = viewModel.dapim.value.0[indexPath.item]
 
         return cell
     }
+    
+}
+
+
+
+extension Dapim_VC: UICollectionViewDelegate {
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         print("DAF ITEM _ SELECTED :)")
         
         if let vc = storyboard?.instantiateViewController(withIdentifier: "dafHayomi") as? DafHayomiVC {
             
-            switch viewModel.dapimData.value[indexPath.item] {
+            switch viewModel.dapim.value.0[indexPath.item] {
             case .normal(let daf):
                 vc.prefix = daf.prefixVM
                 vc.sqldate = daf.sqlDateVM
@@ -85,12 +95,16 @@ extension Dapim_VC: UICollectionViewDelegate, UICollectionViewDataSource {
             default:
                 break
             }
-            
         }
-        
-        
-       
     }
     
-    
+    func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
+        if indexPath.item == viewModel.dapim.value.0.count - 3{
+            pageNum += 1
+            
+            guard pageNum <= maxNumPages else { return }
+            
+            viewModel.getNextDapim(modelClass: ShiurDafResponse.self, urlString: urlString!, page: pageNum)
+        }
+    }
 }

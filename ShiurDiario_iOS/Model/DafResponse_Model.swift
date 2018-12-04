@@ -14,5 +14,11 @@ struct PreviousDafResponse: Codable {
 
 
 struct ShiurDafResponse: Codable {
+    let pages: [Page]
     let dapim: [DafModel]
+}
+
+struct Page: Codable{
+    let page_num: Int
+    let selected: Bool
 }
