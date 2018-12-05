@@ -34,6 +34,7 @@ class SideMenuVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell")
+        cell?.alpha = 0
         cell?.textLabel?.text = sideMenuTitles[indexPath.row]
         return cell!
     }
