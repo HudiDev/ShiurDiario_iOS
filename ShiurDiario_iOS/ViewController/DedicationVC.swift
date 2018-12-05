@@ -14,6 +14,7 @@ class DedicationVC: UIViewController {
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var container: UIView!
+    @IBOutlet weak var loaderIndicator: UIActivityIndicatorView!
     
     let viewModel: DedicationViewModel = DedicationViewModel()
     
@@ -28,6 +29,9 @@ class DedicationVC: UIViewController {
     func bindViewModel() {
         viewModel.dedicationItem.bindAndFire {  [weak self]  (dataType) in
             DispatchQueue.main.async {
+                
+                self?.loaderIndicator.stopAnimating()
+                
                 switch dataType {
                 case .normal(let dedicationStr):
                     self?.titleLabel.text = "A ELEVAÇÃO DA ALMA DE:"

@@ -232,11 +232,20 @@ Clique AQUI para mais informações.</string>
                                         <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="2o6-S9-aiv">
+                                        <rect key="frame" x="115" y="203" width="20" height="20"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="20" id="cUZ-Kl-Xrb"/>
+                                            <constraint firstAttribute="width" constant="20" id="ubN-yL-WWc"/>
+                                        </constraints>
+                                    </activityIndicatorView>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
+                                    <constraint firstItem="2o6-S9-aiv" firstAttribute="centerX" secondItem="qv5-9P-pTa" secondAttribute="centerX" id="1gh-iu-zXF"/>
                                     <constraint firstItem="8KV-yM-1sa" firstAttribute="centerX" secondItem="qv5-9P-pTa" secondAttribute="centerX" id="3yp-eA-907"/>
                                     <constraint firstAttribute="width" constant="250" id="ApQ-WQ-VjH"/>
+                                    <constraint firstItem="2o6-S9-aiv" firstAttribute="top" secondItem="Rmq-GW-LLQ" secondAttribute="bottom" constant="40" id="M61-AN-QNh"/>
                                     <constraint firstAttribute="height" constant="286" id="OOe-9y-urt"/>
                                     <constraint firstItem="1Sm-uT-5Xm" firstAttribute="centerX" secondItem="qv5-9P-pTa" secondAttribute="centerX" id="dcz-xR-2dG"/>
                                     <constraint firstItem="1Sm-uT-5Xm" firstAttribute="top" secondItem="Rmq-GW-LLQ" secondAttribute="bottom" id="fGz-qJ-tjD"/>
@@ -255,6 +264,7 @@ Clique AQUI para mais informações.</string>
                     </view>
                     <connections>
                         <outlet property="container" destination="qv5-9P-pTa" id="bv8-1V-mxj"/>
+                        <outlet property="loaderIndicator" destination="2o6-S9-aiv" id="gj6-ML-N79"/>
                         <outlet property="mainLabel" destination="8KV-yM-1sa" id="TZl-nR-fqP"/>
                         <outlet property="nameLabel" destination="1Sm-uT-5Xm" id="wcq-RP-LWd"/>
                         <outlet property="titleLabel" destination="Rmq-GW-LLQ" id="pkZ-SI-PWL"/>
