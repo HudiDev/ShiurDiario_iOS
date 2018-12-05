@@ -14,6 +14,8 @@
 		11065D0821A82E88002621AE /* Dapim_VC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11065D0721A82E88002621AE /* Dapim_VC.swift */; };
 		11065D0A21A82E9A002621AE /* Masechtot_VC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11065D0921A82E9A002621AE /* Masechtot_VC.swift */; };
 		110F930F21A41CF000A50EDE /* DafHayomiVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 110F930E21A41CF000A50EDE /* DafHayomiVC.swift */; };
+		1122BF6921B6975B0053E27E /* MessageCVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1122BF6721B6975B0053E27E /* MessageCVCell.swift */; };
+		1122BF6A21B6975B0053E27E /* MessageCVCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1122BF6821B6975B0053E27E /* MessageCVCell.xib */; };
 		114C9CC021A1661C00D5713E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 114C9CBF21A1661C00D5713E /* AppDelegate.swift */; };
 		114C9CC221A1661C00D5713E /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 114C9CC121A1661C00D5713E /* HomeVC.swift */; };
 		114C9CC521A1661C00D5713E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 114C9CC321A1661C00D5713E /* Main.storyboard */; };
@@ -51,6 +53,8 @@
 		11065D0721A82E88002621AE /* Dapim_VC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dapim_VC.swift; sourceTree = "<group>"; };
 		11065D0921A82E9A002621AE /* Masechtot_VC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Masechtot_VC.swift; sourceTree = "<group>"; };
 		110F930E21A41CF000A50EDE /* DafHayomiVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DafHayomiVC.swift; sourceTree = "<group>"; };
+		1122BF6721B6975B0053E27E /* MessageCVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageCVCell.swift; sourceTree = "<group>"; };
+		1122BF6821B6975B0053E27E /* MessageCVCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MessageCVCell.xib; sourceTree = "<group>"; };
 		114C9CBC21A1661C00D5713E /* ShiurDiario_iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ShiurDiario_iOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		114C9CBF21A1661C00D5713E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		114C9CC121A1661C00D5713E /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
@@ -102,6 +106,15 @@
 				11065D0921A82E9A002621AE /* Masechtot_VC.swift */,
 			);
 			path = Page_viewControllers;
+			sourceTree = "<group>";
+		};
+		1122BF6B21B698F00053E27E /* messageCell */ = {
+			isa = PBXGroup;
+			children = (
+				1122BF6721B6975B0053E27E /* MessageCVCell.swift */,
+				1122BF6821B6975B0053E27E /* MessageCVCell.xib */,
+			);
+			path = messageCell;
 			sourceTree = "<group>";
 		};
 		114C9CB321A1661C00D5713E = {
@@ -203,6 +216,7 @@
 				11A4724A21AABE27001F54F6 /* DafCell.swift */,
 				11A59EB721A474F7003FD0B0 /* TitleCell.swift */,
 				11065D0021A6F95C002621AE /* TabView.swift */,
+				1122BF6B21B698F00053E27E /* messageCell */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -265,6 +279,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1122BF6A21B6975B0053E27E /* MessageCVCell.xib in Resources */,
 				114C9CCA21A1661E00D5713E /* LaunchScreen.storyboard in Resources */,
 				114C9CC721A1661E00D5713E /* Assets.xcassets in Resources */,
 				114C9CC521A1661C00D5713E /* Main.storyboard in Resources */,
@@ -290,6 +305,7 @@
 				11A4724D21AAE6D2001F54F6 /* MasechtaCell.swift in Sources */,
 				11A4724B21AABE27001F54F6 /* DafCell.swift in Sources */,
 				11F874F121A36BCF00CA11B4 /* SideMenuVC.swift in Sources */,
+				1122BF6921B6975B0053E27E /* MessageCVCell.swift in Sources */,
 				11A4724F21AAE79C001F54F6 /* MasechtaResponse_Model.swift in Sources */,
 				11065D0621A82E74002621AE /* Video_VC.swift in Sources */,
 				11DA70A121AFE2AC00294E14 /* MasechtotRepo.swift in Sources */,

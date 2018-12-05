@@ -26,11 +26,13 @@ class Dapim_VC: UIViewController {
         collectionView.delegate = self
         collectionView.dataSource = self
         
-      
-        // TODO: create *2* urlStrings
+        collectionView.register(UINib(nibName: "MessageCVCell", bundle: nil), forCellWithReuseIdentifier: "msgCell")
+        
+        
+        // TODO: - create *2* urlStrings
         
         if urlString == nil {
-            urlString = "http://ws.shiurdiario.com/dafyomi.php?date=\(sqldate!)"
+            urlString = "http://ws.shiurdiario.com/dafyomi.php?date=\(Utils.getCurrentDate())"
         }
         
         bindViewModel()
@@ -67,11 +69,29 @@ extension Dapim_VC: UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "daf_cell", for: indexPath) as! DafCell
         
-        cell.viewModel = viewModel.dapim.value.0[indexPath.item]
-
-        return cell
+        switch viewModel.dapim.value.0[indexPath.item] {
+        case .normal(let dafViewModel):
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "daf_cell", for: indexPath) as! DafCell
+            cell.viewModel = dafViewModel
+            return cell
+        case .empty:
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "msgCell", for: indexPath) as! MessageCVCell
+            cell.msgLabel.text = "No data avialable"
+            return cell
+        case .error(let err):
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "msgCell", for: indexPath) as! MessageCVCell
+            cell.msgLabel.text = err.localizedDescription
+            return cell
+        }
+        
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
+        
+        let footer = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: "loader", for: indexPath)
+        
+        return footer
     }
     
 }
@@ -80,8 +100,8 @@ extension Dapim_VC: UICollectionViewDataSource {
 
 extension Dapim_VC: UICollectionViewDelegate {
     
+    
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        print("DAF ITEM _ SELECTED :)")
         
         if let vc = storyboard?.instantiateViewController(withIdentifier: "dafHayomi") as? DafHayomiVC {
             
@@ -98,13 +118,18 @@ extension Dapim_VC: UICollectionViewDelegate {
         }
     }
     
+    
     func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
         if indexPath.item == viewModel.dapim.value.0.count - 3{
+            
             pageNum += 1
             
             guard pageNum <= maxNumPages else { return }
             
-            viewModel.getNextDapim(modelClass: ShiurDafResponse.self, urlString: urlString!, page: pageNum)
+            viewModel.getNextDapim(urlString: urlString!, page: pageNum)
         }
     }
+            
 }
+
+

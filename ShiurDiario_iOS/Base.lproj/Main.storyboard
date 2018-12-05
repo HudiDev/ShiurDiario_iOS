@@ -115,7 +115,7 @@ Clique AQUI para mais informações.</string>
                                                     <constraint firstAttribute="width" constant="340" id="sfe-zD-r5g"/>
                                                 </constraints>
                                             </view>
-                                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Hf0-vm-04n">
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Hf0-vm-04n">
                                                 <rect key="frame" x="107" y="628" width="160" height="4"/>
                                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
@@ -129,6 +129,7 @@ Clique AQUI para mais informações.</string>
                                             <constraint firstItem="GiF-aU-kLB" firstAttribute="top" secondItem="hdf-AW-xVU" secondAttribute="bottom" constant="33" id="2QK-Rw-8Qr"/>
                                             <constraint firstItem="xZa-tX-fvD" firstAttribute="top" secondItem="piy-GK-wm0" secondAttribute="bottom" constant="62" id="61h-Ze-inc"/>
                                             <constraint firstItem="xZa-tX-fvD" firstAttribute="centerX" secondItem="ATe-zG-B2O" secondAttribute="centerX" id="6wu-MR-O7X"/>
+                                            <constraint firstItem="Hf0-vm-04n" firstAttribute="centerX" secondItem="ATe-zG-B2O" secondAttribute="centerX" id="9OM-Af-aMK"/>
                                             <constraint firstItem="piy-GK-wm0" firstAttribute="centerX" secondItem="ATe-zG-B2O" secondAttribute="centerX" id="H0J-2s-gXl"/>
                                             <constraint firstItem="GiF-aU-kLB" firstAttribute="centerX" secondItem="ATe-zG-B2O" secondAttribute="centerX" id="Irj-Mo-QFf"/>
                                             <constraint firstAttribute="bottom" secondItem="GiF-aU-kLB" secondAttribute="bottom" constant="100" id="JNo-va-Tpu"/>
@@ -647,7 +648,7 @@ Clique AQUI para mais informações.</string>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="ryc-hw-znd">
                                     <size key="itemSize" width="340" height="100"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
-                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="50" height="50"/>
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
@@ -751,6 +752,16 @@ Clique AQUI para mais informações.</string>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
+                                <collectionReusableView key="sectionFooterView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" reuseIdentifier="loader" id="KXZ-OE-CdH">
+                                    <rect key="frame" x="0.0" y="100" width="375" height="50"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="0kD-3f-y9I">
+                                            <rect key="frame" x="177" y="15" width="20" height="20"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        </activityIndicatorView>
+                                    </subviews>
+                                </collectionReusableView>
                             </collectionView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -898,7 +909,7 @@ Clique AQUI para mais informações.</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SHr-Sb-CDc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-670" y="177"/>
+            <point key="canvasLocation" x="-664" y="177"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="NZ7-AH-Nts">

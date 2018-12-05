@@ -9,13 +9,8 @@
 import Foundation
 
 
-
 class DapimViewModel {
     
-    enum DafType {
-        case shiur(type: [ItemType<DafViewModel>])
-        case previousDaf(type: ([ItemType<DafViewModel>], Int))
-    }
     
     let dapimRepository = DapimRepo()
     
@@ -45,6 +40,7 @@ class DapimViewModel {
                 let dataArr: [ItemType<DafViewModel>] = dapimResult.compactMap {
                     .normal(viewModelData: $0 as DafViewModel)
                 }
+                
                 self.dapim.value = (dataArr, maxNumPages)
                 
             case .failure(let error):
@@ -53,13 +49,13 @@ class DapimViewModel {
         }
     }
     
-    func getNextDapim<T: Codable>(modelClass: T.Type, urlString: String, page: Int) {
-        
+    func getNextDapim(urlString: String, page: Int) {
+                
         guard page > 0 else { return }
         
-        let urlStr = urlString + "&p=\(page)"
+        let pageUrl = urlString + "&p=\(page)"
         
-        dapimRepository.retrieveData(modelClass: modelClass, urlString: urlStr)
+        dapimRepository.retrieveData(modelClass: ShiurDafResponse.self, urlString: pageUrl)
         { (result, maxNumPages) in
             
             switch result {
@@ -76,7 +72,7 @@ class DapimViewModel {
                 }
                 
                 self.dapim.value.0.append(contentsOf: dataArr)
-                
+                                
             case .failure(let error):
                 self.dapim.value.0.append(contentsOf: [.error(message: error)])
             }

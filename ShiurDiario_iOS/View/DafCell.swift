@@ -22,7 +22,7 @@ class DafCell: UICollectionViewCell {
     
 
     
-    var viewModel: ItemType<DafViewModel>? {
+    var viewModel: DafViewModel? {
         didSet{
             if let viewModel = viewModel {
                 bindViewModel(vm: viewModel)
@@ -36,22 +36,14 @@ class DafCell: UICollectionViewCell {
         self.contentView.layer.borderColor = UIColor.black.cgColor
     }
     
-    func bindViewModel(vm: ItemType<DafViewModel>) {
-        switch vm {
-        case .normal(let dafViewModel):
-            
-            dafName_label.text = dafViewModel.dafName
-            duration_label.text = dafViewModel.durationText
-            hebMonthDay_label.text = dafViewModel.monthDay
-            hebYear_label.text = dafViewModel.year
-            date_label.text = dafViewModel.dateVM
-        case .empty:
-            dafName_label.text = "No data avialable"
-            
-        case .error(let err):
-            dafName_label.text = err.localizedDescription
-            print("error is: \(err.localizedDescription)")
-        }
+    func bindViewModel(vm: DafViewModel) {
+        
+        dafName_label.text = vm.dafName
+        duration_label.text = vm.durationText
+        hebMonthDay_label.text = vm.monthDay
+        hebYear_label.text = vm.year
+        date_label.text = vm.dateVM
+        
     }
     
     
