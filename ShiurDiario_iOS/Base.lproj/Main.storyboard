@@ -484,9 +484,7 @@ Clique AQUI para mais informações.</string>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="B0F-9s-s3o"/>
                     </view>
-                    <navigationItem key="navigationItem" title="DAF HAYOMI" id="5Ix-Hd-LpE">
-                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="t0X-eA-2K5"/>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" title="DAF HAYOMI" id="5Ix-Hd-LpE"/>
                     <connections>
                         <outlet property="progressIndicator" destination="y0n-gx-JQy" id="c35-Ep-TeW"/>
                         <outlet property="tabsView" destination="gld-zE-C9M" id="ena-2g-rAE"/>
