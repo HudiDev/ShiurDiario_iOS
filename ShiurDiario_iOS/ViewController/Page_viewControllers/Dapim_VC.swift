@@ -16,7 +16,9 @@ class Dapim_VC: UIViewController {
     var urlString: String?
     var isLoadedFromMasechtotVC: Bool!
     var pageNum = 1
-    var maxNumPages = 0
+    var maxNumPages = 1
+    var hideHeader = false
+    var lastIndex: IndexPath?
     
     let viewModel: DapimViewModel = DapimViewModel()
     
@@ -89,10 +91,13 @@ extension Dapim_VC: UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
         
+        
         let footer = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: "loader", for: indexPath)
         
         return footer
     }
+    
+
     
 }
 
@@ -124,12 +129,28 @@ extension Dapim_VC: UICollectionViewDelegate {
             
             pageNum += 1
             
-            guard pageNum <= maxNumPages else { return }
+            guard pageNum <= maxNumPages else {
+                return
+            }
             
             viewModel.getNextDapim(urlString: urlString!, page: pageNum)
+            
+            
+            
         }
     }
             
+}
+
+extension Dapim_VC: UICollectionViewDelegateFlowLayout {
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForFooterInSection section: Int) -> CGSize {
+        
+        guard pageNum < maxNumPages else {
+            return CGSize(width: 0, height: 0)
+        }
+        
+        return CGSize(width: 50, height: 50)
+    }
 }
 
 
