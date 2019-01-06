@@ -45,13 +45,10 @@ class Video_VC: UIViewController {
         }
     }
     
-    func UIDesigns() {
+    private func UIDesigns() {
         imageBG.alpha = CGFloat(0.8)
-        
         containerUiVIew.addBorder(width: 0.5, color: UIColor.white.cgColor)
         containerUiVIew.alpha = CGFloat(0.5)
-        
-        btnContainer.addBorder(width: 1.5, color: UIColor.black.cgColor)
-        btnContainer.layer.cornerRadius = 15
+        containerUiVIew.layer.cornerRadius = 15
     }
 }
