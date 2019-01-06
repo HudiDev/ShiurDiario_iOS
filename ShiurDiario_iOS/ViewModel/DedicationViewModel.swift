@@ -23,13 +23,25 @@ class DedicationViewModel {
                     self.dedicationItem.value = .empty
                     return
                 }
-                let name = dedicationStr.components(separatedBy: ":")
-                self.dedicationItem.value = .normal(viewModelData: name[1])
+                let nameArr = dedicationStr.components(separatedBy: ":")
+                let name = self.generatesStrFromArray(array: nameArr)
+                
+                self.dedicationItem.value = .normal(viewModelData: name)
                 break
             case .failure(let error):
                 self.dedicationItem.value = .error(message: error)
                 break
             }
         }
+    }
+    
+    private func generatesStrFromArray(array: [String]) -> String {
+        var str = ""
+        for i in 1 ..< array.count {
+            if i > 0 {
+                str += array[i]
+            }
+        }
+        return str
     }
 }

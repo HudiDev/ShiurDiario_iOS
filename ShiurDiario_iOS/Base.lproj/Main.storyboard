@@ -203,7 +203,7 @@ Clique AQUI para mais informações.</string>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qv5-9P-pTa">
-                                <rect key="frame" x="62" y="63" width="250" height="286"/>
+                                <rect key="frame" x="62" y="63" width="250" height="584"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="OS SHIURIM DE HOJE ESTAO DEDICADOS" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8KV-yM-1sa">
                                         <rect key="frame" x="18" y="25" width="215" height="60"/>
@@ -223,13 +223,14 @@ Clique AQUI para mais informações.</string>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Sm-uT-5Xm">
-                                        <rect key="frame" x="125" y="163" width="0.0" height="100"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="13" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Sm-uT-5Xm">
+                                        <rect key="frame" x="125" y="163" width="0.0" height="250"/>
                                         <constraints>
                                             <constraint firstAttribute="width" relation="lessThanOrEqual" constant="187" id="BPQ-XS-XnT"/>
-                                            <constraint firstAttribute="height" constant="100" id="OsE-g4-dJL"/>
+                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="250" id="OsE-g4-dJL"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
+                                        <color key="textColor" red="0.79050999365482233" green="0.39151921652968952" blue="0.16004742357652149" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="2o6-S9-aiv">
@@ -246,7 +247,6 @@ Clique AQUI para mais informações.</string>
                                     <constraint firstItem="8KV-yM-1sa" firstAttribute="centerX" secondItem="qv5-9P-pTa" secondAttribute="centerX" id="3yp-eA-907"/>
                                     <constraint firstAttribute="width" constant="250" id="ApQ-WQ-VjH"/>
                                     <constraint firstItem="2o6-S9-aiv" firstAttribute="top" secondItem="Rmq-GW-LLQ" secondAttribute="bottom" constant="40" id="M61-AN-QNh"/>
-                                    <constraint firstAttribute="height" constant="286" id="OOe-9y-urt"/>
                                     <constraint firstItem="1Sm-uT-5Xm" firstAttribute="centerX" secondItem="qv5-9P-pTa" secondAttribute="centerX" id="dcz-xR-2dG"/>
                                     <constraint firstItem="1Sm-uT-5Xm" firstAttribute="top" secondItem="Rmq-GW-LLQ" secondAttribute="bottom" id="fGz-qJ-tjD"/>
                                     <constraint firstItem="8KV-yM-1sa" firstAttribute="top" secondItem="qv5-9P-pTa" secondAttribute="top" constant="25" id="gC6-v6-02Q"/>
@@ -259,6 +259,7 @@ Clique AQUI para mais informações.</string>
                         <constraints>
                             <constraint firstItem="qv5-9P-pTa" firstAttribute="top" secondItem="zT1-dk-ia6" secondAttribute="top" constant="43" id="ZPW-kN-Gkl"/>
                             <constraint firstItem="qv5-9P-pTa" firstAttribute="centerX" secondItem="L7i-hC-iYI" secondAttribute="centerX" id="Zql-Ds-kKA"/>
+                            <constraint firstItem="zT1-dk-ia6" firstAttribute="bottom" secondItem="qv5-9P-pTa" secondAttribute="bottom" constant="20" id="fET-k1-fJZ"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="zT1-dk-ia6"/>
                     </view>
