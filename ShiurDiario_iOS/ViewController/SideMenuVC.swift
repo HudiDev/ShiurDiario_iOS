@@ -13,7 +13,7 @@ class SideMenuVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     @IBOutlet weak var tableView: UITableView!
     
-    let sideMenuTitles = ["HOME", "DAF HAYOMI", "SHIURIM", "DEDICATORIAS", "CONTATO"]
+    let sideMenuTitles = [("HOME", "home_icon"), ("DAF HAYOMI", "daf_hayomi_icon"), ("SHIURIM", "shiurim_icon"), ("DEDICATORIAS", "dedication_icon"), ("CONTATO", "contact_icon")]
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,10 +33,14 @@ class SideMenuVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell")
-        cell?.alpha = 0
-        cell?.textLabel?.text = sideMenuTitles[indexPath.row]
-        return cell!
+        let cell = tableView.dequeueReusableCell(withIdentifier: "sideMenuCell") as! SideMenuCell
+        cell.alpha = 0
+        cell.tabTitle.text = sideMenuTitles[indexPath.row].0
+    
+        if let icon = UIImage(named: sideMenuTitles[indexPath.row].1) {
+            cell.tabIcon.image = icon
+        }
+        return cell
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
