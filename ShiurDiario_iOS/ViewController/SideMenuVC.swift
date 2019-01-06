@@ -9,9 +9,10 @@
 import UIKit
 import PDFKit
 
-class SideMenuVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class SideMenuVC: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
+    var alert: UIAlertController!
     
     let sideMenuTitles = [("HOME", "home_icon"), ("DAF HAYOMI", "daf_hayomi_icon"), ("SHIURIM", "shiurim_icon"), ("DEDICATORIAS", "dedication_icon"), ("CONTATO", "contact_icon")]
 
@@ -24,6 +25,11 @@ class SideMenuVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
     }
     
+
+}
+
+
+extension SideMenuVC: UITableViewDataSource {
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
@@ -36,13 +42,16 @@ class SideMenuVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(withIdentifier: "sideMenuCell") as! SideMenuCell
         cell.alpha = 0
         cell.tabTitle.text = sideMenuTitles[indexPath.row].0
-    
+        
         if let icon = UIImage(named: sideMenuTitles[indexPath.row].1) {
             cell.tabIcon.image = icon
         }
         return cell
     }
-    
+}
+
+
+extension SideMenuVC: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
         switch indexPath.row {
@@ -60,11 +69,23 @@ class SideMenuVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
             show(vc!, sender: self)
             break
         case 4:
-            let vc = storyboard?.instantiateViewController(withIdentifier: "contact_VC")
-            show(vc!, sender: self)
+            showToast()
+            //let vc = storyboard?.instantiateViewController(withIdentifier: "contact_VC")
+            //show(vc!, sender: self)
             break
         default:
             print("No such ROW")
+        }
+    }
+    
+    private func showToast() {
+        
+        let alert = UIAlertController(title: nil, message: "Will be available in upcoming versions", preferredStyle: .alert)
+        DispatchQueue.main.async {
+            self.present(alert, animated: true)
+        }
+        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 1.0) {
+            alert.dismiss(animated: true)
         }
     }
 }
