@@ -22,6 +22,7 @@
 		114C9CC521A1661C00D5713E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 114C9CC321A1661C00D5713E /* Main.storyboard */; };
 		114C9CC721A1661E00D5713E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 114C9CC621A1661E00D5713E /* Assets.xcassets */; };
 		114C9CCA21A1661E00D5713E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 114C9CC821A1661E00D5713E /* LaunchScreen.storyboard */; };
+		1174377721E49D0600EFC218 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1174377621E49D0600EFC218 /* Default-568h@2x.png */; };
 		11959C7D21B3E35300BEFCC6 /* DapimViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11959C7C21B3E35300BEFCC6 /* DapimViewModel.swift */; };
 		11A4724721AABA0A001F54F6 /* Daf_Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11A4724621AABA0A001F54F6 /* Daf_Model.swift */; };
 		11A4724921AABD35001F54F6 /* DafResponse_Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11A4724821AABD35001F54F6 /* DafResponse_Model.swift */; };
@@ -39,14 +40,28 @@
 		11E58B1F21B1633500EBF17D /* DapimRepo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11E58B1E21B1633500EBF17D /* DapimRepo.swift */; };
 		11E58B2121B1662100EBF17D /* MasechtotViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11E58B2021B1662100EBF17D /* MasechtotViewModel.swift */; };
 		11E58B2321B16A3900EBF17D /* Daf_ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11E58B2221B16A3900EBF17D /* Daf_ViewModel.swift */; };
+		11F12A8F21E3720C00430143 /* DataTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11F12A8E21E3720C00430143 /* DataTests.swift */; };
 		11F800C221ADCBD6004614E8 /* DedicationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11F800C121ADCBD6004614E8 /* DedicationVC.swift */; };
 		11F800C421AEDEE6004614E8 /* ContactVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11F800C321AEDEE6004614E8 /* ContactVC.swift */; };
 		11F800C921AF098E004614E8 /* DedicationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11F800C821AF098E004614E8 /* DedicationViewModel.swift */; };
 		11F800CB21AF0B7C004614E8 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11F800CA21AF0B7C004614E8 /* Utils.swift */; };
 		11F874F121A36BCF00CA11B4 /* SideMenuVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11F874F021A36BCF00CA11B4 /* SideMenuVC.swift */; };
+		351C656D12345679031F18BE /* Pods_ShiurDiario_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C24E2ECC5537CA33F4B10B5 /* Pods_ShiurDiario_iOS.framework */; };
+		68A5AA96FB59F768D1DFC9D1 /* Pods_ShiurDiario_iOSTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 86392C445F4BE394ABD9B562 /* Pods_ShiurDiario_iOSTests.framework */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		1156509C21E36FA500A6B641 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 114C9CB421A1661C00D5713E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 114C9CBB21A1661C00D5713E;
+			remoteInfo = ShiurDiario_iOS;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
+		017EF5B85479924C73E0F157 /* Pods-ShiurDiario_iOSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ShiurDiario_iOSTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ShiurDiario_iOSTests/Pods-ShiurDiario_iOSTests.debug.xcconfig"; sourceTree = "<group>"; };
 		11065CFE21A6F557002621AE /* PageVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageVC.swift; sourceTree = "<group>"; };
 		11065D0021A6F95C002621AE /* TabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabView.swift; sourceTree = "<group>"; };
 		11065D0321A82E64002621AE /* Text_VC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Text_VC.swift; sourceTree = "<group>"; };
@@ -64,6 +79,9 @@
 		114C9CC621A1661E00D5713E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		114C9CC921A1661E00D5713E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		114C9CCB21A1661E00D5713E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1156509721E36FA500A6B641 /* ShiurDiario_iOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ShiurDiario_iOSTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		1156509B21E36FA500A6B641 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1174377621E49D0600EFC218 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		11959C7C21B3E35300BEFCC6 /* DapimViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DapimViewModel.swift; sourceTree = "<group>"; };
 		11A4724621AABA0A001F54F6 /* Daf_Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Daf_Model.swift; sourceTree = "<group>"; };
 		11A4724821AABD35001F54F6 /* DafResponse_Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DafResponse_Model.swift; sourceTree = "<group>"; };
@@ -81,11 +99,17 @@
 		11E58B1E21B1633500EBF17D /* DapimRepo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DapimRepo.swift; sourceTree = "<group>"; };
 		11E58B2021B1662100EBF17D /* MasechtotViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasechtotViewModel.swift; sourceTree = "<group>"; };
 		11E58B2221B16A3900EBF17D /* Daf_ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Daf_ViewModel.swift; sourceTree = "<group>"; };
+		11F12A8E21E3720C00430143 /* DataTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataTests.swift; sourceTree = "<group>"; };
 		11F800C121ADCBD6004614E8 /* DedicationVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DedicationVC.swift; sourceTree = "<group>"; };
 		11F800C321AEDEE6004614E8 /* ContactVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactVC.swift; sourceTree = "<group>"; };
 		11F800C821AF098E004614E8 /* DedicationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DedicationViewModel.swift; sourceTree = "<group>"; };
 		11F800CA21AF0B7C004614E8 /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 		11F874F021A36BCF00CA11B4 /* SideMenuVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuVC.swift; sourceTree = "<group>"; };
+		19563A862F9061651023EE53 /* Pods-ShiurDiario_iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ShiurDiario_iOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-ShiurDiario_iOS/Pods-ShiurDiario_iOS.release.xcconfig"; sourceTree = "<group>"; };
+		52EA3D2C172DE2F8353623AF /* Pods-ShiurDiario_iOSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ShiurDiario_iOSTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ShiurDiario_iOSTests/Pods-ShiurDiario_iOSTests.release.xcconfig"; sourceTree = "<group>"; };
+		7C24E2ECC5537CA33F4B10B5 /* Pods_ShiurDiario_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ShiurDiario_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		86392C445F4BE394ABD9B562 /* Pods_ShiurDiario_iOSTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ShiurDiario_iOSTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EB7908FB3DFB4CA20947A2E0 /* Pods-ShiurDiario_iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ShiurDiario_iOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ShiurDiario_iOS/Pods-ShiurDiario_iOS.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,6 +117,15 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				351C656D12345679031F18BE /* Pods_ShiurDiario_iOS.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1156509421E36FA500A6B641 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				68A5AA96FB59F768D1DFC9D1 /* Pods_ShiurDiario_iOSTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -122,8 +155,12 @@
 		114C9CB321A1661C00D5713E = {
 			isa = PBXGroup;
 			children = (
+				1174377621E49D0600EFC218 /* Default-568h@2x.png */,
 				114C9CBE21A1661C00D5713E /* ShiurDiario_iOS */,
+				1156509821E36FA500A6B641 /* ShiurDiario_iOSTests */,
 				114C9CBD21A1661C00D5713E /* Products */,
+				D719F83B32CA4C262B0BE8FC /* Pods */,
+				F1E803D13A6C9FB935078684 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -131,6 +168,7 @@
 			isa = PBXGroup;
 			children = (
 				114C9CBC21A1661C00D5713E /* ShiurDiario_iOS.app */,
+				1156509721E36FA500A6B641 /* ShiurDiario_iOSTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -138,19 +176,37 @@
 		114C9CBE21A1661C00D5713E /* ShiurDiario_iOS */ = {
 			isa = PBXGroup;
 			children = (
+				11F12A8A21E370BE00430143 /* App Delegate */,
 				11DA70A221AFEBC900294E14 /* helpers */,
 				11DA709D21AFE1DE00294E14 /* Repository */,
 				11DA709C21AFE07400294E14 /* ViewController */,
 				11F800C721AF0698004614E8 /* View */,
 				11F800C621AF068C004614E8 /* ViewModel */,
 				11F800C521AF0679004614E8 /* Model */,
-				114C9CBF21A1661C00D5713E /* AppDelegate.swift */,
-				114C9CC321A1661C00D5713E /* Main.storyboard */,
-				114C9CC621A1661E00D5713E /* Assets.xcassets */,
-				114C9CC821A1661E00D5713E /* LaunchScreen.storyboard */,
-				114C9CCB21A1661E00D5713E /* Info.plist */,
+				115650A121E3705700A6B641 /* Supporting Files */,
 			);
 			path = ShiurDiario_iOS;
+			sourceTree = "<group>";
+		};
+		1156509821E36FA500A6B641 /* ShiurDiario_iOSTests */ = {
+			isa = PBXGroup;
+			children = (
+				11F12A8C21E3716700430143 /* Data */,
+				11F12A8B21E3715D00430143 /* Cases */,
+				11F12A8D21E3716D00430143 /* Supporting Files */,
+			);
+			path = ShiurDiario_iOSTests;
+			sourceTree = "<group>";
+		};
+		115650A121E3705700A6B641 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				114C9CC321A1661C00D5713E /* Main.storyboard */,
+				114C9CC821A1661E00D5713E /* LaunchScreen.storyboard */,
+				114C9CCB21A1661E00D5713E /* Info.plist */,
+				114C9CC621A1661E00D5713E /* Assets.xcassets */,
+			);
+			path = "Supporting Files";
 			sourceTree = "<group>";
 		};
 		11DA709C21AFE07400294E14 /* ViewController */ = {
@@ -189,6 +245,37 @@
 			path = helpers;
 			sourceTree = "<group>";
 		};
+		11F12A8A21E370BE00430143 /* App Delegate */ = {
+			isa = PBXGroup;
+			children = (
+				114C9CBF21A1661C00D5713E /* AppDelegate.swift */,
+			);
+			path = "App Delegate";
+			sourceTree = "<group>";
+		};
+		11F12A8B21E3715D00430143 /* Cases */ = {
+			isa = PBXGroup;
+			children = (
+				11F12A8E21E3720C00430143 /* DataTests.swift */,
+			);
+			path = Cases;
+			sourceTree = "<group>";
+		};
+		11F12A8C21E3716700430143 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		11F12A8D21E3716D00430143 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				1156509B21E36FA500A6B641 /* Info.plist */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
 		11F800C521AF0679004614E8 /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -224,6 +311,26 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		D719F83B32CA4C262B0BE8FC /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				EB7908FB3DFB4CA20947A2E0 /* Pods-ShiurDiario_iOS.debug.xcconfig */,
+				19563A862F9061651023EE53 /* Pods-ShiurDiario_iOS.release.xcconfig */,
+				017EF5B85479924C73E0F157 /* Pods-ShiurDiario_iOSTests.debug.xcconfig */,
+				52EA3D2C172DE2F8353623AF /* Pods-ShiurDiario_iOSTests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		F1E803D13A6C9FB935078684 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7C24E2ECC5537CA33F4B10B5 /* Pods_ShiurDiario_iOS.framework */,
+				86392C445F4BE394ABD9B562 /* Pods_ShiurDiario_iOSTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -231,9 +338,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 114C9CCE21A1661E00D5713E /* Build configuration list for PBXNativeTarget "ShiurDiario_iOS" */;
 			buildPhases = (
+				F2A1572C70DCD0170D38B025 /* [CP] Check Pods Manifest.lock */,
 				114C9CB821A1661C00D5713E /* Sources */,
 				114C9CB921A1661C00D5713E /* Frameworks */,
 				114C9CBA21A1661C00D5713E /* Resources */,
+				1174377821E51A2C00EFC218 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -243,6 +352,25 @@
 			productName = ShiurDiario_iOS;
 			productReference = 114C9CBC21A1661C00D5713E /* ShiurDiario_iOS.app */;
 			productType = "com.apple.product-type.application";
+		};
+		1156509621E36FA500A6B641 /* ShiurDiario_iOSTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 115650A021E36FA500A6B641 /* Build configuration list for PBXNativeTarget "ShiurDiario_iOSTests" */;
+			buildPhases = (
+				C7F6218BDEF5B4BBF57E5FE4 /* [CP] Check Pods Manifest.lock */,
+				1156509321E36FA500A6B641 /* Sources */,
+				1156509421E36FA500A6B641 /* Frameworks */,
+				1156509521E36FA500A6B641 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				1156509D21E36FA500A6B641 /* PBXTargetDependency */,
+			);
+			name = ShiurDiario_iOSTests;
+			productName = ShiurDiario_iOSTests;
+			productReference = 1156509721E36FA500A6B641 /* ShiurDiario_iOSTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
 
@@ -256,6 +384,11 @@
 				TargetAttributes = {
 					114C9CBB21A1661C00D5713E = {
 						CreatedOnToolsVersion = 9.4.1;
+					};
+					1156509621E36FA500A6B641 = {
+						CreatedOnToolsVersion = 9.4.1;
+						LastSwiftMigration = 0940;
+						TestTargetID = 114C9CBB21A1661C00D5713E;
 					};
 				};
 			};
@@ -273,6 +406,7 @@
 			projectRoot = "";
 			targets = (
 				114C9CBB21A1661C00D5713E /* ShiurDiario_iOS */,
+				1156509621E36FA500A6B641 /* ShiurDiario_iOSTests */,
 			);
 		};
 /* End PBXProject section */
@@ -285,11 +419,71 @@
 				1122BF6A21B6975B0053E27E /* MessageCVCell.xib in Resources */,
 				114C9CCA21A1661E00D5713E /* LaunchScreen.storyboard in Resources */,
 				114C9CC721A1661E00D5713E /* Assets.xcassets in Resources */,
+				1174377721E49D0600EFC218 /* Default-568h@2x.png in Resources */,
 				114C9CC521A1661C00D5713E /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		1156509521E36FA500A6B641 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1174377821E51A2C00EFC218 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Fabric/run\" c1d752d0e150a865e17bf2878c234095762976c9 9b2960bacbca422e94bf6215e078ff164e08bc81a17eb291645395b9e1ce75be";
+		};
+		C7F6218BDEF5B4BBF57E5FE4 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ShiurDiario_iOSTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F2A1572C70DCD0170D38B025 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ShiurDiario_iOS-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		114C9CB821A1661C00D5713E /* Sources */ = {
@@ -332,7 +526,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		1156509321E36FA500A6B641 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				11F12A8F21E3720C00430143 /* DataTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		1156509D21E36FA500A6B641 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 114C9CBB21A1661C00D5713E /* ShiurDiario_iOS */;
+			targetProxy = 1156509C21E36FA500A6B641 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		114C9CC321A1661C00D5713E /* Main.storyboard */ = {
@@ -470,16 +680,17 @@
 		};
 		114C9CCF21A1661E00D5713E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EB7908FB3DFB4CA20947A2E0 /* Pods-ShiurDiario_iOS.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 6JTGB7C2KR;
-				INFOPLIST_FILE = ShiurDiario_iOS/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/ShiurDiario_iOS/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.example.ShiurDiario-iOS";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.hudifeld.ShiurDiario-iOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -488,19 +699,65 @@
 		};
 		114C9CD021A1661E00D5713E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 19563A862F9061651023EE53 /* Pods-ShiurDiario_iOS.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 6JTGB7C2KR;
-				INFOPLIST_FILE = ShiurDiario_iOS/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/ShiurDiario_iOS/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.example.ShiurDiario-iOS";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.hudifeld.ShiurDiario-iOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		1156509E21E36FA500A6B641 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 017EF5B85479924C73E0F157 /* Pods-ShiurDiario_iOSTests.debug.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 6JTGB7C2KR;
+				INFOPLIST_FILE = ShiurDiario_iOSTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.example.ShiurDiario-iOSTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ShiurDiario_iOS.app/ShiurDiario_iOS";
+			};
+			name = Debug;
+		};
+		1156509F21E36FA500A6B641 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 52EA3D2C172DE2F8353623AF /* Pods-ShiurDiario_iOSTests.release.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 6JTGB7C2KR;
+				INFOPLIST_FILE = ShiurDiario_iOSTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.example.ShiurDiario-iOSTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ShiurDiario_iOS.app/ShiurDiario_iOS";
 			};
 			name = Release;
 		};
@@ -521,6 +778,15 @@
 			buildConfigurations = (
 				114C9CCF21A1661E00D5713E /* Debug */,
 				114C9CD021A1661E00D5713E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		115650A021E36FA500A6B641 /* Build configuration list for PBXNativeTarget "ShiurDiario_iOSTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1156509E21E36FA500A6B641 /* Debug */,
+				1156509F21E36FA500A6B641 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
