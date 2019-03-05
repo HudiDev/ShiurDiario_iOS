@@ -17,7 +17,7 @@ class TabView: UIView {
     @IBOutlet weak var tabsCollectionView: UICollectionView!
     
     
-    let titles = ["VIDEO", "GEMARA TEXT", "PREVIOUS DAPIM", "ALL MASECHTOT"]
+    let titles = ["VÍDEO", "TEXTO DE GUEMARÁ", "AULAS PASSADAS", "LISTA DE TRATADOS"]
     
     var menuDelegate: MenuBarDelegate?
 
