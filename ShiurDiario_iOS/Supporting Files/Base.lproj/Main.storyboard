@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="RvS-WT-wcT">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="RvS-WT-wcT">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="Stack View standard spacing" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -27,10 +26,10 @@
                                         <rect key="frame" x="0.0" y="0.0" width="377" height="1225.5"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xZa-tX-fvD">
-                                                <rect key="frame" x="30" y="217" width="316" height="53"/>
+                                                <rect key="frame" x="30" y="217" width="317" height="53"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Shiur Diário - a nossa meta" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k0S-cZ-Rc3">
-                                                        <rect key="frame" x="5" y="5" width="306" height="43"/>
+                                                        <rect key="frame" x="5" y="5" width="307" height="43"/>
                                                         <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="17"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
@@ -118,7 +117,7 @@ Clique AQUI para mais informações.</string>
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Hf0-vm-04n">
-                                                <rect key="frame" x="108" y="628" width="160" height="4"/>
+                                                <rect key="frame" x="108.5" y="628" width="160" height="4"/>
                                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="160" id="2E9-SL-kHT"/>
@@ -133,14 +132,12 @@ Clique AQUI para mais informações.</string>
                                             <constraint firstItem="xZa-tX-fvD" firstAttribute="top" secondItem="piy-GK-wm0" secondAttribute="bottom" constant="62" id="61h-Ze-inc"/>
                                             <constraint firstItem="xZa-tX-fvD" firstAttribute="centerX" secondItem="ATe-zG-B2O" secondAttribute="centerX" id="6wu-MR-O7X"/>
                                             <constraint firstItem="Hf0-vm-04n" firstAttribute="centerX" secondItem="ATe-zG-B2O" secondAttribute="centerX" id="9OM-Af-aMK"/>
-                                            <constraint firstItem="xZa-tX-fvD" firstAttribute="leading" secondItem="ATe-zG-B2O" secondAttribute="leading" constant="30" id="Box-OU-z1A"/>
                                             <constraint firstAttribute="trailing" secondItem="piy-GK-wm0" secondAttribute="trailing" constant="30" id="GyI-H8-QwV"/>
                                             <constraint firstItem="piy-GK-wm0" firstAttribute="centerX" secondItem="ATe-zG-B2O" secondAttribute="centerX" id="H0J-2s-gXl"/>
                                             <constraint firstItem="GiF-aU-kLB" firstAttribute="centerX" secondItem="ATe-zG-B2O" secondAttribute="centerX" id="Irj-Mo-QFf"/>
                                             <constraint firstAttribute="bottom" secondItem="GiF-aU-kLB" secondAttribute="bottom" constant="100" id="JNo-va-Tpu"/>
                                             <constraint firstItem="qYE-9Q-Oqm" firstAttribute="top" secondItem="xZa-tX-fvD" secondAttribute="bottom" constant="8" id="KGZ-Zw-LeB"/>
                                             <constraint firstItem="hdf-AW-xVU" firstAttribute="centerX" secondItem="ATe-zG-B2O" secondAttribute="centerX" id="Lzj-SV-QIg"/>
-                                            <constraint firstAttribute="trailing" secondItem="xZa-tX-fvD" secondAttribute="trailing" constant="31" id="PGS-IM-tIL"/>
                                             <constraint firstAttribute="trailing" secondItem="7P9-Y5-jcc" secondAttribute="trailing" constant="30" id="UB6-b9-etA"/>
                                             <constraint firstItem="hdf-AW-xVU" firstAttribute="top" secondItem="7P9-Y5-jcc" secondAttribute="bottom" constant="47" id="WSK-yU-GdU"/>
                                             <constraint firstItem="GiF-aU-kLB" firstAttribute="leading" secondItem="ATe-zG-B2O" secondAttribute="leading" constant="30" id="Ypc-CA-z4J"/>
@@ -150,11 +147,13 @@ Clique AQUI para mais informações.</string>
                                             <constraint firstAttribute="trailing" secondItem="GiF-aU-kLB" secondAttribute="trailing" constant="30" id="jsN-B7-eis"/>
                                             <constraint firstItem="piy-GK-wm0" firstAttribute="top" secondItem="ATe-zG-B2O" secondAttribute="top" constant="80" id="pNn-KA-yjc"/>
                                             <constraint firstItem="Hf0-vm-04n" firstAttribute="top" secondItem="qYE-9Q-Oqm" secondAttribute="bottom" constant="8" id="pTF-JC-4sg"/>
+                                            <constraint firstItem="xZa-tX-fvD" firstAttribute="leading" secondItem="ATe-zG-B2O" secondAttribute="leading" constant="30" id="plG-75-iQV"/>
                                             <constraint firstItem="7P9-Y5-jcc" firstAttribute="top" secondItem="qYE-9Q-Oqm" secondAttribute="bottom" constant="20" id="qid-Ex-ejU"/>
                                             <constraint firstAttribute="trailing" secondItem="hdf-AW-xVU" secondAttribute="trailing" constant="30" id="sox-Bg-V5v"/>
                                             <constraint firstItem="hdf-AW-xVU" firstAttribute="leading" secondItem="ATe-zG-B2O" secondAttribute="leading" constant="30" id="u4p-ga-pB8"/>
                                             <constraint firstItem="qYE-9Q-Oqm" firstAttribute="centerX" secondItem="ATe-zG-B2O" secondAttribute="centerX" id="xgV-LV-EmF"/>
                                             <constraint firstItem="7P9-Y5-jcc" firstAttribute="leading" secondItem="ATe-zG-B2O" secondAttribute="leading" constant="30" id="xk7-Re-Pzx"/>
+                                            <constraint firstAttribute="trailing" secondItem="xZa-tX-fvD" secondAttribute="trailing" constant="30" id="zHo-GK-Lbf"/>
                                         </constraints>
                                     </view>
                                 </subviews>
@@ -168,9 +167,9 @@ Clique AQUI para mais informações.</string>
                                 </constraints>
                             </scrollView>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4OS-K6-vVs">
-                                <rect key="frame" x="-300" y="0.0" width="300" height="1236"/>
+                                <rect key="frame" x="-250" y="0.0" width="250" height="1236"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="300" id="h1z-7k-rj4"/>
+                                    <constraint firstAttribute="width" constant="250" id="h1z-7k-rj4"/>
                                 </constraints>
                                 <connections>
                                     <segue destination="7Bn-R1-IEz" kind="embed" id="LMY-fn-YUR"/>
@@ -183,7 +182,7 @@ Clique AQUI para mais informações.</string>
                             <constraint firstItem="4OS-K6-vVs" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="PBd-vO-U9y"/>
                             <constraint firstItem="cI8-Ke-MTf" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="nap-mI-BgG"/>
                             <constraint firstItem="cI8-Ke-MTf" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="u5K-dD-h5k"/>
-                            <constraint firstItem="4OS-K6-vVs" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="-300" id="wAh-yR-FEI"/>
+                            <constraint firstItem="4OS-K6-vVs" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="-250" id="wAh-yR-FEI"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="cI8-Ke-MTf" secondAttribute="trailing" id="zcx-Cg-6oF"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -199,6 +198,7 @@ Clique AQUI para mais informações.</string>
                     <connections>
                         <outlet property="firstSubTitleView" destination="xZa-tX-fvD" id="iSm-t2-eUU"/>
                         <outlet property="introText" destination="qYE-9Q-Oqm" id="CSe-dA-vRn"/>
+                        <outlet property="scrollView" destination="cI8-Ke-MTf" id="zzI-fS-UBW"/>
                         <outlet property="secondSubTitleView" destination="hdf-AW-xVU" id="GPc-Ts-nlu"/>
                         <outlet property="sideMenuConstraint" destination="wAh-yR-FEI" id="zhj-KE-1x7"/>
                         <outlet property="titleContainer" destination="piy-GK-wm0" id="Qvr-id-GYD"/>
@@ -217,10 +217,10 @@ Clique AQUI para mais informações.</string>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qv5-9P-pTa">
-                                <rect key="frame" x="62" y="63" width="250" height="584"/>
+                                <rect key="frame" x="62.5" y="63" width="250" height="584"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="OS SHIURIM DE HOJE ESTAO DEDICADOS" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8KV-yM-1sa">
-                                        <rect key="frame" x="18" y="25" width="215" height="60"/>
+                                        <rect key="frame" x="17.5" y="25" width="215" height="60"/>
                                         <constraints>
                                             <constraint firstAttribute="width" relation="lessThanOrEqual" constant="241" id="2rf-kx-XQJ"/>
                                             <constraint firstAttribute="height" constant="60" id="KMy-Gp-bE2"/>
@@ -413,7 +413,7 @@ Clique AQUI para mais informações.</string>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="y0n-gx-JQy">
-                                <rect key="frame" x="177" y="323" width="20" height="20"/>
+                                <rect key="frame" x="177.5" y="323.5" width="20" height="20"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="20" id="7D1-YG-2x0"/>
                                     <constraint firstAttribute="width" constant="20" id="iuT-EE-GQP"/>
@@ -446,7 +446,7 @@ Clique AQUI para mais informações.</string>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pAx-7f-Vtt">
-                                                            <rect key="frame" x="13" y="13.5" width="224" height="43.5"/>
+                                                            <rect key="frame" x="13" y="33" width="224" height="24"/>
                                                             <color key="backgroundColor" red="0.062274225056171417" green="0.25529485940933228" blue="0.23560461401939392" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="width" relation="lessThanOrEqual" constant="300" id="80J-3s-9ON"/>
@@ -456,7 +456,7 @@ Clique AQUI para mais informações.</string>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fJv-dG-elI">
-                                                            <rect key="frame" x="13" y="62.5" width="224" height="1"/>
+                                                            <rect key="frame" x="13" y="62" width="224" height="1"/>
                                                             <color key="backgroundColor" red="0.062274225056171417" green="0.25529485940933228" blue="0.23560461401939392" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="1" id="bjs-e6-XcJ"/>
@@ -542,7 +542,7 @@ Clique AQUI para mais informações.</string>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tMR-YC-em8">
-                                        <rect key="frame" x="89.5" y="83" width="70" height="70"/>
+                                        <rect key="frame" x="90" y="83" width="70" height="70"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="70" id="Hcd-es-8oE"/>
                                             <constraint firstAttribute="height" constant="70" id="jUS-rL-ya3"/>
@@ -610,7 +610,7 @@ Clique AQUI para mais informações.</string>
                                 </constraints>
                             </activityIndicatorView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rYl-W3-PcJ">
-                                <rect key="frame" x="62.5" y="302" width="250" height="62"/>
+                                <rect key="frame" x="62.5" y="302.5" width="250" height="62"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="62" id="0OU-mM-hRV"/>
@@ -673,7 +673,7 @@ Clique AQUI para mais informações.</string>
                                                             <rect key="frame" x="10" y="10" width="80" height="80"/>
                                                             <subviews>
                                                                 <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Menachot_96" translatesAutoresizingMaskIntoConstraints="NO" id="JiC-pe-ULh">
-                                                                    <rect key="frame" x="-0.5" y="0.0" width="81" height="80"/>
+                                                                    <rect key="frame" x="0.0" y="0.0" width="80" height="80"/>
                                                                 </imageView>
                                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="play_btn_icon" translatesAutoresizingMaskIntoConstraints="NO" id="J3r-Rj-zBz">
                                                                     <rect key="frame" x="30" y="30" width="20" height="20"/>
@@ -888,24 +888,24 @@ Clique AQUI para mais informações.</string>
             <objects>
                 <viewController id="7Bn-R1-IEz" customClass="SideMenuVC" customModule="ShiurDiario_iOS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="AG6-Od-T7H">
-                        <rect key="frame" x="0.0" y="0.0" width="300" height="1236"/>
+                        <rect key="frame" x="0.0" y="0.0" width="250" height="1236"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="talmud copy" translatesAutoresizingMaskIntoConstraints="NO" id="lFn-p8-cbl">
-                                <rect key="frame" x="0.0" y="0.0" width="300" height="200"/>
+                                <rect key="frame" x="0.0" y="0.0" width="250" height="200"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="200" id="zrV-jc-88V"/>
                                 </constraints>
                             </imageView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="50" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="wJF-OF-b2u">
-                                <rect key="frame" x="0.0" y="230" width="300" height="1006"/>
+                                <rect key="frame" x="0.0" y="230" width="250" height="1006"/>
                                 <color key="backgroundColor" red="0.99065404160000003" green="1" blue="0.96004231770000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" alpha="0.0" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="sideMenuCell" id="YAs-kb-GnY" customClass="SideMenuCell" customModule="ShiurDiario_iOS" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="300" height="50"/>
+                                    <tableViewCell clipsSubviews="YES" alpha="0.0" contentMode="scaleToFill" misplaced="YES" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="sideMenuCell" id="YAs-kb-GnY" customClass="SideMenuCell" customModule="ShiurDiario_iOS" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="250" height="50"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="YAs-kb-GnY" id="GvP-iu-uID">
-                                            <rect key="frame" x="0.0" y="0.0" width="300" height="50"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="250" height="50"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dedication_icon" translatesAutoresizingMaskIntoConstraints="NO" id="xVI-7B-GNQ">
@@ -984,12 +984,12 @@ Clique AQUI para mais informações.</string>
     <resources>
         <image name="Menachot_96" width="480" height="360"/>
         <image name="bookshelf-1082309_1280" width="1280" height="853"/>
-        <image name="dedication_icon" width="151" height="157"/>
-        <image name="icons8-chevron-right-26" width="26" height="26"/>
-        <image name="icons8-play-filled-501" width="500" height="500"/>
+        <image name="dedication_icon" width="36.240001678466797" height="37.680000305175781"/>
+        <image name="icons8-chevron-right-26" width="19.5" height="19.5"/>
+        <image name="icons8-play-filled-501" width="375" height="375"/>
         <image name="masechet_icon" width="512" height="512"/>
-        <image name="menu_bar_icon" width="24" height="24"/>
+        <image name="menu_bar_icon" width="18" height="18"/>
         <image name="play_btn_icon" width="512" height="512"/>
-        <image name="talmud copy" width="600" height="450"/>
+        <image name="talmud copy" width="144" height="108"/>
     </resources>
 </document>

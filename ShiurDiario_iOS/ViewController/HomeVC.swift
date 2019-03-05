@@ -9,19 +9,30 @@
 import UIKit
 
 class HomeVC: UIViewController {
-    @IBOutlet weak var titleContainer: UIView!
     
+    
+    
+    lazy var mask: UIView = {
+        let view = UIView(frame: self.scrollView.frame)
+        view.backgroundColor = .black
+        view.alpha = 0
+        return view
+    }()
+    
+    
+    @IBOutlet weak var scrollView: UIScrollView!
+    @IBOutlet weak var titleContainer: UIView!
     @IBOutlet weak var introText: UILabel!
     @IBOutlet weak var sideMenuConstraint: NSLayoutConstraint!
-    
     @IBOutlet weak var firstSubTitleView: UIView!
-    
     @IBOutlet weak var secondSubTitleView: UIView!
     
     var isSideMenuOpened = true
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.scrollView.addSubview(self.mask)
         
         firstSubTitleView.addBorder(width: 0.5, color: UIColor.black.cgColor)
         
@@ -54,6 +65,7 @@ class HomeVC: UIViewController {
             if x_delta < -70 {
                 UIView.animate(withDuration: 0.4) {
                     self.sideMenuConstraint.constant = -300
+                    self.mask.alpha = 0
                     self.view.layoutIfNeeded()
                 }
             }
@@ -90,12 +102,14 @@ class HomeVC: UIViewController {
         isSideMenuOpened = !isSideMenuOpened
         if isSideMenuOpened {
             UIView.animate(withDuration: 0.4) {
-                self.sideMenuConstraint.constant = -300
+                self.sideMenuConstraint.constant = -250
+                self.mask.alpha = 0
                 self.view.layoutIfNeeded()
             }
         } else {
             UIView.animate(withDuration: 0.4) {
                 self.sideMenuConstraint.constant = 0
+                self.mask.alpha = 0.5
                 self.view.layoutIfNeeded()
             }
         }
