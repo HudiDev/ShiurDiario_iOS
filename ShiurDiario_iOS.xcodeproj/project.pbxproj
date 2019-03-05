@@ -305,8 +305,8 @@
 				11A4724A21AABE27001F54F6 /* DafCell.swift */,
 				11A59EB721A474F7003FD0B0 /* TitleCell.swift */,
 				11065D0021A6F95C002621AE /* TabView.swift */,
-				1122BF6B21B698F00053E27E /* messageCell */,
 				110B242821E18C6000792546 /* SideMenuCell.swift */,
+				1122BF6B21B698F00053E27E /* messageCell */,
 			);
 			path = View;
 			sourceTree = "<group>";

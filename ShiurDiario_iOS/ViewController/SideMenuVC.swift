@@ -40,7 +40,6 @@ extension SideMenuVC: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "sideMenuCell") as! SideMenuCell
-        cell.alpha = 0
         cell.tabTitle.text = sideMenuTitles[indexPath.row].0
         
         if let icon = UIImage(named: sideMenuTitles[indexPath.row].1) {

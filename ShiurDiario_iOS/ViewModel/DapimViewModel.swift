@@ -14,7 +14,7 @@ class DapimViewModel {
     
     let dapimRepository = DapimRepo()
     
-    var dapimTuple: ([ItemType<DafViewModel>], Int?) = (data: [ItemType<DafViewModel>](), maxNum: 0)
+    var dapimTuple: ([ItemType<DafViewModel>], Int?)
     
     let dapim: Bindable<([ItemType<DafViewModel>], Int?)>
     

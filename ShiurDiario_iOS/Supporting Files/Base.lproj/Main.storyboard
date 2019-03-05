@@ -21,17 +21,16 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cI8-Ke-MTf">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="1236"/>
+                                <rect key="frame" x="0.0" y="0.0" width="377" height="1236"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ATe-zG-B2O" userLabel="ContentView">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="1225.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="377" height="1225.5"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xZa-tX-fvD">
-                                                <rect key="frame" x="30" y="217" width="314" height="53"/>
+                                                <rect key="frame" x="30" y="217" width="316" height="53"/>
                                                 <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Shiur Diário - a nossa meta" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k0S-cZ-Rc3">
-                                                        <rect key="frame" x="8" y="16" width="298" height="21"/>
-                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Shiur Diário - a nossa meta" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k0S-cZ-Rc3">
+                                                        <rect key="frame" x="5" y="5" width="306" height="43"/>
                                                         <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="17"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
@@ -39,15 +38,17 @@
                                                 </subviews>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="width" constant="314" id="Bx4-2p-u3b"/>
+                                                    <constraint firstAttribute="bottom" secondItem="k0S-cZ-Rc3" secondAttribute="bottom" constant="5" id="42O-1g-7Nc"/>
+                                                    <constraint firstAttribute="trailing" secondItem="k0S-cZ-Rc3" secondAttribute="trailing" constant="5" id="4NW-Ob-uth"/>
                                                     <constraint firstAttribute="height" constant="53" id="LQ1-73-jcj"/>
+                                                    <constraint firstItem="k0S-cZ-Rc3" firstAttribute="top" secondItem="xZa-tX-fvD" secondAttribute="top" constant="5" id="fDU-0t-vCd"/>
+                                                    <constraint firstItem="k0S-cZ-Rc3" firstAttribute="leading" secondItem="xZa-tX-fvD" secondAttribute="leading" constant="5" id="ktm-ML-sTF"/>
                                                 </constraints>
                                             </view>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="36" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qYE-9Q-Oqm">
-                                                <rect key="frame" x="30" y="278" width="314" height="342"/>
+                                                <rect key="frame" x="30" y="278" width="317" height="342"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="342" id="60T-6S-72h"/>
-                                                    <constraint firstAttribute="width" relation="lessThanOrEqual" constant="314" id="Ahe-Bw-NOZ"/>
                                                 </constraints>
                                                 <string key="text">O site que traz a vocês a sabedoria dos nossos Sábios da Mishná e da Guemará em português, em uma linguagem atual e acessível. Nossos shiurim são transmitidos de forma clara e concisa, aproximando a Torá a cada um de nós. Oferecemos também a escolha de shiur em formato vídeo ou áudio, ambos em alta qualidade para vocês assistirem ou baixarem para seus aparelhos. Na comodidade de sua casa, no carro ou no trabalho, nunca foi tão fácil estudar o Judaismo e sua Sabedoria milenar, no Brasil e no mundo.</string>
                                                 <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="17"/>
@@ -55,9 +56,8 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7P9-Y5-jcc">
-                                                <rect key="frame" x="29" y="640" width="317" height="253"/>
+                                                <rect key="frame" x="30" y="640" width="317" height="253"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="width" constant="317" id="YxY-7V-K1t"/>
                                                     <constraint firstAttribute="height" constant="253" id="zV4-iB-Ts1"/>
                                                 </constraints>
                                                 <string key="text">Nossos Sábios disseram: אֵין לְךָ בֶּן חוֹרִין אֶלָּא מִי שֶׁעוֹסֵק בְּתַלְמוּד תּוֹרָה" - אבות, ו:ב" 
@@ -68,11 +68,10 @@ Venha, então, conosco estudar os diamantes da Torá em português, aprender nov
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hdf-AW-xVU">
-                                                <rect key="frame" x="29" y="940" width="317" height="54"/>
+                                                <rect key="frame" x="30" y="940" width="317" height="54"/>
                                                 <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Dedicatorias" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Ox-Hx-D9y">
-                                                        <rect key="frame" x="8" y="17" width="301" height="21"/>
-                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dedicatorias" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Ox-Hx-D9y">
+                                                        <rect key="frame" x="5" y="5" width="307" height="44"/>
                                                         <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="17"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
@@ -82,13 +81,14 @@ Venha, então, conosco estudar os diamantes da Torá em português, aprender nov
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="317" id="3yl-zd-ZeH"/>
                                                     <constraint firstAttribute="height" constant="54" id="8iP-zU-svM"/>
+                                                    <constraint firstAttribute="bottom" secondItem="7Ox-Hx-D9y" secondAttribute="bottom" constant="5" id="YfO-du-DW8"/>
+                                                    <constraint firstItem="7Ox-Hx-D9y" firstAttribute="top" secondItem="hdf-AW-xVU" secondAttribute="top" constant="5" id="Yte-Sk-cpv"/>
+                                                    <constraint firstAttribute="trailing" secondItem="7Ox-Hx-D9y" secondAttribute="trailing" constant="5" id="nI3-aP-aIm"/>
+                                                    <constraint firstItem="7Ox-Hx-D9y" firstAttribute="leading" secondItem="hdf-AW-xVU" secondAttribute="leading" constant="5" id="w2j-wk-KWG"/>
                                                 </constraints>
                                             </view>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GiF-aU-kLB">
-                                                <rect key="frame" x="29" y="1027" width="317" height="98.5"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="width" constant="317" id="HOH-lz-1dQ"/>
-                                                </constraints>
+                                                <rect key="frame" x="30" y="1027" width="317" height="98.5"/>
                                                 <string key="text">Dedique um ou mais shiurim ao seus entes queridos. 
 Para elevação da alma, a cura plena ou o sucesso pessoal. 
 Clique AQUI para mais informações.</string>
@@ -98,11 +98,10 @@ Clique AQUI para mais informações.</string>
                                                 <string key="userLabel">Dedique um ou mais shiurim ao seus entes queridos.  Para elevação da alma, a cura plena ou o sucesso pessoal.  Clique AQUI para mais informações.</string>
                                             </label>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="piy-GK-wm0">
-                                                <rect key="frame" x="17" y="80" width="340" height="75"/>
+                                                <rect key="frame" x="30" y="80" width="317" height="75"/>
                                                 <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Shiur Diario" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tcs-1d-nCr">
-                                                        <rect key="frame" x="5" y="5" width="330" height="65"/>
-                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Shiur Diario" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tcs-1d-nCr">
+                                                        <rect key="frame" x="5" y="5" width="307" height="65"/>
                                                         <color key="backgroundColor" red="0.67450980392156867" green="0.72941176470588232" blue="0.65490196078431373" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                         <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="49"/>
                                                         <nil key="textColor"/>
@@ -111,12 +110,15 @@ Clique AQUI para mais informações.</string>
                                                 </subviews>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
+                                                    <constraint firstItem="tcs-1d-nCr" firstAttribute="top" secondItem="piy-GK-wm0" secondAttribute="top" constant="5" id="0SO-WG-SOv"/>
                                                     <constraint firstAttribute="height" constant="75" id="0s5-L7-fG3"/>
-                                                    <constraint firstAttribute="width" constant="340" id="sfe-zD-r5g"/>
+                                                    <constraint firstAttribute="bottom" secondItem="tcs-1d-nCr" secondAttribute="bottom" constant="5" id="7Et-lG-cPN"/>
+                                                    <constraint firstAttribute="trailing" secondItem="tcs-1d-nCr" secondAttribute="trailing" constant="5" id="7yh-kb-88B"/>
+                                                    <constraint firstItem="tcs-1d-nCr" firstAttribute="leading" secondItem="piy-GK-wm0" secondAttribute="leading" constant="5" id="waC-bm-v7I"/>
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Hf0-vm-04n">
-                                                <rect key="frame" x="107" y="628" width="160" height="4"/>
+                                                <rect key="frame" x="108" y="628" width="160" height="4"/>
                                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="160" id="2E9-SL-kHT"/>
@@ -127,20 +129,32 @@ Clique AQUI para mais informações.</string>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstItem="GiF-aU-kLB" firstAttribute="top" secondItem="hdf-AW-xVU" secondAttribute="bottom" constant="33" id="2QK-Rw-8Qr"/>
+                                            <constraint firstItem="piy-GK-wm0" firstAttribute="leading" secondItem="ATe-zG-B2O" secondAttribute="leading" constant="30" id="4k6-ge-pJJ"/>
                                             <constraint firstItem="xZa-tX-fvD" firstAttribute="top" secondItem="piy-GK-wm0" secondAttribute="bottom" constant="62" id="61h-Ze-inc"/>
                                             <constraint firstItem="xZa-tX-fvD" firstAttribute="centerX" secondItem="ATe-zG-B2O" secondAttribute="centerX" id="6wu-MR-O7X"/>
                                             <constraint firstItem="Hf0-vm-04n" firstAttribute="centerX" secondItem="ATe-zG-B2O" secondAttribute="centerX" id="9OM-Af-aMK"/>
+                                            <constraint firstItem="xZa-tX-fvD" firstAttribute="leading" secondItem="ATe-zG-B2O" secondAttribute="leading" constant="30" id="Box-OU-z1A"/>
+                                            <constraint firstAttribute="trailing" secondItem="piy-GK-wm0" secondAttribute="trailing" constant="30" id="GyI-H8-QwV"/>
                                             <constraint firstItem="piy-GK-wm0" firstAttribute="centerX" secondItem="ATe-zG-B2O" secondAttribute="centerX" id="H0J-2s-gXl"/>
                                             <constraint firstItem="GiF-aU-kLB" firstAttribute="centerX" secondItem="ATe-zG-B2O" secondAttribute="centerX" id="Irj-Mo-QFf"/>
                                             <constraint firstAttribute="bottom" secondItem="GiF-aU-kLB" secondAttribute="bottom" constant="100" id="JNo-va-Tpu"/>
                                             <constraint firstItem="qYE-9Q-Oqm" firstAttribute="top" secondItem="xZa-tX-fvD" secondAttribute="bottom" constant="8" id="KGZ-Zw-LeB"/>
                                             <constraint firstItem="hdf-AW-xVU" firstAttribute="centerX" secondItem="ATe-zG-B2O" secondAttribute="centerX" id="Lzj-SV-QIg"/>
+                                            <constraint firstAttribute="trailing" secondItem="xZa-tX-fvD" secondAttribute="trailing" constant="31" id="PGS-IM-tIL"/>
+                                            <constraint firstAttribute="trailing" secondItem="7P9-Y5-jcc" secondAttribute="trailing" constant="30" id="UB6-b9-etA"/>
                                             <constraint firstItem="hdf-AW-xVU" firstAttribute="top" secondItem="7P9-Y5-jcc" secondAttribute="bottom" constant="47" id="WSK-yU-GdU"/>
+                                            <constraint firstItem="GiF-aU-kLB" firstAttribute="leading" secondItem="ATe-zG-B2O" secondAttribute="leading" constant="30" id="Ypc-CA-z4J"/>
                                             <constraint firstItem="7P9-Y5-jcc" firstAttribute="centerX" secondItem="ATe-zG-B2O" secondAttribute="centerX" id="ZnU-TT-e9y"/>
+                                            <constraint firstAttribute="trailing" secondItem="qYE-9Q-Oqm" secondAttribute="trailing" constant="30" id="cla-9q-TQa"/>
+                                            <constraint firstItem="qYE-9Q-Oqm" firstAttribute="leading" secondItem="ATe-zG-B2O" secondAttribute="leading" constant="30" id="ilm-a0-8Pp"/>
+                                            <constraint firstAttribute="trailing" secondItem="GiF-aU-kLB" secondAttribute="trailing" constant="30" id="jsN-B7-eis"/>
                                             <constraint firstItem="piy-GK-wm0" firstAttribute="top" secondItem="ATe-zG-B2O" secondAttribute="top" constant="80" id="pNn-KA-yjc"/>
                                             <constraint firstItem="Hf0-vm-04n" firstAttribute="top" secondItem="qYE-9Q-Oqm" secondAttribute="bottom" constant="8" id="pTF-JC-4sg"/>
                                             <constraint firstItem="7P9-Y5-jcc" firstAttribute="top" secondItem="qYE-9Q-Oqm" secondAttribute="bottom" constant="20" id="qid-Ex-ejU"/>
+                                            <constraint firstAttribute="trailing" secondItem="hdf-AW-xVU" secondAttribute="trailing" constant="30" id="sox-Bg-V5v"/>
+                                            <constraint firstItem="hdf-AW-xVU" firstAttribute="leading" secondItem="ATe-zG-B2O" secondAttribute="leading" constant="30" id="u4p-ga-pB8"/>
                                             <constraint firstItem="qYE-9Q-Oqm" firstAttribute="centerX" secondItem="ATe-zG-B2O" secondAttribute="centerX" id="xgV-LV-EmF"/>
+                                            <constraint firstItem="7P9-Y5-jcc" firstAttribute="leading" secondItem="ATe-zG-B2O" secondAttribute="leading" constant="30" id="xk7-Re-Pzx"/>
                                         </constraints>
                                     </view>
                                 </subviews>
@@ -885,9 +899,9 @@ Clique AQUI para mais informações.</string>
                             </imageView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="50" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="wJF-OF-b2u">
                                 <rect key="frame" x="0.0" y="230" width="300" height="1006"/>
-                                <color key="backgroundColor" red="0.99065404156454251" green="1" blue="0.96004231770833337" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="backgroundColor" red="0.99065404160000003" green="1" blue="0.96004231770000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="sideMenuCell" id="YAs-kb-GnY" customClass="SideMenuCell" customModule="ShiurDiario_iOS" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" alpha="0.0" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="sideMenuCell" id="YAs-kb-GnY" customClass="SideMenuCell" customModule="ShiurDiario_iOS" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="300" height="50"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="YAs-kb-GnY" id="GvP-iu-uID">
@@ -912,6 +926,7 @@ Clique AQUI para mais informações.</string>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
+                                            <color key="backgroundColor" red="0.99065404160000003" green="1" blue="0.96004231770000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                             <constraints>
                                                 <constraint firstItem="0s9-Cc-s5Y" firstAttribute="leading" secondItem="xVI-7B-GNQ" secondAttribute="trailing" constant="16" id="Fd6-e8-4xd"/>
                                                 <constraint firstItem="xVI-7B-GNQ" firstAttribute="centerY" secondItem="GvP-iu-uID" secondAttribute="centerY" id="GtU-Vc-CQJ"/>
@@ -927,7 +942,7 @@ Clique AQUI para mais informações.</string>
                                 </prototypes>
                             </tableView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" red="0.99065404160000003" green="1" blue="0.96004231770000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
                             <constraint firstItem="MPF-M2-f4Y" firstAttribute="trailing" secondItem="lFn-p8-cbl" secondAttribute="trailing" id="BGe-ms-kfZ"/>
                             <constraint firstItem="wJF-OF-b2u" firstAttribute="leading" secondItem="MPF-M2-f4Y" secondAttribute="leading" id="FT2-OZ-Uqb"/>
