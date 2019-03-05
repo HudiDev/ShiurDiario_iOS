@@ -83,9 +83,10 @@ class HomeVC: UIViewController {
     
     
     @objc func handleEdgePan(sender: UIScreenEdgePanGestureRecognizer) {
-        if sender.state == .recognized {
+        if sender.state == .began {
             UIView.animate(withDuration: 0.4) {
                 self.sideMenuConstraint.constant = 0
+                self.mask.alpha = 0.5
                 self.view.layoutIfNeeded()
             }
         }
