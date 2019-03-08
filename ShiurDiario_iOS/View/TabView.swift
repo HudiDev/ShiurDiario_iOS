@@ -34,6 +34,7 @@ class TabView: UIView {
         tabsCollectionView.dataSource = self
         
         if let layout = self.tabsCollectionView.collectionViewLayout as? UICollectionViewFlowLayout {
+            layout.invalidateLayout()
             layout.estimatedItemSize = UICollectionViewFlowLayoutAutomaticSize
         }
     }

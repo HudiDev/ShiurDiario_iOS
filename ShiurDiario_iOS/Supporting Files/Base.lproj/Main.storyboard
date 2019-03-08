@@ -455,27 +455,17 @@ Clique AQUI para mais informações.</string>
                                                             <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fJv-dG-elI">
-                                                            <rect key="frame" x="13" y="62" width="224" height="1"/>
-                                                            <color key="backgroundColor" red="0.062274225056171417" green="0.25529485940933228" blue="0.23560461401939392" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                            <constraints>
-                                                                <constraint firstAttribute="height" constant="1" id="bjs-e6-XcJ"/>
-                                                            </constraints>
-                                                        </view>
                                                     </subviews>
                                                 </view>
+                                                <color key="backgroundColor" red="0.062274225060000001" green="0.25529485940000002" blue="0.23560461399999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
-                                                    <constraint firstItem="fJv-dG-elI" firstAttribute="centerX" secondItem="Y3z-7c-sUh" secondAttribute="centerX" id="Fuq-LF-aRN"/>
                                                     <constraint firstItem="pAx-7f-Vtt" firstAttribute="top" secondItem="Y3z-7c-sUh" secondAttribute="topMargin" constant="5" id="Iwx-UY-vRO"/>
                                                     <constraint firstItem="pAx-7f-Vtt" firstAttribute="leading" secondItem="Y3z-7c-sUh" secondAttribute="leadingMargin" constant="5" id="XHu-pc-tqA"/>
                                                     <constraint firstAttribute="trailingMargin" secondItem="pAx-7f-Vtt" secondAttribute="trailing" constant="5" id="fLQ-eQ-0vq"/>
-                                                    <constraint firstItem="fJv-dG-elI" firstAttribute="width" secondItem="pAx-7f-Vtt" secondAttribute="width" id="izj-MY-edI"/>
                                                     <constraint firstItem="pAx-7f-Vtt" firstAttribute="centerX" secondItem="Y3z-7c-sUh" secondAttribute="centerX" id="kJZ-X6-uIc"/>
-                                                    <constraint firstItem="fJv-dG-elI" firstAttribute="top" secondItem="pAx-7f-Vtt" secondAttribute="bottom" constant="5" id="sd2-0H-fw1"/>
                                                     <constraint firstAttribute="bottomMargin" secondItem="pAx-7f-Vtt" secondAttribute="bottom" constant="5" id="uSJ-2C-U19"/>
                                                 </constraints>
                                                 <connections>
-                                                    <outlet property="selectIndicator" destination="fJv-dG-elI" id="34V-Tn-Wti"/>
                                                     <outlet property="titleLabel" destination="pAx-7f-Vtt" id="EwC-bE-ubb"/>
                                                 </connections>
                                             </collectionViewCell>

@@ -22,7 +22,6 @@
 		114C9CC521A1661C00D5713E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 114C9CC321A1661C00D5713E /* Main.storyboard */; };
 		114C9CC721A1661E00D5713E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 114C9CC621A1661E00D5713E /* Assets.xcassets */; };
 		114C9CCA21A1661E00D5713E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 114C9CC821A1661E00D5713E /* LaunchScreen.storyboard */; };
-		1174377721E49D0600EFC218 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1174377621E49D0600EFC218 /* Default-568h@2x.png */; };
 		11959C7D21B3E35300BEFCC6 /* DapimViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11959C7C21B3E35300BEFCC6 /* DapimViewModel.swift */; };
 		11A4724721AABA0A001F54F6 /* Daf_Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11A4724621AABA0A001F54F6 /* Daf_Model.swift */; };
 		11A4724921AABD35001F54F6 /* DafResponse_Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11A4724821AABD35001F54F6 /* DafResponse_Model.swift */; };
@@ -81,7 +80,6 @@
 		114C9CCB21A1661E00D5713E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1156509721E36FA500A6B641 /* ShiurDiario_iOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ShiurDiario_iOSTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1156509B21E36FA500A6B641 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		1174377621E49D0600EFC218 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		11959C7C21B3E35300BEFCC6 /* DapimViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DapimViewModel.swift; sourceTree = "<group>"; };
 		11A4724621AABA0A001F54F6 /* Daf_Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Daf_Model.swift; sourceTree = "<group>"; };
 		11A4724821AABD35001F54F6 /* DafResponse_Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DafResponse_Model.swift; sourceTree = "<group>"; };
@@ -155,7 +153,6 @@
 		114C9CB321A1661C00D5713E = {
 			isa = PBXGroup;
 			children = (
-				1174377621E49D0600EFC218 /* Default-568h@2x.png */,
 				114C9CBE21A1661C00D5713E /* ShiurDiario_iOS */,
 				1156509821E36FA500A6B641 /* ShiurDiario_iOSTests */,
 				114C9CBD21A1661C00D5713E /* Products */,
@@ -419,7 +416,6 @@
 				1122BF6A21B6975B0053E27E /* MessageCVCell.xib in Resources */,
 				114C9CCA21A1661E00D5713E /* LaunchScreen.storyboard in Resources */,
 				114C9CC721A1661E00D5713E /* Assets.xcassets in Resources */,
-				1174377721E49D0600EFC218 /* Default-568h@2x.png in Resources */,
 				114C9CC521A1661C00D5713E /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
