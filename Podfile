@@ -11,6 +11,7 @@ target 'ShiurDiario_iOS' do
     pod 'Crashlytics'
     pod 'Firebase/Core'
     pod 'Firebase/Firestore'
+    pod 'Firebase/Auth'
 
 
 
