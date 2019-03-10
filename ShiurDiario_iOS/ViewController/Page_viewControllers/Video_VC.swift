@@ -13,42 +13,93 @@ class Video_VC: UIViewController {
     
     var prefix: String?
     var dafName: String!
+    
+    var videoPlayer: AVPlayer!
+    var videoLayer: AVPlayerLayer!
 
+    
+    @IBOutlet weak var commentLabelSection: UIView!
+    @IBOutlet weak var commentSection: UIView!
+    
+    @IBOutlet weak var commentSection_bottomAnchor: NSLayoutConstraint!
+    
+    @IBOutlet weak var videoContainer: UIView!
+    @IBOutlet weak var videoView: UIView!
     @IBOutlet weak var videoTitle: UILabel!
-    @IBOutlet weak var playBtn: UIButton!
-    @IBOutlet weak var containerUiVIew: UIView!
-    @IBOutlet weak var imageBG: UIImageView!
-    @IBOutlet weak var btnContainer: UIView!
+    @IBOutlet weak var addCommentLabel: UILabel!
+    
+    @IBOutlet weak var commentTextView: UITextView!
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        UIDesigns()
+        self.hideKeyBoardWhenTouchedAround()
+        
+        if prefix == nil { prefix = "Menachot_95" }
+        
         videoTitle.text = dafName
-    }
-
-    
-    @IBAction func playVideoBtn(_ sender: Any) {
-        playBtn.alpha = 0.15
-        if prefix == nil {
-            prefix = "Menachot_95"
-        }
-        print("PREFIX OF VIDEO IS: \(prefix!)")
+        
         guard let url = URL(string: "http://shiurdiario.com/media/video/\(prefix!).mp4") else { return }
-        let video = AVPlayer(url: url)
-        let videoPlayer = AVPlayerViewController()
-        videoPlayer.player = video
-
-        present(videoPlayer, animated: true) {
-            video.play()
+        videoPlayer = AVPlayer(url: url)
+        videoLayer = AVPlayerLayer(player: videoPlayer)
+        videoLayer.videoGravity = .resize
+        videoView.layer.addSublayer(videoLayer)
+        
+        commentLabelSection.layer.borderWidth = 0.4
+        commentLabelSection.layer.borderColor = UIColor.black.cgColor
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(displayInputView), name: NSNotification.Name.UIKeyboardWillShow, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(hideInputView), name: NSNotification.Name.UIKeyboardWillHide, object: nil)
+        
+    }
+    
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        addConstraints(to: videoView)
+        videoLayer.frame = videoView.bounds
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        videoPlayer.play()
+    }
+    
+    @objc func displayInputView(notification: NSNotification) {
+        let info = notification.userInfo!
+        let keyboardFrame = (info[UIKeyboardFrameEndUserInfoKey] as! NSValue).cgRectValue
+        UIView.animate(withDuration: 0.3) {
+            self.commentSection_bottomAnchor.constant = keyboardFrame.height
+            self.view.layoutIfNeeded()
         }
     }
     
-    private func UIDesigns() {
-        imageBG.alpha = CGFloat(0.8)
-        containerUiVIew.addBorder(width: 0.5, color: UIColor.white.cgColor)
-        containerUiVIew.alpha = CGFloat(0.5)
-        containerUiVIew.layer.cornerRadius = 15
+    @objc func hideInputView(notification: NSNotification) {
+        UIView.animate(withDuration: 0.3) {
+            self.commentSection_bottomAnchor.constant = 0
+            self.view.layoutIfNeeded()
+        }
     }
+    
+    
+    @IBAction func commentLabelTap(_ sender: UITapGestureRecognizer) {
+        commentTextView.becomeFirstResponder()
+    }
+    
+    
+
+    private func addConstraints(to videoView: UIView) {
+        videoView.translatesAutoresizingMaskIntoConstraints = false
+        videoView.topAnchor.constraint(equalTo: videoContainer.topAnchor).isActive = true
+        videoView.bottomAnchor.constraint(equalTo: videoContainer.bottomAnchor).isActive = true
+        videoView.centerXAnchor.constraint(equalTo: videoContainer.centerXAnchor).isActive = true
+        videoView.widthAnchor.constraint(equalToConstant: 270.0).isActive = true
+        videoView.layoutIfNeeded()
+    }
+    
+}
+
+
+extension Video_VC: UITextViewDelegate {
+    
 }

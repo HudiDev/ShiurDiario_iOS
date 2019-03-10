@@ -22,7 +22,8 @@
 		114C9CC521A1661C00D5713E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 114C9CC321A1661C00D5713E /* Main.storyboard */; };
 		114C9CC721A1661E00D5713E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 114C9CC621A1661E00D5713E /* Assets.xcassets */; };
 		114C9CCA21A1661E00D5713E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 114C9CC821A1661E00D5713E /* LaunchScreen.storyboard */; };
-		1174377721E49D0600EFC218 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1174377621E49D0600EFC218 /* Default-568h@2x.png */; };
+		117B33162235298C0075D710 /* VideoComments_VC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 117B33152235298C0075D710 /* VideoComments_VC.swift */; };
+		117B3318223529FF0075D710 /* CommentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 117B3317223529FF0075D710 /* CommentCell.swift */; };
 		11959C7D21B3E35300BEFCC6 /* DapimViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11959C7C21B3E35300BEFCC6 /* DapimViewModel.swift */; };
 		11A4724721AABA0A001F54F6 /* Daf_Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11A4724621AABA0A001F54F6 /* Daf_Model.swift */; };
 		11A4724921AABD35001F54F6 /* DafResponse_Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11A4724821AABD35001F54F6 /* DafResponse_Model.swift */; };
@@ -46,6 +47,7 @@
 		11F800C921AF098E004614E8 /* DedicationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11F800C821AF098E004614E8 /* DedicationViewModel.swift */; };
 		11F800CB21AF0B7C004614E8 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11F800CA21AF0B7C004614E8 /* Utils.swift */; };
 		11F874F121A36BCF00CA11B4 /* SideMenuVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11F874F021A36BCF00CA11B4 /* SideMenuVC.swift */; };
+		11F97A0D2235601D00746909 /* GoogleService-Info-2.plist in Resources */ = {isa = PBXBuildFile; fileRef = 11F97A0C2235601D00746909 /* GoogleService-Info-2.plist */; };
 		351C656D12345679031F18BE /* Pods_ShiurDiario_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C24E2ECC5537CA33F4B10B5 /* Pods_ShiurDiario_iOS.framework */; };
 		68A5AA96FB59F768D1DFC9D1 /* Pods_ShiurDiario_iOSTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 86392C445F4BE394ABD9B562 /* Pods_ShiurDiario_iOSTests.framework */; };
 /* End PBXBuildFile section */
@@ -81,7 +83,8 @@
 		114C9CCB21A1661E00D5713E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1156509721E36FA500A6B641 /* ShiurDiario_iOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ShiurDiario_iOSTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1156509B21E36FA500A6B641 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		1174377621E49D0600EFC218 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		117B33152235298C0075D710 /* VideoComments_VC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoComments_VC.swift; sourceTree = "<group>"; };
+		117B3317223529FF0075D710 /* CommentCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentCell.swift; sourceTree = "<group>"; };
 		11959C7C21B3E35300BEFCC6 /* DapimViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DapimViewModel.swift; sourceTree = "<group>"; };
 		11A4724621AABA0A001F54F6 /* Daf_Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Daf_Model.swift; sourceTree = "<group>"; };
 		11A4724821AABD35001F54F6 /* DafResponse_Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DafResponse_Model.swift; sourceTree = "<group>"; };
@@ -105,6 +108,7 @@
 		11F800C821AF098E004614E8 /* DedicationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DedicationViewModel.swift; sourceTree = "<group>"; };
 		11F800CA21AF0B7C004614E8 /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 		11F874F021A36BCF00CA11B4 /* SideMenuVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuVC.swift; sourceTree = "<group>"; };
+		11F97A0C2235601D00746909 /* GoogleService-Info-2.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info-2.plist"; path = "../../../../.Trash/GoogleService-Info-2.plist"; sourceTree = "<group>"; };
 		19563A862F9061651023EE53 /* Pods-ShiurDiario_iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ShiurDiario_iOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-ShiurDiario_iOS/Pods-ShiurDiario_iOS.release.xcconfig"; sourceTree = "<group>"; };
 		52EA3D2C172DE2F8353623AF /* Pods-ShiurDiario_iOSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ShiurDiario_iOSTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ShiurDiario_iOSTests/Pods-ShiurDiario_iOSTests.release.xcconfig"; sourceTree = "<group>"; };
 		7C24E2ECC5537CA33F4B10B5 /* Pods_ShiurDiario_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ShiurDiario_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -139,6 +143,7 @@
 				11065D0321A82E64002621AE /* Text_VC.swift */,
 				11065D0721A82E88002621AE /* Dapim_VC.swift */,
 				11065D0921A82E9A002621AE /* Masechtot_VC.swift */,
+				117B33152235298C0075D710 /* VideoComments_VC.swift */,
 			);
 			path = Page_viewControllers;
 			sourceTree = "<group>";
@@ -155,7 +160,6 @@
 		114C9CB321A1661C00D5713E = {
 			isa = PBXGroup;
 			children = (
-				1174377621E49D0600EFC218 /* Default-568h@2x.png */,
 				114C9CBE21A1661C00D5713E /* ShiurDiario_iOS */,
 				1156509821E36FA500A6B641 /* ShiurDiario_iOSTests */,
 				114C9CBD21A1661C00D5713E /* Products */,
@@ -177,13 +181,14 @@
 			isa = PBXGroup;
 			children = (
 				11F12A8A21E370BE00430143 /* App Delegate */,
-				11DA70A221AFEBC900294E14 /* helpers */,
 				11DA709D21AFE1DE00294E14 /* Repository */,
 				11DA709C21AFE07400294E14 /* ViewController */,
 				11F800C721AF0698004614E8 /* View */,
 				11F800C621AF068C004614E8 /* ViewModel */,
 				11F800C521AF0679004614E8 /* Model */,
+				11DA70A221AFEBC900294E14 /* helpers */,
 				115650A121E3705700A6B641 /* Supporting Files */,
+				11F97A0C2235601D00746909 /* GoogleService-Info-2.plist */,
 			);
 			path = ShiurDiario_iOS;
 			sourceTree = "<group>";
@@ -307,6 +312,7 @@
 				11065D0021A6F95C002621AE /* TabView.swift */,
 				110B242821E18C6000792546 /* SideMenuCell.swift */,
 				1122BF6B21B698F00053E27E /* messageCell */,
+				117B3317223529FF0075D710 /* CommentCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -343,6 +349,7 @@
 				114C9CB921A1661C00D5713E /* Frameworks */,
 				114C9CBA21A1661C00D5713E /* Resources */,
 				1174377821E51A2C00EFC218 /* ShellScript */,
+				60FD940953A713022DD79828 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -416,10 +423,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				11F97A0D2235601D00746909 /* GoogleService-Info-2.plist in Resources */,
 				1122BF6A21B6975B0053E27E /* MessageCVCell.xib in Resources */,
 				114C9CCA21A1661E00D5713E /* LaunchScreen.storyboard in Resources */,
 				114C9CC721A1661E00D5713E /* Assets.xcassets in Resources */,
-				1174377721E49D0600EFC218 /* Default-568h@2x.png in Resources */,
 				114C9CC521A1661C00D5713E /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -446,6 +453,38 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Fabric/run\" c1d752d0e150a865e17bf2878c234095762976c9 9b2960bacbca422e94bf6215e078ff164e08bc81a17eb291645395b9e1ce75be";
+		};
+		60FD940953A713022DD79828 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-ShiurDiario_iOS/Pods-ShiurDiario_iOS-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/BoringSSL-GRPC/openssl_grpc.framework",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
+				"${BUILT_PRODUCTS_DIR}/Protobuf/Protobuf.framework",
+				"${BUILT_PRODUCTS_DIR}/gRPC-C++/grpcpp.framework",
+				"${BUILT_PRODUCTS_DIR}/gRPC-Core/grpc.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/openssl_grpc.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Protobuf.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/grpcpp.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/grpc.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ShiurDiario_iOS/Pods-ShiurDiario_iOS-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
 		};
 		C7F6218BDEF5B4BBF57E5FE4 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -500,6 +539,7 @@
 				11E58B2321B16A3900EBF17D /* Daf_ViewModel.swift in Sources */,
 				11DA70A421AFEBE000294E14 /* Result.swift in Sources */,
 				11A4724D21AAE6D2001F54F6 /* MasechtaCell.swift in Sources */,
+				117B33162235298C0075D710 /* VideoComments_VC.swift in Sources */,
 				11A4724B21AABE27001F54F6 /* DafCell.swift in Sources */,
 				11F874F121A36BCF00CA11B4 /* SideMenuVC.swift in Sources */,
 				1122BF6921B6975B0053E27E /* MessageCVCell.swift in Sources */,
@@ -509,6 +549,7 @@
 				11E58B2121B1662100EBF17D /* MasechtotViewModel.swift in Sources */,
 				11065D0121A6F95C002621AE /* TabView.swift in Sources */,
 				11DA70AC21B0743600294E14 /* extensions.swift in Sources */,
+				117B3318223529FF0075D710 /* CommentCell.swift in Sources */,
 				11DA70AA21B03B6C00294E14 /* ItemType.swift in Sources */,
 				11065D0A21A82E9A002621AE /* Masechtot_VC.swift in Sources */,
 				11065D0421A82E64002621AE /* Text_VC.swift in Sources */,
