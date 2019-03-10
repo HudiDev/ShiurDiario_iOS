@@ -18,13 +18,23 @@ class Video_VC: UIViewController {
     var videoLayer: AVPlayerLayer!
 
     
+    @IBOutlet weak var commentLabelSection: UIView!
+    @IBOutlet weak var commentSection: UIView!
+    
+    @IBOutlet weak var commentSection_bottomAnchor: NSLayoutConstraint!
+    
     @IBOutlet weak var videoContainer: UIView!
     @IBOutlet weak var videoView: UIView!
     @IBOutlet weak var videoTitle: UILabel!
+    @IBOutlet weak var addCommentLabel: UILabel!
+    
+    @IBOutlet weak var commentTextView: UITextView!
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.hideKeyBoardWhenTouchedAround()
         
         if prefix == nil { prefix = "Menachot_95" }
         
@@ -35,6 +45,13 @@ class Video_VC: UIViewController {
         videoLayer = AVPlayerLayer(player: videoPlayer)
         videoLayer.videoGravity = .resize
         videoView.layer.addSublayer(videoLayer)
+        
+        commentLabelSection.layer.borderWidth = 0.4
+        commentLabelSection.layer.borderColor = UIColor.black.cgColor
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(displayInputView), name: NSNotification.Name.UIKeyboardWillShow, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(hideInputView), name: NSNotification.Name.UIKeyboardWillHide, object: nil)
+        
     }
     
     override func viewDidLayoutSubviews() {
@@ -43,13 +60,32 @@ class Video_VC: UIViewController {
         videoLayer.frame = videoView.bounds
     }
     
-
-   
- 
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         videoPlayer.play()
     }
+    
+    @objc func displayInputView(notification: NSNotification) {
+        let info = notification.userInfo!
+        let keyboardFrame = (info[UIKeyboardFrameEndUserInfoKey] as! NSValue).cgRectValue
+        UIView.animate(withDuration: 0.3) {
+            self.commentSection_bottomAnchor.constant = keyboardFrame.height
+            self.view.layoutIfNeeded()
+        }
+    }
+    
+    @objc func hideInputView(notification: NSNotification) {
+        UIView.animate(withDuration: 0.3) {
+            self.commentSection_bottomAnchor.constant = 0
+            self.view.layoutIfNeeded()
+        }
+    }
+    
+    
+    @IBAction func commentLabelTap(_ sender: UITapGestureRecognizer) {
+        commentTextView.becomeFirstResponder()
+    }
+    
     
 
     private func addConstraints(to videoView: UIView) {
@@ -60,5 +96,10 @@ class Video_VC: UIViewController {
         videoView.widthAnchor.constraint(equalToConstant: 270.0).isActive = true
         videoView.layoutIfNeeded()
     }
+    
+}
+
+
+extension Video_VC: UITextViewDelegate {
     
 }
