@@ -13,42 +13,52 @@ class Video_VC: UIViewController {
     
     var prefix: String?
     var dafName: String!
+    
+    var videoPlayer: AVPlayer!
+    var videoLayer: AVPlayerLayer!
 
+    
+    @IBOutlet weak var videoContainer: UIView!
+    @IBOutlet weak var videoView: UIView!
     @IBOutlet weak var videoTitle: UILabel!
-    @IBOutlet weak var playBtn: UIButton!
-    @IBOutlet weak var containerUiVIew: UIView!
-    @IBOutlet weak var imageBG: UIImageView!
-    @IBOutlet weak var btnContainer: UIView!
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        UIDesigns()
+        if prefix == nil { prefix = "Menachot_95" }
+        
         videoTitle.text = dafName
-    }
-
-    
-    @IBAction func playVideoBtn(_ sender: Any) {
-        playBtn.alpha = 0.15
-        if prefix == nil {
-            prefix = "Menachot_95"
-        }
-        print("PREFIX OF VIDEO IS: \(prefix!)")
+        
         guard let url = URL(string: "http://shiurdiario.com/media/video/\(prefix!).mp4") else { return }
-        let video = AVPlayer(url: url)
-        let videoPlayer = AVPlayerViewController()
-        videoPlayer.player = video
-
-        present(videoPlayer, animated: true) {
-            video.play()
-        }
+        videoPlayer = AVPlayer(url: url)
+        videoLayer = AVPlayerLayer(player: videoPlayer)
+        videoLayer.videoGravity = .resize
+        videoView.layer.addSublayer(videoLayer)
     }
     
-    private func UIDesigns() {
-        imageBG.alpha = CGFloat(0.8)
-        containerUiVIew.addBorder(width: 0.5, color: UIColor.white.cgColor)
-        containerUiVIew.alpha = CGFloat(0.5)
-        containerUiVIew.layer.cornerRadius = 15
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        addConstraints(to: videoView)
+        videoLayer.frame = videoView.bounds
     }
+    
+
+   
+ 
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        videoPlayer.play()
+    }
+    
+
+    private func addConstraints(to videoView: UIView) {
+        videoView.translatesAutoresizingMaskIntoConstraints = false
+        videoView.topAnchor.constraint(equalTo: videoContainer.topAnchor).isActive = true
+        videoView.bottomAnchor.constraint(equalTo: videoContainer.bottomAnchor).isActive = true
+        videoView.centerXAnchor.constraint(equalTo: videoContainer.centerXAnchor).isActive = true
+        videoView.widthAnchor.constraint(equalToConstant: 270.0).isActive = true
+        videoView.layoutIfNeeded()
+    }
+    
 }
