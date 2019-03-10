@@ -47,6 +47,7 @@
 		11F800C921AF098E004614E8 /* DedicationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11F800C821AF098E004614E8 /* DedicationViewModel.swift */; };
 		11F800CB21AF0B7C004614E8 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11F800CA21AF0B7C004614E8 /* Utils.swift */; };
 		11F874F121A36BCF00CA11B4 /* SideMenuVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11F874F021A36BCF00CA11B4 /* SideMenuVC.swift */; };
+		11F97A0D2235601D00746909 /* GoogleService-Info-2.plist in Resources */ = {isa = PBXBuildFile; fileRef = 11F97A0C2235601D00746909 /* GoogleService-Info-2.plist */; };
 		351C656D12345679031F18BE /* Pods_ShiurDiario_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C24E2ECC5537CA33F4B10B5 /* Pods_ShiurDiario_iOS.framework */; };
 		68A5AA96FB59F768D1DFC9D1 /* Pods_ShiurDiario_iOSTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 86392C445F4BE394ABD9B562 /* Pods_ShiurDiario_iOSTests.framework */; };
 /* End PBXBuildFile section */
@@ -107,6 +108,7 @@
 		11F800C821AF098E004614E8 /* DedicationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DedicationViewModel.swift; sourceTree = "<group>"; };
 		11F800CA21AF0B7C004614E8 /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 		11F874F021A36BCF00CA11B4 /* SideMenuVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuVC.swift; sourceTree = "<group>"; };
+		11F97A0C2235601D00746909 /* GoogleService-Info-2.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info-2.plist"; path = "../../../../.Trash/GoogleService-Info-2.plist"; sourceTree = "<group>"; };
 		19563A862F9061651023EE53 /* Pods-ShiurDiario_iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ShiurDiario_iOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-ShiurDiario_iOS/Pods-ShiurDiario_iOS.release.xcconfig"; sourceTree = "<group>"; };
 		52EA3D2C172DE2F8353623AF /* Pods-ShiurDiario_iOSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ShiurDiario_iOSTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ShiurDiario_iOSTests/Pods-ShiurDiario_iOSTests.release.xcconfig"; sourceTree = "<group>"; };
 		7C24E2ECC5537CA33F4B10B5 /* Pods_ShiurDiario_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ShiurDiario_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -186,6 +188,7 @@
 				11F800C521AF0679004614E8 /* Model */,
 				11DA70A221AFEBC900294E14 /* helpers */,
 				115650A121E3705700A6B641 /* Supporting Files */,
+				11F97A0C2235601D00746909 /* GoogleService-Info-2.plist */,
 			);
 			path = ShiurDiario_iOS;
 			sourceTree = "<group>";
@@ -346,6 +349,7 @@
 				114C9CB921A1661C00D5713E /* Frameworks */,
 				114C9CBA21A1661C00D5713E /* Resources */,
 				1174377821E51A2C00EFC218 /* ShellScript */,
+				60FD940953A713022DD79828 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -419,6 +423,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				11F97A0D2235601D00746909 /* GoogleService-Info-2.plist in Resources */,
 				1122BF6A21B6975B0053E27E /* MessageCVCell.xib in Resources */,
 				114C9CCA21A1661E00D5713E /* LaunchScreen.storyboard in Resources */,
 				114C9CC721A1661E00D5713E /* Assets.xcassets in Resources */,
@@ -448,6 +453,28 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Fabric/run\" c1d752d0e150a865e17bf2878c234095762976c9 9b2960bacbca422e94bf6215e078ff164e08bc81a17eb291645395b9e1ce75be";
+		};
+		60FD940953A713022DD79828 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-ShiurDiario_iOS/Pods-ShiurDiario_iOS-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ShiurDiario_iOS/Pods-ShiurDiario_iOS-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
 		};
 		C7F6218BDEF5B4BBF57E5FE4 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
