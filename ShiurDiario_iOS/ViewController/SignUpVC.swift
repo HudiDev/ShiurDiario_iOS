@@ -11,26 +11,45 @@ import Firebase
 
 class SignUpVC: UIViewController {
     
+    typealias NameUniqueCompletion = (_ isUnique: Bool) -> ()
     
-    private let db: Firestore = Firestore.firestore()
+    
+    private var db: Firestore!
+    private let users: String = "users"
     
     
+    @IBOutlet weak var nameField: UITextField!
     @IBOutlet weak var emailField: UITextField!
     @IBOutlet weak var passwordField: UITextField!
-
+    @IBOutlet weak var passwordVerificationField: UITextField!
     
-    var emailStr: String {
-        return emailField.text ?? ""
-    }
+    @IBOutlet weak var loadingIndicator: UIActivityIndicatorView!
     
-    var passwordStr: String {
-        return passwordField.text ?? ""
-    }
+    
+    private var nameStr: String { return nameField.text ?? "" }
+    private var emailStr: String { return emailField.text ?? "" }
+    private var passwordStr: String { return passwordField.text ?? "" }
+    private var passwordVerificationStr: String { return passwordVerificationField.text ?? "" }
+    
+    private lazy var viewMask: UIView = {
+        let view = UIView(frame: self.view.frame)
+        view.alpha = 0.0
+        view.backgroundColor = .black
+        return view
+    }()
+    
+    
     
    
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.hideKeyBoardWhenTouchedAround()
+        
+        self.view.addSubview(viewMask)
+        
+        db = Firestore.firestore()
     }
     
     
@@ -51,36 +70,100 @@ class SignUpVC: UIViewController {
     @IBAction func signUpBtn(_ sender: UIButton) {
         guard isFieldsValid() else { return }
         
-        Auth.auth().createUser(withEmail: emailStr, password: passwordStr) { (result, err) in
-            guard err == nil else {
-                self.displayErrorAlert(title: "Login Error", msg: err!.localizedDescription)
+        self.view.isUserInteractionEnabled = false
+        self.viewMask.alpha = 0.5
+        self.loadingIndicator.startAnimating()
+        
+        self.isUserNameUnique { (isUnique) in
+            guard isUnique else {
+                self.displayErrorAlert(title: "Login error", msg: "user name already exists")
                 return
             }
             
-            guard result != nil else { return }
-            print("you signed up successfully")
-            
-            let changeRequest = Auth.auth().currentUser?.createProfileChangeRequest()
-            changeRequest?.displayName = "Hudi"
-            changeRequest?.commitChanges(completion: { (err) in
+            Auth.auth().createUser(withEmail: self.emailStr, password: self.passwordStr) { (result, err) in
                 guard err == nil else {
-                    self.displayErrorAlert(title: "Change Error", msg: err!.localizedDescription)
+                    self.displayErrorAlert(title: "Login error", msg: err!.localizedDescription)
                     return
                 }
                 
-                print("you have successfully changed user details")
-            })
+                guard result != nil else { return }
+                print("you signed up successfully")
+                
+                let changeRequest = Auth.auth().currentUser?.createProfileChangeRequest()
+                changeRequest?.displayName = self.nameStr
+                changeRequest?.commitChanges(completion: { (err) in
+                    guard err == nil else {
+                        self.displayErrorAlert(title: "Change Error", msg: err!.localizedDescription)
+                        return
+                    }
+                    
+                    self.addNewUserToDB()
+                    
+                    self.view.isUserInteractionEnabled = true
+                    self.loadingIndicator.stopAnimating()
+                    self.viewMask.alpha = 0.0
+                    
+                    print("you have successfully changed user details")
+                })
+            }
+            
+        }
+        
+        
+    }
+    
+    
+    
+    private func isUserNameUnique(completion: @escaping NameUniqueCompletion) {
+        
+        db.collection(self.users).whereField("display_name", isEqualTo: self.nameStr)
+            .getDocuments { (snapshot, err) in
+                guard err == nil else {
+                    print("error attempting to query users with similar name: \(err!.localizedDescription)")
+                    return
+                }
+                guard let snapshot = snapshot else { return }
+                snapshot.count == 0 ? completion(true) : completion(false)
         }
     }
     
     
+    private func addNewUserToDB() {
+        guard let uid = Auth.auth().currentUser?.uid else {
+            print("couldn't get uid of current user")
+            return
+        }
+        self.db.collection(self.users).document(uid).setData([
+            "display_name": nameStr,
+            "email": emailStr]) { (err) in
+                guard err == nil else {
+                    print("error saving new user to db: \(err!.localizedDescription)")
+                    return
+                }
+        }
+        
+        self.db.collection(self.users).document(uid).setData([
+            "display_name": nameStr,
+            "email": emailStr])
+    }
+    
+    
     private func isFieldsValid() -> Bool {
-        if !isValidEmail(testStr: emailField.text ?? "") {
+        
+        if nameStr.count == 0 {
+            displayErrorAlert(title: "Login error", msg: "user name is empty")
+            return false
+        }
+        if !isValidEmail(testStr: emailStr) {
             displayErrorAlert(title: "Login error", msg: "Invalid email address")
             return false
         }
-        if passwordField.text!.count < 5 {
+        if passwordStr.count < 5 {
             displayErrorAlert(title: "Login error", msg: "Password requires at least 5 characters")
+            return false
+        }
+        if passwordVerificationStr != passwordStr {
+            displayErrorAlert(title: "Login error", msg: "verification does not match password")
             return false
         }
         return true
