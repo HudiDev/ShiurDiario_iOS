@@ -12,6 +12,7 @@ target 'ShiurDiario_iOS' do
     pod 'Firebase/Core'
     pod 'Firebase/Firestore'
     pod 'Firebase/Auth'
+    pod 'IQKeyboardManagerSwift'
 
 
 
