@@ -42,12 +42,15 @@
 		11E58B2121B1662100EBF17D /* MasechtotViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11E58B2021B1662100EBF17D /* MasechtotViewModel.swift */; };
 		11E58B2321B16A3900EBF17D /* Daf_ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11E58B2221B16A3900EBF17D /* Daf_ViewModel.swift */; };
 		11F12A8F21E3720C00430143 /* DataTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11F12A8E21E3720C00430143 /* DataTests.swift */; };
+		11F78C092236B6DB006A5935 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11F78C082236B6DB006A5935 /* LoginVC.swift */; };
+		11F78C0B22371733006A5935 /* LaunchVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11F78C0A22371732006A5935 /* LaunchVC.swift */; };
 		11F800C221ADCBD6004614E8 /* DedicationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11F800C121ADCBD6004614E8 /* DedicationVC.swift */; };
 		11F800C421AEDEE6004614E8 /* ContactVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11F800C321AEDEE6004614E8 /* ContactVC.swift */; };
 		11F800C921AF098E004614E8 /* DedicationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11F800C821AF098E004614E8 /* DedicationViewModel.swift */; };
 		11F800CB21AF0B7C004614E8 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11F800CA21AF0B7C004614E8 /* Utils.swift */; };
 		11F874F121A36BCF00CA11B4 /* SideMenuVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11F874F021A36BCF00CA11B4 /* SideMenuVC.swift */; };
-		11F97A0D2235601D00746909 /* GoogleService-Info-2.plist in Resources */ = {isa = PBXBuildFile; fileRef = 11F97A0C2235601D00746909 /* GoogleService-Info-2.plist */; };
+		11F97A0D2235601D00746909 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 11F97A0C2235601D00746909 /* GoogleService-Info.plist */; };
+		11F97A0F223586F300746909 /* SignUpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11F97A0E223586F300746909 /* SignUpVC.swift */; };
 		351C656D12345679031F18BE /* Pods_ShiurDiario_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C24E2ECC5537CA33F4B10B5 /* Pods_ShiurDiario_iOS.framework */; };
 		68A5AA96FB59F768D1DFC9D1 /* Pods_ShiurDiario_iOSTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 86392C445F4BE394ABD9B562 /* Pods_ShiurDiario_iOSTests.framework */; };
 /* End PBXBuildFile section */
@@ -103,12 +106,15 @@
 		11E58B2021B1662100EBF17D /* MasechtotViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasechtotViewModel.swift; sourceTree = "<group>"; };
 		11E58B2221B16A3900EBF17D /* Daf_ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Daf_ViewModel.swift; sourceTree = "<group>"; };
 		11F12A8E21E3720C00430143 /* DataTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataTests.swift; sourceTree = "<group>"; };
+		11F78C082236B6DB006A5935 /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
+		11F78C0A22371732006A5935 /* LaunchVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchVC.swift; sourceTree = "<group>"; };
 		11F800C121ADCBD6004614E8 /* DedicationVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DedicationVC.swift; sourceTree = "<group>"; };
 		11F800C321AEDEE6004614E8 /* ContactVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactVC.swift; sourceTree = "<group>"; };
 		11F800C821AF098E004614E8 /* DedicationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DedicationViewModel.swift; sourceTree = "<group>"; };
 		11F800CA21AF0B7C004614E8 /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 		11F874F021A36BCF00CA11B4 /* SideMenuVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuVC.swift; sourceTree = "<group>"; };
-		11F97A0C2235601D00746909 /* GoogleService-Info-2.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info-2.plist"; path = "../../../../.Trash/GoogleService-Info-2.plist"; sourceTree = "<group>"; };
+		11F97A0C2235601D00746909 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../.Trash/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		11F97A0E223586F300746909 /* SignUpVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpVC.swift; sourceTree = "<group>"; };
 		19563A862F9061651023EE53 /* Pods-ShiurDiario_iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ShiurDiario_iOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-ShiurDiario_iOS/Pods-ShiurDiario_iOS.release.xcconfig"; sourceTree = "<group>"; };
 		52EA3D2C172DE2F8353623AF /* Pods-ShiurDiario_iOSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ShiurDiario_iOSTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ShiurDiario_iOSTests/Pods-ShiurDiario_iOSTests.release.xcconfig"; sourceTree = "<group>"; };
 		7C24E2ECC5537CA33F4B10B5 /* Pods_ShiurDiario_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ShiurDiario_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -188,7 +194,7 @@
 				11F800C521AF0679004614E8 /* Model */,
 				11DA70A221AFEBC900294E14 /* helpers */,
 				115650A121E3705700A6B641 /* Supporting Files */,
-				11F97A0C2235601D00746909 /* GoogleService-Info-2.plist */,
+				11F97A0C2235601D00746909 /* GoogleService-Info.plist */,
 			);
 			path = ShiurDiario_iOS;
 			sourceTree = "<group>";
@@ -224,6 +230,9 @@
 				110F930E21A41CF000A50EDE /* DafHayomiVC.swift */,
 				11F874F021A36BCF00CA11B4 /* SideMenuVC.swift */,
 				11065D0221A82E1C002621AE /* Page_viewControllers */,
+				11F97A0E223586F300746909 /* SignUpVC.swift */,
+				11F78C082236B6DB006A5935 /* LoginVC.swift */,
+				11F78C0A22371732006A5935 /* LaunchVC.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -423,7 +432,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				11F97A0D2235601D00746909 /* GoogleService-Info-2.plist in Resources */,
+				11F97A0D2235601D00746909 /* GoogleService-Info.plist in Resources */,
 				1122BF6A21B6975B0053E27E /* MessageCVCell.xib in Resources */,
 				114C9CCA21A1661E00D5713E /* LaunchScreen.storyboard in Resources */,
 				114C9CC721A1661E00D5713E /* Assets.xcassets in Resources */,
@@ -464,6 +473,7 @@
 				"${BUILT_PRODUCTS_DIR}/BoringSSL-GRPC/openssl_grpc.framework",
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
+				"${BUILT_PRODUCTS_DIR}/IQKeyboardManagerSwift/IQKeyboardManagerSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/Protobuf/Protobuf.framework",
 				"${BUILT_PRODUCTS_DIR}/gRPC-C++/grpcpp.framework",
 				"${BUILT_PRODUCTS_DIR}/gRPC-Core/grpc.framework",
@@ -475,6 +485,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/openssl_grpc.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IQKeyboardManagerSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Protobuf.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/grpcpp.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/grpc.framework",
@@ -552,16 +563,19 @@
 				117B3318223529FF0075D710 /* CommentCell.swift in Sources */,
 				11DA70AA21B03B6C00294E14 /* ItemType.swift in Sources */,
 				11065D0A21A82E9A002621AE /* Masechtot_VC.swift in Sources */,
+				11F78C092236B6DB006A5935 /* LoginVC.swift in Sources */,
 				11065D0421A82E64002621AE /* Text_VC.swift in Sources */,
 				11A4724921AABD35001F54F6 /* DafResponse_Model.swift in Sources */,
 				11E58B1F21B1633500EBF17D /* DapimRepo.swift in Sources */,
 				114C9CC021A1661C00D5713E /* AppDelegate.swift in Sources */,
 				11F800C421AEDEE6004614E8 /* ContactVC.swift in Sources */,
+				11F97A0F223586F300746909 /* SignUpVC.swift in Sources */,
 				110B242921E18C6000792546 /* SideMenuCell.swift in Sources */,
 				11F800CB21AF0B7C004614E8 /* Utils.swift in Sources */,
 				11DA70A621B014EC00294E14 /* Bindable.swift in Sources */,
 				11A4724721AABA0A001F54F6 /* Daf_Model.swift in Sources */,
 				11065CFF21A6F557002621AE /* PageVC.swift in Sources */,
+				11F78C0B22371733006A5935 /* LaunchVC.swift in Sources */,
 				11065D0821A82E88002621AE /* Dapim_VC.swift in Sources */,
 				11DA709F21AFE26C00294E14 /* DedicationRepo.swift in Sources */,
 			);
