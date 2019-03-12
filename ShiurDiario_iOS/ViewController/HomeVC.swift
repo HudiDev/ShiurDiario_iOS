@@ -31,8 +31,12 @@ class HomeVC: UIViewController {
     
     var isSideMenuOpened = true
     
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         
         self.scrollView.addSubview(self.mask)
         addConstraints(for: self.mask)
@@ -45,6 +49,17 @@ class HomeVC: UIViewController {
         addEdgePanGesture(view: self.view)
         
         NotificationCenter.default.addObserver(self, selector: #selector(hideSideMenu), name: NSNotification.Name("hideMenu"), object: nil)
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.navigationController?.navigationBar.isHidden = false
+        self.navigationController?.navigationBar.isTranslucent = false
+    }
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+        self.mask.alpha = 0.0
     }
     
     @objc func hideSideMenu() {

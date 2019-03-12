@@ -31,6 +31,10 @@ class SignUpVC: UIViewController {
     private var passwordStr: String { return passwordField.text ?? "" }
     private var passwordVerificationStr: String { return passwordVerificationField.text ?? "" }
     
+    var trimmedName: String {
+        return nameStr.trimmingCharacters(in: CharacterSet.whitespacesAndNewlines)
+    }
+    
     private lazy var viewMask: UIView = {
         let view = UIView(frame: self.view.frame)
         view.alpha = 0.0
@@ -40,37 +44,34 @@ class SignUpVC: UIViewController {
     
     
     
-   
-    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        if let currentUser = Auth.auth().currentUser {
+            print("current user name is: \(currentUser.displayName)")
+        } else {
+            print("current user is nil")
+        }
+        
+        self.navigationController?.navigationBar.isHidden = true
         
         self.hideKeyBoardWhenTouchedAround()
         
         self.view.addSubview(viewMask)
-        
+
         db = Firestore.firestore()
     }
     
     
-    
-    @IBAction func loginBtn(_ sender: UIButton) {
-        guard isFieldsValid() else { return }
+    @IBAction func goToLogin(_ sender: UIButton) {
         
-        Auth.auth().signIn(withEmail: emailStr, password: passwordStr) { (result, err) in
-            guard err == nil else {
-                self.displayErrorAlert(title: "Login Error", msg: err!.localizedDescription)
-                return
-            }
-            guard result != nil else { return }
-            print("you logged in successfully")
-        }
     }
+    
+    
     
     @IBAction func signUpBtn(_ sender: UIButton) {
         guard isFieldsValid() else { return }
         
-        self.view.isUserInteractionEnabled = false
         self.viewMask.alpha = 0.5
         self.loadingIndicator.startAnimating()
         
@@ -90,7 +91,7 @@ class SignUpVC: UIViewController {
                 print("you signed up successfully")
                 
                 let changeRequest = Auth.auth().currentUser?.createProfileChangeRequest()
-                changeRequest?.displayName = self.nameStr
+                changeRequest?.displayName = self.trimmedName
                 changeRequest?.commitChanges(completion: { (err) in
                     guard err == nil else {
                         self.displayErrorAlert(title: "Change Error", msg: err!.localizedDescription)
@@ -99,7 +100,6 @@ class SignUpVC: UIViewController {
                     
                     self.addNewUserToDB()
                     
-                    self.view.isUserInteractionEnabled = true
                     self.loadingIndicator.stopAnimating()
                     self.viewMask.alpha = 0.0
                     
@@ -169,12 +169,6 @@ class SignUpVC: UIViewController {
         return true
     }
     
-    private func isValidEmail(testStr:String) -> Bool {
-        let emailRegEx = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,64}"
-        let emailTest = NSPredicate(format:"SELF MATCHES %@", emailRegEx)
-        return emailTest.evaluate(with: testStr)
-    }
-
 }
 
 
@@ -185,5 +179,11 @@ extension UIViewController {
         let action = UIAlertAction(title: "OK", style: .cancel, handler: nil)
         alertController.addAction(action)
         present(alertController, animated: true, completion: nil)
+    }
+    
+    func isValidEmail(testStr:String) -> Bool {
+        let emailRegEx = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,64}"
+        let emailTest = NSPredicate(format:"SELF MATCHES %@", emailRegEx)
+        return emailTest.evaluate(with: testStr)
     }
 }

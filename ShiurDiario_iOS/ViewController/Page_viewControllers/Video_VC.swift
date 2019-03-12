@@ -20,14 +20,11 @@ class Video_VC: UIViewController {
     
     @IBOutlet weak var commentLabelSection: UIView!
     @IBOutlet weak var commentSection: UIView!
-    
     @IBOutlet weak var commentSection_bottomAnchor: NSLayoutConstraint!
-    
     @IBOutlet weak var videoContainer: UIView!
     @IBOutlet weak var videoView: UIView!
     @IBOutlet weak var videoTitle: UILabel!
     @IBOutlet weak var addCommentLabel: UILabel!
-    
     @IBOutlet weak var commentTextView: UITextView!
     
     
@@ -49,8 +46,8 @@ class Video_VC: UIViewController {
         commentLabelSection.layer.borderWidth = 0.4
         commentLabelSection.layer.borderColor = UIColor.black.cgColor
         
-        NotificationCenter.default.addObserver(self, selector: #selector(displayInputView), name: NSNotification.Name.UIKeyboardWillShow, object: nil)
-        NotificationCenter.default.addObserver(self, selector: #selector(hideInputView), name: NSNotification.Name.UIKeyboardWillHide, object: nil)
+//        NotificationCenter.default.addObserver(self, selector: #selector(displayInputView), name: NSNotification.Name.UIKeyboardWillShow, object: nil)
+//        NotificationCenter.default.addObserver(self, selector: #selector(hideInputView), name: NSNotification.Name.UIKeyboardWillHide, object: nil)
         
     }
     
@@ -96,10 +93,5 @@ class Video_VC: UIViewController {
         videoView.widthAnchor.constraint(equalToConstant: 270.0).isActive = true
         videoView.layoutIfNeeded()
     }
-    
-}
-
-
-extension Video_VC: UITextViewDelegate {
     
 }

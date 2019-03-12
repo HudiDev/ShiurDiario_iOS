@@ -16,6 +16,13 @@ extension UIView {
     }
 }
 
+
+extension String {
+    func trimmed() -> String {
+        return trimmingCharacters(in: CharacterSet.whitespacesAndNewlines)
+    }
+}
+
 extension UIViewController {
     
     func hideKeyBoardWhenTouchedAround() {

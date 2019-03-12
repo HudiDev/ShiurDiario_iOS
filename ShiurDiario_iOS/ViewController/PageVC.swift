@@ -4,7 +4,6 @@
 //
 //  Created by Hudi Ilfeld on 11/22/18.
 //  Copyright © 2018 Hudi Ilfeld. All rights reserved.
-//
 
 import UIKit
 
@@ -40,7 +39,6 @@ class PageVC: UIPageViewController {
                         self.setViewControllers([firstVC], direction: .forward, animated: true, completion: nil)
                     }
                 }
-                
             }
         }
         
