@@ -142,6 +142,8 @@ class SignUpVC: UIViewController {
                 }
         }
         
+        
+        
         self.db.collection(self.users).document(uid).setData([
             "display_name": nameStr,
             "email": emailStr])

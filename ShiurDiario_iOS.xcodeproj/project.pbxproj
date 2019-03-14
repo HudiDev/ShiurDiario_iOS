@@ -15,6 +15,7 @@
 		11065D0A21A82E9A002621AE /* Masechtot_VC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11065D0921A82E9A002621AE /* Masechtot_VC.swift */; };
 		110B242921E18C6000792546 /* SideMenuCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 110B242821E18C6000792546 /* SideMenuCell.swift */; };
 		110F930F21A41CF000A50EDE /* DafHayomiVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 110F930E21A41CF000A50EDE /* DafHayomiVC.swift */; };
+		1117E991223A902E00897B96 /* Comment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1117E990223A902E00897B96 /* Comment.swift */; };
 		1122BF6921B6975B0053E27E /* MessageCVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1122BF6721B6975B0053E27E /* MessageCVCell.swift */; };
 		1122BF6A21B6975B0053E27E /* MessageCVCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1122BF6821B6975B0053E27E /* MessageCVCell.xib */; };
 		114C9CC021A1661C00D5713E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 114C9CBF21A1661C00D5713E /* AppDelegate.swift */; };
@@ -75,6 +76,7 @@
 		11065D0921A82E9A002621AE /* Masechtot_VC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Masechtot_VC.swift; sourceTree = "<group>"; };
 		110B242821E18C6000792546 /* SideMenuCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuCell.swift; sourceTree = "<group>"; };
 		110F930E21A41CF000A50EDE /* DafHayomiVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DafHayomiVC.swift; sourceTree = "<group>"; };
+		1117E990223A902E00897B96 /* Comment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Comment.swift; sourceTree = "<group>"; };
 		1122BF6721B6975B0053E27E /* MessageCVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageCVCell.swift; sourceTree = "<group>"; };
 		1122BF6821B6975B0053E27E /* MessageCVCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MessageCVCell.xib; sourceTree = "<group>"; };
 		114C9CBC21A1661C00D5713E /* ShiurDiario_iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ShiurDiario_iOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -297,6 +299,7 @@
 				11A4724821AABD35001F54F6 /* DafResponse_Model.swift */,
 				11A4724E21AAE79C001F54F6 /* MasechtaResponse_Model.swift */,
 				11A4725221AAE93E001F54F6 /* Masechta_Model.swift */,
+				1117E990223A902E00897B96 /* Comment.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -574,6 +577,7 @@
 				11F800CB21AF0B7C004614E8 /* Utils.swift in Sources */,
 				11DA70A621B014EC00294E14 /* Bindable.swift in Sources */,
 				11A4724721AABA0A001F54F6 /* Daf_Model.swift in Sources */,
+				1117E991223A902E00897B96 /* Comment.swift in Sources */,
 				11065CFF21A6F557002621AE /* PageVC.swift in Sources */,
 				11F78C0B22371733006A5935 /* LaunchVC.swift in Sources */,
 				11065D0821A82E88002621AE /* Dapim_VC.swift in Sources */,

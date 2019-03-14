@@ -8,6 +8,7 @@
 
 import UIKit
 import AVKit
+import Firebase
 
 class Video_VC: UIViewController {
     
@@ -16,7 +17,7 @@ class Video_VC: UIViewController {
     
     var videoPlayer: AVPlayer!
     var videoLayer: AVPlayerLayer!
-
+    private var db: Firestore!
     
     @IBOutlet weak var commentLabelSection: UIView!
     @IBOutlet weak var commentSection: UIView!
@@ -24,16 +25,30 @@ class Video_VC: UIViewController {
     @IBOutlet weak var videoContainer: UIView!
     @IBOutlet weak var videoView: UIView!
     @IBOutlet weak var videoTitle: UILabel!
-    //@IBOutlet weak var commentTextView: UITextView!
+    @IBOutlet weak var commentTextView: UITextView!
+    @IBOutlet weak var addNewCommentBtn: UIButton!
+    
+    var newCommentStr: String! {
+        return commentTextView.text
+    }
     
     @IBAction func addCommentBtn(_ sender: UIButton) {
         
+        guard let currentUserName = Auth.auth().currentUser?.displayName else { return }
+        self.db.collection("dapim").document(self.dafName).collection("comments").document().setData([
+            "owner_name": currentUserName,
+            "time_of_comment": videoPlayer.currentTime().durationText,
+            "content": self.newCommentStr])
+        
+        commentTextView.text = nil
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.hideKeyBoardWhenTouchedAround()
+        db = Firestore.firestore()
+        
+        //self.hideKeyBoardWhenTouchedAround()
         
         if prefix == nil { prefix = "Menachot_95" }
         
@@ -47,11 +62,17 @@ class Video_VC: UIViewController {
         
         commentLabelSection.layer.borderWidth = 0.4
         commentLabelSection.layer.borderColor = UIColor.black.cgColor
-        
-//        NotificationCenter.default.addObserver(self, selector: #selector(displayInputView), name: NSNotification.Name.UIKeyboardWillShow, object: nil)
-//        NotificationCenter.default.addObserver(self, selector: #selector(hideInputView), name: NSNotification.Name.UIKeyboardWillHide, object: nil)
-        
+        commentTextView.delegate = self
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "commentSegue", let vc = segue.destination as? VideoComments_VC {
+            vc.delegate = self
+        }
+    }
+    
+    
+    
     
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
@@ -90,4 +111,55 @@ class Video_VC: UIViewController {
         videoView.layoutIfNeeded()
     }
     
+    
+    
+}
+
+
+extension Video_VC: UITextViewDelegate {
+    func textViewDidBeginEditing(_ textView: UITextView) {
+        print("tv begun!!")
+        if commentTextView.textColor != UIColor.black {
+            commentTextView.textColor = UIColor.black
+        }
+        self.commentTextView.text = nil
+    }
+    
+    func textViewDidChange(_ textView: UITextView) {
+        if newCommentStr.count > 0 {
+            addNewCommentBtn.isHidden = false
+        } else {
+            addNewCommentBtn.isHidden = true
+        }
+    }
+    
+    func textViewDidEndEditing(_ textView: UITextView) {
+        print("tv ended!!")
+        if commentTextView.textColor == UIColor.black {
+            commentTextView.textColor = UIColor.lightGray
+        }
+        commentTextView.text = "add a comment..."
+    }
+}
+
+extension CMTime {
+    var durationText:String {
+        let totalSeconds = CMTimeGetSeconds(self)
+        let hours:Int = Int(totalSeconds / 3600)
+        let minutes:Int = Int(totalSeconds.truncatingRemainder(dividingBy: 3600) / 60)
+        let seconds:Int = Int(totalSeconds.truncatingRemainder(dividingBy: 60))
+        
+        if hours > 0 {
+            return String(format: "%i:%02i:%02i", hours, minutes, seconds)
+        } else {
+            return String(format: "%02i:%02i", minutes, seconds)
+        }
+    }
+}
+
+
+extension Video_VC: DafNameDelegate {
+    var daf_name: String {
+        return self.dafName
+    }
 }

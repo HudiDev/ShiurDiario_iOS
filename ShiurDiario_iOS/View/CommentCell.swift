@@ -11,11 +11,19 @@ import UIKit
 class CommentCell: UITableViewCell {
     
     
-    @IBOutlet weak var author: UILabel!
-    @IBOutlet weak var commentContent: UILabel!
+    static public let reuseIdentifier = "commentCell"
+    
+    @IBOutlet weak var owner: UILabel!
+    @IBOutlet weak var content: UILabel!
+    @IBOutlet weak var commentTime: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+    }
+    
+    func bindData(comment: Comment) {
+        self.owner.text = comment.ownerName
+        self.content.text = comment.content
+        self.commentTime.text = comment.timeOfComment
     }
 }

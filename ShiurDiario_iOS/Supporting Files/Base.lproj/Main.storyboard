@@ -509,41 +509,64 @@ Clique AQUI para mais informações.</string>
             </objects>
             <point key="canvasLocation" x="583" y="1013"/>
         </scene>
-        <!--Table View Controller-->
+        <!--Video CommentsVC-->
         <scene sceneID="ekN-Bt-GVs">
             <objects>
-                <tableViewController id="i0D-0E-PWD" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="nQ1-tS-cw2">
+                <tableViewController id="i0D-0E-PWD" customClass="VideoComments_VC" customModule="ShiurDiario_iOS" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="nQ1-tS-cw2">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="257"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="CpH-rs-HBL" customClass="CommentCell" customModule="ShiurDiario_iOS" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="commentCell" id="CpH-rs-HBL" customClass="CommentCell" customModule="ShiurDiario_iOS" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="CpH-rs-HBL" id="q0h-g4-bnj">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Yehuda Leib" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Sj-yf-BMZ">
-                                            <rect key="frame" x="16" y="12" width="100" height="21"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9c1-Ga-Wyq">
+                                            <rect key="frame" x="100" y="14" width="208.5" height="16"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="16" id="Vtk-1O-AG1"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9c1-Ga-Wyq">
-                                            <rect key="frame" x="131" y="12" width="42" height="21"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <nil key="textColor"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qFY-5o-rtN">
+                                            <rect key="frame" x="318.5" y="14" width="32.5" height="16"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="16" id="HvZ-y3-rTS"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="12"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Yehuda Leib" textAlignment="natural" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Sj-yf-BMZ">
+                                            <rect key="frame" x="16" y="14.5" width="74" height="15"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="15" id="XQi-uc-qhK"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="12"/>
+                                            <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
+                                    <constraints>
+                                        <constraint firstItem="9c1-Ga-Wyq" firstAttribute="centerY" secondItem="q0h-g4-bnj" secondAttribute="centerY" id="6CH-MU-KEz"/>
+                                        <constraint firstItem="qFY-5o-rtN" firstAttribute="leading" secondItem="9c1-Ga-Wyq" secondAttribute="trailing" constant="10" id="Dbb-Hh-PHt"/>
+                                        <constraint firstItem="7Sj-yf-BMZ" firstAttribute="leading" secondItem="q0h-g4-bnj" secondAttribute="leadingMargin" id="JKh-WZ-lk0"/>
+                                        <constraint firstItem="7Sj-yf-BMZ" firstAttribute="centerY" secondItem="q0h-g4-bnj" secondAttribute="centerY" id="Na0-ST-xBm"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="qFY-5o-rtN" secondAttribute="trailing" constant="8" id="UGp-nC-Ds3"/>
+                                        <constraint firstItem="9c1-Ga-Wyq" firstAttribute="leading" secondItem="7Sj-yf-BMZ" secondAttribute="trailing" constant="10" id="gpf-z3-ihe"/>
+                                        <constraint firstItem="9c1-Ga-Wyq" firstAttribute="leading" secondItem="7Sj-yf-BMZ" secondAttribute="trailing" constant="10" id="hoh-ZO-dm9"/>
+                                        <constraint firstItem="qFY-5o-rtN" firstAttribute="centerY" secondItem="q0h-g4-bnj" secondAttribute="centerY" id="o5t-HT-sAr"/>
+                                    </constraints>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <outlet property="author" destination="7Sj-yf-BMZ" id="CVv-0c-s4D"/>
-                                    <outlet property="commentContent" destination="9c1-Ga-Wyq" id="bgF-fJ-COL"/>
+                                    <outlet property="commentTime" destination="qFY-5o-rtN" id="PcW-tS-lMD"/>
+                                    <outlet property="content" destination="9c1-Ga-Wyq" id="bgF-fJ-COL"/>
+                                    <outlet property="owner" destination="7Sj-yf-BMZ" id="CVv-0c-s4D"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -555,7 +578,7 @@ Clique AQUI para mais informações.</string>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Zpf-8f-jAZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-674" y="1898"/>
+            <point key="canvasLocation" x="-674.39999999999998" y="1897.6011994002999"/>
         </scene>
         <!--VideoVC-->
         <scene sceneID="dPT-bQ-PAI">
@@ -591,7 +614,7 @@ Clique AQUI para mais informações.</string>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5sB-ik-Btn">
                                 <rect key="frame" x="0.0" y="350" width="375" height="257"/>
                                 <connections>
-                                    <segue destination="i0D-0E-PWD" kind="embed" id="Cjq-dE-QHI"/>
+                                    <segue destination="i0D-0E-PWD" kind="embed" identifier="commentSegue" id="Cjq-dE-QHI"/>
                                 </connections>
                             </containerView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0jq-LS-BU6">
@@ -607,7 +630,7 @@ Clique AQUI para mais informações.</string>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="P4k-id-o6E">
                                         <rect key="frame" x="311" y="8" width="56" height="44"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2pE-Nv-dIW">
+                                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2pE-Nv-dIW">
                                                 <rect key="frame" x="11" y="6" width="34" height="32"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <state key="normal" backgroundImage="send_ic"/>
@@ -656,7 +679,9 @@ Clique AQUI para mais informações.</string>
                         <viewLayoutGuide key="safeArea" id="nhc-71-qQr"/>
                     </view>
                     <connections>
+                        <outlet property="addNewCommentBtn" destination="2pE-Nv-dIW" id="Wqw-8N-ytF"/>
                         <outlet property="commentLabelSection" destination="0jq-LS-BU6" id="apY-Rw-2fd"/>
+                        <outlet property="commentTextView" destination="q3S-EH-zzW" id="hr2-NC-6nv"/>
                         <outlet property="videoContainer" destination="zLQ-2m-Fsw" id="gzx-N5-nBk"/>
                         <outlet property="videoTitle" destination="7f3-iq-ZQa" id="wxt-SS-X8u"/>
                         <outlet property="videoView" destination="BiO-v4-JFU" id="AHa-Uh-ufp"/>
