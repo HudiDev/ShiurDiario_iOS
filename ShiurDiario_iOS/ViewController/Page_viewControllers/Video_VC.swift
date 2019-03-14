@@ -24,9 +24,11 @@ class Video_VC: UIViewController {
     @IBOutlet weak var videoContainer: UIView!
     @IBOutlet weak var videoView: UIView!
     @IBOutlet weak var videoTitle: UILabel!
-    @IBOutlet weak var addCommentLabel: UILabel!
-    @IBOutlet weak var commentTextView: UITextView!
+    //@IBOutlet weak var commentTextView: UITextView!
     
+    @IBAction func addCommentBtn(_ sender: UIButton) {
+        
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -79,12 +81,6 @@ class Video_VC: UIViewController {
     }
     
     
-    @IBAction func commentLabelTap(_ sender: UITapGestureRecognizer) {
-        commentTextView.becomeFirstResponder()
-    }
-    
-    
-
     private func addConstraints(to videoView: UIView) {
         videoView.translatesAutoresizingMaskIntoConstraints = false
         videoView.topAnchor.constraint(equalTo: videoContainer.topAnchor).isActive = true
