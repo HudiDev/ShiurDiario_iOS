@@ -9,15 +9,17 @@
 import Foundation
 
 struct Comment {
+    let id: String
     let ownerName: String
     let content: String
     let timeOfComment: String
     
-    static func fromFireBase(document: [String : Any]) -> Comment? {
-        guard let ownerName = document["owner_name"] as? String,
-            let content = document["content"] as? String,
-            let timeOfComment = document["time_of_comment"] as? String else { return nil }
+    static func fromFireBase(document: (id: String, data: [String : Any])) -> Comment? {
         
-        return Comment(ownerName: ownerName, content: content, timeOfComment: timeOfComment)
+            guard let ownerName = document.data["owner_name"] as? String,
+            let content = document.data["content"] as? String,
+            let timeOfComment = document.data["time_of_comment"] as? String else { return nil }
+        
+        return Comment(id: document.id, ownerName: ownerName, content: content, timeOfComment: timeOfComment)
     }
 }

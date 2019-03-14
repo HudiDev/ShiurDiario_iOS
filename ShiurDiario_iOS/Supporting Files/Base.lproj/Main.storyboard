@@ -518,49 +518,62 @@ Clique AQUI para mais informações.</string>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="commentCell" id="CpH-rs-HBL" customClass="CommentCell" customModule="ShiurDiario_iOS" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="commentCell" id="CpH-rs-HBL" customClass="CommentCell" customModule="ShiurDiario_iOS" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="CpH-rs-HBL" id="q0h-g4-bnj">
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9c1-Ga-Wyq">
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9c1-Ga-Wyq" customClass="PaddingLabel" customModule="ShiurDiario_iOS" customModuleProvider="target">
                                             <rect key="frame" x="100" y="14" width="208.5" height="16"/>
-                                            <constraints>
-                                                <constraint firstAttribute="height" constant="16" id="Vtk-1O-AG1"/>
-                                            </constraints>
-                                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                            <nil key="textColor"/>
+                                            <color key="backgroundColor" red="0.92143100499999997" green="0.92145264149999995" blue="0.92144101860000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <attributedString key="attributedText">
+                                                <fragment content="Label">
+                                                    <attributes>
+                                                        <font key="NSFont" metaFont="cellTitle"/>
+                                                    </attributes>
+                                                </fragment>
+                                            </attributedString>
                                             <nil key="highlightedColor"/>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="rightInset">
+                                                    <real key="value" value="10"/>
+                                                </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="leftInset">
+                                                    <real key="value" value="10"/>
+                                                </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="bottomInset">
+                                                    <real key="value" value="10"/>
+                                                </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="topInset">
+                                                    <real key="value" value="10"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qFY-5o-rtN">
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="1000" text="Label" textAlignment="natural" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qFY-5o-rtN">
                                             <rect key="frame" x="318.5" y="14" width="32.5" height="16"/>
-                                            <constraints>
-                                                <constraint firstAttribute="height" constant="16" id="HvZ-y3-rTS"/>
-                                            </constraints>
                                             <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="12"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Yehuda Leib" textAlignment="natural" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Sj-yf-BMZ">
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="1000" text="Yehuda Leib" textAlignment="natural" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Sj-yf-BMZ">
                                             <rect key="frame" x="16" y="14.5" width="74" height="15"/>
-                                            <constraints>
-                                                <constraint firstAttribute="height" constant="15" id="XQi-uc-qhK"/>
-                                            </constraints>
                                             <fontDescription key="fontDescription" type="boldSystem" pointSize="12"/>
                                             <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstItem="9c1-Ga-Wyq" firstAttribute="centerY" secondItem="q0h-g4-bnj" secondAttribute="centerY" id="6CH-MU-KEz"/>
+                                        <constraint firstItem="7Sj-yf-BMZ" firstAttribute="top" secondItem="q0h-g4-bnj" secondAttribute="top" constant="14.5" id="Csg-8j-Yuv"/>
                                         <constraint firstItem="qFY-5o-rtN" firstAttribute="leading" secondItem="9c1-Ga-Wyq" secondAttribute="trailing" constant="10" id="Dbb-Hh-PHt"/>
+                                        <constraint firstItem="qFY-5o-rtN" firstAttribute="top" secondItem="q0h-g4-bnj" secondAttribute="top" constant="14" id="IQk-rx-Unb"/>
+                                        <constraint firstAttribute="bottom" secondItem="7Sj-yf-BMZ" secondAttribute="bottom" constant="14.5" id="JAz-4C-KKl"/>
                                         <constraint firstItem="7Sj-yf-BMZ" firstAttribute="leading" secondItem="q0h-g4-bnj" secondAttribute="leadingMargin" id="JKh-WZ-lk0"/>
-                                        <constraint firstItem="7Sj-yf-BMZ" firstAttribute="centerY" secondItem="q0h-g4-bnj" secondAttribute="centerY" id="Na0-ST-xBm"/>
+                                        <constraint firstItem="9c1-Ga-Wyq" firstAttribute="top" secondItem="q0h-g4-bnj" secondAttribute="top" constant="14" id="N0k-R8-vX3"/>
                                         <constraint firstAttribute="trailingMargin" secondItem="qFY-5o-rtN" secondAttribute="trailing" constant="8" id="UGp-nC-Ds3"/>
+                                        <constraint firstAttribute="bottom" secondItem="9c1-Ga-Wyq" secondAttribute="bottom" constant="14" id="Zi3-JM-sJm"/>
                                         <constraint firstItem="9c1-Ga-Wyq" firstAttribute="leading" secondItem="7Sj-yf-BMZ" secondAttribute="trailing" constant="10" id="gpf-z3-ihe"/>
-                                        <constraint firstItem="9c1-Ga-Wyq" firstAttribute="leading" secondItem="7Sj-yf-BMZ" secondAttribute="trailing" constant="10" id="hoh-ZO-dm9"/>
-                                        <constraint firstItem="qFY-5o-rtN" firstAttribute="centerY" secondItem="q0h-g4-bnj" secondAttribute="centerY" id="o5t-HT-sAr"/>
+                                        <constraint firstAttribute="bottom" secondItem="qFY-5o-rtN" secondAttribute="bottom" constant="14" id="wka-Yq-OzW"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
@@ -594,7 +607,8 @@ Clique AQUI para mais informações.</string>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="240" id="DKm-ST-vgY"/>
                                     <constraint firstAttribute="height" constant="40" id="PEK-sL-mCV"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" weight="black" pointSize="20"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zLQ-2m-Fsw">

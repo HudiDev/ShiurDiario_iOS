@@ -24,6 +24,8 @@ class VideoComments_VC: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.tableView.rowHeight = UITableViewAutomaticDimension
+        self.tableView.estimatedRowHeight = 60
         getData()
     }
     
@@ -40,14 +42,14 @@ class VideoComments_VC: UITableViewController {
             }
             for (index, doc) in snapshot!.documents.enumerated() {
                 print("doc at \(index) is: \(doc.data())")
-                guard let comment = Comment.fromFireBase(document: doc.data()) else { print("comment from firebase is null")
+                guard let comment = Comment.fromFireBase(document: (id: doc.documentID, data: doc.data())) else { print("comment from firebase is null")
                     return
                 }
                 self.comments.append(comment)
             }
-            DispatchQueue.main.async {
-                self.tableView.reloadData()
-            }
+        
+            self.tableView.reloadData()
+            
         }
     }
 
@@ -61,6 +63,33 @@ class VideoComments_VC: UITableViewController {
             return cell
         }
         return UITableViewCell()
+    }
+    
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let alert = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
+        
+        let deletCommentAction = UIAlertAction(title: "delete", style: .destructive) { (_) in
+            
+            guard let dafName = self.delegate?.daf_name else {
+                print("daf name is nil")
+                return
+            }
+            
+            let commentsRef = self.db.collection("dapim").document(dafName).collection("comments")
+            commentsRef.document(self.comments[indexPath.row].id).delete(completion: { (err) in
+                guard err == nil else {
+                    print("error deleting comment: \(err!.localizedDescription)")
+                    return
+                }
+                
+                print("comment with id: \(self.comments[indexPath.row].id), has been successfully deleted")
+            })
+        }
+        
+        alert.addAction(deletCommentAction)
+        alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
+        present(alert, animated: true, completion: nil)
     }
     
 }

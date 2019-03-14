@@ -19,6 +19,9 @@ class CommentCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
+        //self.content.backgroundColor = UIColor.lightGray
+        self.content.layer.cornerRadius = 5
+        self.content.clipsToBounds = true
     }
     
     func bindData(comment: Comment) {
