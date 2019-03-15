@@ -35,21 +35,20 @@ class VideoComments_VC: UITableViewController {
             return
         }
         let commentsRef = self.db.collection("dapim").document(dafName).collection("comments")
-        commentsRef.getDocuments { (snapshot, err) in
+        
+        
+        commentsRef.addSnapshotListener { (snapshot, err) in
+            
             guard err == nil else {
                 print("error could not retrieve data from db: \(err!.localizedDescription)")
                 return
             }
-            for (index, doc) in snapshot!.documents.enumerated() {
-                print("doc at \(index) is: \(doc.data())")
-                guard let comment = Comment.fromFireBase(document: (id: doc.documentID, data: doc.data())) else { print("comment from firebase is null")
-                    return
-                }
-                self.comments.append(comment)
+            
+            self.comments = snapshot!.documents.compactMap {
+                return Comment.fromFireBase(document: (id: $0.documentID, data: $0.data()))
             }
         
             self.tableView.reloadData()
-            
         }
     }
 
