@@ -4,7 +4,6 @@
 //
 //  Created by Hudi Ilfeld on 11/22/18.
 //  Copyright © 2018 Hudi Ilfeld. All rights reserved.
-//
 
 import UIKit
 
@@ -40,7 +39,6 @@ class PageVC: UIPageViewController {
                         self.setViewControllers([firstVC], direction: .forward, animated: true, completion: nil)
                     }
                 }
-                
             }
         }
         
@@ -86,7 +84,7 @@ class PageVC: UIPageViewController {
         guard let url = URL(string: "http://ws.shiurdiario.com/dafyomi.php?date=\(getCurrentDate())") else { return }
         URLSession.shared.dataTask(with: url) { (data, response, err) in
             if err != nil {
-                print("ERR IS: \(err!.localizedDescription)")
+                self.displayErrorAlert(title: "Network error", msg: err!.localizedDescription)
             }
             do {
                 let currentPrefix = try JSONDecoder().decode(MasechtaResponse.self, from: data!)
