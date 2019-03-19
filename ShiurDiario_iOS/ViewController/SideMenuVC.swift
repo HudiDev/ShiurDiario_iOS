@@ -14,7 +14,7 @@ class SideMenuVC: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     var alert: UIAlertController!
     
-    let sideMenuTitles = [("HOME", "home_icon"), ("DAF HAYOMI", "daf_hayomi_icon"), ("SHIURIM", "shiurim_icon"), ("DEDICATORIAS", "dedication_icon"), ("CONTATO", "contact_icon")]
+    let sideMenuTitles = [("DAF HAYOMI", "daf_hayomi_icon"), ("SHIURIM", "shiurim_icon"), ("DEDICATORIAS", "dedication_icon"), ("CONTATO", "contact_icon")]
 
     override func viewDidLoad() {
         super.viewDidLoad()
