@@ -20,6 +20,8 @@ class HomeVC: UIViewController {
     }()
     
     
+    
+    
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var titleContainer: UIView!
     @IBOutlet weak var introText: UILabel!
@@ -29,10 +31,15 @@ class HomeVC: UIViewController {
     
     var isSideMenuOpened = true
     
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        
         self.scrollView.addSubview(self.mask)
+        addConstraints(for: self.mask)
         
         firstSubTitleView.addBorder(width: 0.5, color: UIColor.black.cgColor)
         
@@ -44,14 +51,27 @@ class HomeVC: UIViewController {
         NotificationCenter.default.addObserver(self, selector: #selector(hideSideMenu), name: NSNotification.Name("hideMenu"), object: nil)
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.navigationController?.navigationBar.isHidden = false
+        self.navigationController?.navigationBar.isTranslucent = false
+    }
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+        self.mask.alpha = 0.0
+    }
+    
     @objc func hideSideMenu() {
         sideMenuConstraint.constant = -300
     }
     
-    func addPanGesture(view: UIView) {
+    private func addPanGesture(view: UIView) {
         let pan = UIPanGestureRecognizer(target: self, action: #selector(handlePan(sender:)))
         view.addGestureRecognizer(pan)
     }
+    
+    
     
     @objc func handlePan(sender: UIPanGestureRecognizer) {
         var getInitialX: CGFloat = 0.0
@@ -90,6 +110,14 @@ class HomeVC: UIViewController {
                 self.view.layoutIfNeeded()
             }
         }
+    }
+    
+    private func addConstraints(for maskView: UIView) {
+        mask.translatesAutoresizingMaskIntoConstraints = false
+        mask.topAnchor.constraint(equalTo: self.scrollView.topAnchor).isActive = true
+        mask.bottomAnchor.constraint(equalTo: self.scrollView.bottomAnchor).isActive = true
+        mask.leadingAnchor.constraint(equalTo: self.scrollView.leadingAnchor).isActive = true
+        mask.trailingAnchor.constraint(equalTo: self.scrollView.trailingAnchor).isActive = true
     }
     
     
