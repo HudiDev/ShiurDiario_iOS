@@ -43,6 +43,7 @@
 		11E58B1F21B1633500EBF17D /* DapimRepo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11E58B1E21B1633500EBF17D /* DapimRepo.swift */; };
 		11E58B2121B1662100EBF17D /* MasechtotViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11E58B2021B1662100EBF17D /* MasechtotViewModel.swift */; };
 		11E58B2321B16A3900EBF17D /* Daf_ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11E58B2221B16A3900EBF17D /* Daf_ViewModel.swift */; };
+		11F11CB52241A8C100001521 /* CustomSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11F11CB42241A8C100001521 /* CustomSlider.swift */; };
 		11F12A8F21E3720C00430143 /* DataTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11F12A8E21E3720C00430143 /* DataTests.swift */; };
 		11F78C092236B6DB006A5935 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11F78C082236B6DB006A5935 /* LoginVC.swift */; };
 		11F78C0B22371733006A5935 /* LaunchVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11F78C0A22371732006A5935 /* LaunchVC.swift */; };
@@ -109,6 +110,7 @@
 		11E58B1E21B1633500EBF17D /* DapimRepo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DapimRepo.swift; sourceTree = "<group>"; };
 		11E58B2021B1662100EBF17D /* MasechtotViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasechtotViewModel.swift; sourceTree = "<group>"; };
 		11E58B2221B16A3900EBF17D /* Daf_ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Daf_ViewModel.swift; sourceTree = "<group>"; };
+		11F11CB42241A8C100001521 /* CustomSlider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSlider.swift; sourceTree = "<group>"; };
 		11F12A8E21E3720C00430143 /* DataTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataTests.swift; sourceTree = "<group>"; };
 		11F78C082236B6DB006A5935 /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
 		11F78C0A22371732006A5935 /* LaunchVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchVC.swift; sourceTree = "<group>"; };
@@ -328,6 +330,7 @@
 				1122BF6B21B698F00053E27E /* messageCell */,
 				117B3317223529FF0075D710 /* CommentCell.swift */,
 				1117E992223B09F400897B96 /* PaddingLabel.swift */,
+				11F11CB42241A8C100001521 /* CustomSlider.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -406,6 +409,7 @@
 				TargetAttributes = {
 					114C9CBB21A1661C00D5713E = {
 						CreatedOnToolsVersion = 9.4.1;
+						LastSwiftMigration = 1010;
 					};
 					1156509621E36FA500A6B641 = {
 						CreatedOnToolsVersion = 9.4.1;
@@ -575,6 +579,7 @@
 				11E58B1F21B1633500EBF17D /* DapimRepo.swift in Sources */,
 				114C9CC021A1661C00D5713E /* AppDelegate.swift in Sources */,
 				11F800C421AEDEE6004614E8 /* ContactVC.swift in Sources */,
+				11F11CB52241A8C100001521 /* CustomSlider.swift in Sources */,
 				11F97A0F223586F300746909 /* SignUpVC.swift in Sources */,
 				110B242921E18C6000792546 /* SideMenuCell.swift in Sources */,
 				11F800CB21AF0B7C004614E8 /* Utils.swift in Sources */,
@@ -746,6 +751,7 @@
 			baseConfigurationReference = EB7908FB3DFB4CA20947A2E0 /* Pods-ShiurDiario_iOS.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 6JTGB7C2KR;
 				INFOPLIST_FILE = "$(SRCROOT)/ShiurDiario_iOS/Supporting Files/Info.plist";
@@ -755,6 +761,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.hudifeld.ShiurDiario-iOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -765,6 +772,7 @@
 			baseConfigurationReference = 19563A862F9061651023EE53 /* Pods-ShiurDiario_iOS.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 6JTGB7C2KR;
 				INFOPLIST_FILE = "$(SRCROOT)/ShiurDiario_iOS/Supporting Files/Info.plist";

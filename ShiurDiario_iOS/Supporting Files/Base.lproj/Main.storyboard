@@ -618,13 +618,11 @@ Clique AQUI para mais informações.</string>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zLQ-2m-Fsw">
                                 <rect key="frame" x="0.0" y="80" width="375" height="270"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="BiO-v4-JFU">
-                                        <rect key="frame" x="36" y="0.0" width="303" height="270"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BiO-v4-JFU">
+                                        <rect key="frame" x="52.5" y="0.0" width="270" height="270"/>
                                         <subviews>
-                                            <stackView hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" distribution="equalSpacing" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="QhL-rb-jbv">
-                                                <rect key="frame" x="66" y="120" width="170" height="30"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <stackView hidden="YES" opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="QhL-rb-jbv">
+                                                <rect key="frame" x="50" y="120" width="170" height="30"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ucv-mI-3Sa">
                                                         <rect key="frame" x="0.0" y="0.0" width="30" height="30"/>
@@ -660,9 +658,67 @@ Clique AQUI para mais informações.</string>
                                                         </connections>
                                                     </button>
                                                 </subviews>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="170" id="DOj-DM-Vya"/>
+                                                    <constraint firstAttribute="height" constant="30" id="n1h-71-Ag5"/>
+                                                </constraints>
                                             </stackView>
+                                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1LH-jW-kzP">
+                                                <rect key="frame" x="0.0" y="223" width="270" height="47"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nQl-iX-PWe">
+                                                        <rect key="frame" x="8" y="16" width="34" height="15"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="15" id="WxW-4q-HSQ"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="phK-o7-SHP">
+                                                        <rect key="frame" x="228" y="16" width="34" height="15"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="15" id="j8P-dy-aVS"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="Q0k-ft-KUE" customClass="CustomSlider" customModule="ShiurDiario_iOS" customModuleProvider="target">
+                                                        <rect key="frame" x="48" y="11" width="174" height="26"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="25" id="fWQ-7n-EJk"/>
+                                                        </constraints>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="image" keyPath="sliderThumb" value="slideButton"/>
+                                                        </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <action selector="videoSlider:" destination="GQ6-0k-IU9" eventType="valueChanged" id="4HP-py-y1Y"/>
+                                                        </connections>
+                                                    </slider>
+                                                </subviews>
+                                                <color key="backgroundColor" white="1" alpha="0.69929901541095896" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstItem="nQl-iX-PWe" firstAttribute="centerY" secondItem="1LH-jW-kzP" secondAttribute="centerY" id="AHu-Mc-yaQ"/>
+                                                    <constraint firstItem="Q0k-ft-KUE" firstAttribute="centerY" secondItem="1LH-jW-kzP" secondAttribute="centerY" id="Lsx-Y9-YGg"/>
+                                                    <constraint firstItem="phK-o7-SHP" firstAttribute="leading" secondItem="Q0k-ft-KUE" secondAttribute="trailing" constant="8" id="UdP-hX-Qre"/>
+                                                    <constraint firstItem="nQl-iX-PWe" firstAttribute="leading" secondItem="1LH-jW-kzP" secondAttribute="leading" constant="8" id="aGM-Y7-bhl"/>
+                                                    <constraint firstItem="phK-o7-SHP" firstAttribute="centerY" secondItem="1LH-jW-kzP" secondAttribute="centerY" id="eI8-1w-cWw"/>
+                                                    <constraint firstItem="Q0k-ft-KUE" firstAttribute="leading" secondItem="nQl-iX-PWe" secondAttribute="trailing" constant="8" id="s2x-R1-7PZ"/>
+                                                    <constraint firstAttribute="trailing" secondItem="phK-o7-SHP" secondAttribute="trailing" constant="8" id="wNI-eZ-bH2"/>
+                                                    <constraint firstAttribute="height" constant="47" id="x11-3F-MuP"/>
+                                                </constraints>
+                                            </view>
                                         </subviews>
                                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="bottom" secondItem="1LH-jW-kzP" secondAttribute="bottom" id="NMb-bP-vDH"/>
+                                            <constraint firstItem="QhL-rb-jbv" firstAttribute="centerY" secondItem="BiO-v4-JFU" secondAttribute="centerY" id="ZaH-7b-Cgr"/>
+                                            <constraint firstAttribute="width" constant="270" id="hd6-MC-7nP"/>
+                                            <constraint firstItem="QhL-rb-jbv" firstAttribute="centerX" secondItem="BiO-v4-JFU" secondAttribute="centerX" id="jH0-m7-YvT"/>
+                                            <constraint firstAttribute="trailing" secondItem="1LH-jW-kzP" secondAttribute="trailing" id="k3y-J9-aZ0"/>
+                                            <constraint firstItem="1LH-jW-kzP" firstAttribute="leading" secondItem="BiO-v4-JFU" secondAttribute="leading" id="ssr-II-qqV"/>
+                                        </constraints>
                                         <connections>
                                             <outletCollection property="gestureRecognizers" destination="eL4-Qw-e6h" appends="YES" id="ew4-iw-8dj"/>
                                         </connections>
@@ -679,7 +735,11 @@ Clique AQUI para mais informações.</string>
                                 <constraints>
                                     <constraint firstItem="BsA-fN-pyf" firstAttribute="centerY" secondItem="zLQ-2m-Fsw" secondAttribute="centerY" id="6ih-hX-ZdI"/>
                                     <constraint firstItem="BsA-fN-pyf" firstAttribute="centerX" secondItem="zLQ-2m-Fsw" secondAttribute="centerX" id="6m4-Zd-hJE"/>
+                                    <constraint firstAttribute="bottom" secondItem="BiO-v4-JFU" secondAttribute="bottom" id="O4P-cY-B6m"/>
+                                    <constraint firstItem="BiO-v4-JFU" firstAttribute="top" secondItem="zLQ-2m-Fsw" secondAttribute="top" id="QKT-TW-jyb"/>
                                     <constraint firstAttribute="height" constant="270" id="SaX-a5-MlA"/>
+                                    <constraint firstItem="BiO-v4-JFU" firstAttribute="centerY" secondItem="zLQ-2m-Fsw" secondAttribute="centerY" id="geM-CP-EMR"/>
+                                    <constraint firstItem="BiO-v4-JFU" firstAttribute="centerX" secondItem="zLQ-2m-Fsw" secondAttribute="centerX" id="qED-DL-DP7"/>
                                 </constraints>
                             </view>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5sB-ik-Btn">
@@ -755,7 +815,11 @@ Clique AQUI para mais informações.</string>
                         <outlet property="commentLabelSection" destination="0jq-LS-BU6" id="apY-Rw-2fd"/>
                         <outlet property="commentTextView" destination="q3S-EH-zzW" id="hr2-NC-6nv"/>
                         <outlet property="controllersContainer" destination="QhL-rb-jbv" id="x1E-Ps-IeJ"/>
+                        <outlet property="durationContainer" destination="1LH-jW-kzP" id="Rbg-go-gYv"/>
+                        <outlet property="durationTime" destination="phK-o7-SHP" id="zVj-t1-LkV"/>
+                        <outlet property="passedTime" destination="nQl-iX-PWe" id="ywu-76-b0f"/>
                         <outlet property="playPauseBtn" destination="eRM-4K-DS6" id="aj5-E8-b1f"/>
+                        <outlet property="timeSlider" destination="Q0k-ft-KUE" id="Ym0-ZE-CMZ"/>
                         <outlet property="videoContainer" destination="zLQ-2m-Fsw" id="gzx-N5-nBk"/>
                         <outlet property="videoLoaderIndicator" destination="BsA-fN-pyf" id="FDP-xC-z8l"/>
                         <outlet property="videoTitle" destination="7f3-iq-ZQa" id="wxt-SS-X8u"/>
@@ -1418,6 +1482,7 @@ Clique AQUI para mais informações.</string>
         <image name="play_btn_icon" width="512" height="512"/>
         <image name="play_ic" width="156.52174377441406" height="156.52174377441406"/>
         <image name="send_ic" width="72" height="72"/>
+        <image name="slideButton" width="15" height="15"/>
         <image name="talmud copy" width="144" height="108"/>
     </resources>
 </document>

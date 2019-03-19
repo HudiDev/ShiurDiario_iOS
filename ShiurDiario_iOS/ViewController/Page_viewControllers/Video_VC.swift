@@ -22,6 +22,7 @@ class Video_VC: UIViewController {
     private var videoControllersToggle: Bool = true
     var observer: Any!
     
+    
     @IBOutlet weak var commentLabelSection: UIView!
     @IBOutlet weak var videoContainer: UIView!
     @IBOutlet weak var videoView: UIView!
@@ -31,20 +32,25 @@ class Video_VC: UIViewController {
     @IBOutlet weak var controllersContainer: UIStackView!
     @IBOutlet weak var playPauseBtn: UIButton!
     @IBOutlet weak var videoLoaderIndicator: UIActivityIndicatorView!
+    @IBOutlet weak var durationContainer: UIView!
+    @IBOutlet weak var passedTime: UILabel!
+    @IBOutlet weak var durationTime: UILabel!
+    @IBOutlet weak var timeSlider: UISlider!
+    
+    
     
     var newCommentStr: String! {
         return commentTextView.text
     }
+
     
-    
-    
-    
+    @IBAction func videoSlider(_ sender: UISlider) {
+        videoPlayer.seek(to: CMTimeMake(Int64(sender.value*1000), 1000))
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        addConstraints(for: self.controllersContainer)
-        
+
         db = Firestore.firestore()
         
         if prefix == nil { prefix = "Menachot_95" }
@@ -61,24 +67,39 @@ class Video_VC: UIViewController {
         commentLabelSection.layer.borderColor = UIColor.black.cgColor
         commentTextView.delegate = self
         
-        self.observer = self.videoPlayer.addPeriodicTimeObserver(forInterval: CMTimeMake(1, 600), queue: .main, using: {
-            [weak self] time in
+        self.observer = addTimeObserver()
+    }
+    
+    private func addTimeObserver() -> Any {
+        
+        let interval = CMTime(seconds: 0.5, preferredTimescale: CMTimeScale(NSEC_PER_SEC))
+        let mainQueue = DispatchQueue.main
+        
+        let observer = videoPlayer.addPeriodicTimeObserver(forInterval: interval, queue: mainQueue, using: { [weak self] (time) in
+            
             if self?.videoPlayer.currentItem?.status == AVPlayerItemStatus.readyToPlay {
-                if let isPlaybackLikelyToKeepUp = self?.videoPlayer.currentItem?.isPlaybackLikelyToKeepUp {
+                
+                if (self?.videoPlayer.currentItem?.isPlaybackLikelyToKeepUp) != nil {
                     self?.videoLoaderIndicator.stopAnimating()
                 } else {
                     self?.videoLoaderIndicator.startAnimating()
                 }
+                
+                guard let currentItem = self?.videoPlayer.currentItem else { return }
+                self?.timeSlider.maximumValue = Float(currentItem.duration.seconds)
+                self?.timeSlider.minimumValue = 0
+                self?.timeSlider.value = Float(currentItem.currentTime().seconds)
+                self?.passedTime.text = self?.getTimeString(from: currentItem.currentTime())
             } else {
                 self?.videoLoaderIndicator.startAnimating()
             }
         })
+        return observer
     }
     
     
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
-        addConstraints(to: videoView)
         videoLayer.frame = videoView.bounds
     }
     
@@ -106,8 +127,14 @@ class Video_VC: UIViewController {
         videoControllersToggle = !videoControllersToggle
         if videoControllersToggle {
             controllersContainer.isHidden = false
+            durationContainer.isHidden = false
+            DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 2.0) {
+                self.controllersContainer.isHidden = true
+                self.durationContainer.isHidden = true
+            }
         } else {
             controllersContainer.isHidden = true
+            durationContainer.isHidden = true
         }
     }
     
@@ -132,7 +159,9 @@ class Video_VC: UIViewController {
         } else {
             avPlayer.addObserver(self, forKeyPath: "rate", options: [.new, .old], context: nil)
         }
+        avPlayer.currentItem?.addObserver(self, forKeyPath: "duration", options: [.new, .initial], context: nil)
     }
+
     
     
     override func observeValue(forKeyPath keyPath: String?, of object: Any?, change: [NSKeyValueChangeKey : Any]?, context: UnsafeMutableRawPointer?) {
@@ -151,6 +180,7 @@ class Video_VC: UIViewController {
                         playPauseBtn.setBackgroundImage(UIImage(named: "pause_ic"), for: .normal)
                         DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 0.5) {
                             self.controllersContainer.isHidden = true
+                            self.durationContainer.isHidden = true
                         }
                     } else {
                         print("video paused")
@@ -166,6 +196,22 @@ class Video_VC: UIViewController {
             default: break
             }
         }
+        guard keyPath == "duration", let duration = self.videoPlayer.currentItem?.duration.seconds, duration > 0.0 else { return }
+        self.durationTime.text = getTimeString(from: self.videoPlayer.currentItem!.duration)
+        self.passedTime.text = getTimeString(from: self.videoPlayer.currentTime())
+    }
+    
+    
+    private func getTimeString(from time: CMTime) -> String {
+        let totalSeconds = CMTimeGetSeconds(time)
+        let hours = Int(totalSeconds/3600)
+        let minutes = Int(totalSeconds/60) % 60
+        let seconds = Int(totalSeconds.truncatingRemainder(dividingBy: 60))
+        if hours > 0 {
+            return String(format: "%i:%02i:%02i", arguments: [hours, minutes, seconds])
+        } else {
+            return String(format: "%02i:%02i", arguments: [minutes, seconds])
+        }
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -175,12 +221,16 @@ class Video_VC: UIViewController {
     }
     
     
-   
-    
-    
-    
     
     @IBAction func backwardsBtn(_ sender: UIButton) {
+        guard (videoPlayer.currentItem?.duration) != nil else { return }
+        let currentTime = CMTimeGetSeconds(videoPlayer.currentTime())
+        var newTime = currentTime - 5.0
+        if newTime < 0 {
+            newTime = 0
+        }
+        let time: CMTime = CMTimeMake(Int64(newTime*1000), 1000)
+        videoPlayer.seek(to: time)
     }
     
     @IBAction func playPauseBtn(_ sender: UIButton) {
@@ -189,29 +239,14 @@ class Video_VC: UIViewController {
     }
     
     @IBAction func forwardBtn(_ sender: UIButton) {
+        guard let duration = videoPlayer.currentItem?.duration else { return }
+        let currentTime = CMTimeGetSeconds(videoPlayer.currentTime())
+        let newTime = currentTime + 5.0
+        if newTime <= (CMTimeGetSeconds(duration) - 5) {
+            let time: CMTime = CMTimeMake(Int64(newTime*1000), 1000)
+            videoPlayer.seek(to: time)
+        }
     }
-    
-    
-    private func addConstraints(for container: UIStackView) {
-        container.translatesAutoresizingMaskIntoConstraints = false
-        container.heightAnchor.constraint(equalToConstant: 30).isActive = true
-        container.widthAnchor.constraint(equalToConstant: 170).isActive = true
-        container.centerXAnchor.constraint(equalTo: self.videoView.centerXAnchor).isActive = true
-        container.centerYAnchor.constraint(equalTo: self.videoView.centerYAnchor).isActive = true
-        
-    }
-    
-    private func addConstraints(to videoView: UIView) {
-        videoView.translatesAutoresizingMaskIntoConstraints = false
-        videoView.topAnchor.constraint(equalTo: videoContainer.topAnchor).isActive = true
-        videoView.bottomAnchor.constraint(equalTo: videoContainer.bottomAnchor).isActive = true
-        videoView.centerXAnchor.constraint(equalTo: videoContainer.centerXAnchor).isActive = true
-        videoView.widthAnchor.constraint(equalToConstant: 270.0).isActive = true
-        videoView.layoutIfNeeded()
-    }
-    
-    
-    
 }
 
 
