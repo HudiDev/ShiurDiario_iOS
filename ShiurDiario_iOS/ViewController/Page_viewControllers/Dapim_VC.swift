@@ -47,11 +47,11 @@ class Dapim_VC: UIViewController {
     }
     
     func bindViewModel() {
-        viewModel.dapim.bindAndFire { (data) in
+        viewModel.dapim.bindAndFire { [weak self] (data) in
             DispatchQueue.main.async {
-                self.collectionView.reloadData()
-                if let maxNumPages = self.viewModel.dapim.value.1 {
-                    self.maxNumPages = maxNumPages
+                self?.collectionView.reloadData()
+                if let maxNumPages = self?.viewModel.dapim.value.1 {
+                    self?.maxNumPages = maxNumPages
                 }
             }
         }

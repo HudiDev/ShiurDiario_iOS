@@ -61,6 +61,7 @@ class VideoComments_VC: UITableViewController {
             cell.bindData(comment: self.comments[indexPath.row])
             return cell
         }
+        
         return UITableViewCell()
     }
     
@@ -81,8 +82,6 @@ class VideoComments_VC: UITableViewController {
                     print("error deleting comment: \(err!.localizedDescription)")
                     return
                 }
-                
-                print("comment with id: \(self.comments[indexPath.row].id), has been successfully deleted")
             })
         }
         

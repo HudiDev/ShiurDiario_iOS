@@ -17,9 +17,11 @@ class CommentCell: UITableViewCell {
     @IBOutlet weak var content: UILabel!
     @IBOutlet weak var commentTime: UILabel!
     
+    
+    
     override func awakeFromNib() {
         super.awakeFromNib()
-        //self.content.backgroundColor = UIColor.lightGray
+        self.content.sizeToFit()
         self.content.layer.cornerRadius = 5
         self.content.clipsToBounds = true
     }
@@ -30,3 +32,6 @@ class CommentCell: UITableViewCell {
         self.commentTime.text = comment.timeOfComment
     }
 }
+
+
+

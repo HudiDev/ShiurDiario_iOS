@@ -15,22 +15,103 @@ class Video_VC: UIViewController {
     var prefix: String?
     var dafName: String!
     
-    var videoPlayer: AVPlayer!
-    var videoLayer: AVPlayerLayer!
+    private var videoPlayer: AVPlayer!
+    private var videoLayer: AVPlayerLayer!
     private var db: Firestore!
+    private var playPauseToggle: Bool = false
+    private var videoControllersToggle: Bool = true
+    var observer: Any!
     
     @IBOutlet weak var commentLabelSection: UIView!
-    @IBOutlet weak var commentSection: UIView!
-    @IBOutlet weak var commentSection_bottomAnchor: NSLayoutConstraint!
     @IBOutlet weak var videoContainer: UIView!
     @IBOutlet weak var videoView: UIView!
     @IBOutlet weak var videoTitle: UILabel!
     @IBOutlet weak var commentTextView: UITextView!
     @IBOutlet weak var addNewCommentBtn: UIButton!
+    @IBOutlet weak var controllersContainer: UIStackView!
+    @IBOutlet weak var playPauseBtn: UIButton!
+    @IBOutlet weak var videoLoaderIndicator: UIActivityIndicatorView!
     
     var newCommentStr: String! {
         return commentTextView.text
     }
+    
+    
+    
+    
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        addConstraints(for: self.controllersContainer)
+        
+        db = Firestore.firestore()
+        
+        if prefix == nil { prefix = "Menachot_95" }
+        
+        videoTitle.text = dafName
+        
+        guard let url = URL(string: "http://shiurdiario.com/media/video/\(prefix!).mp4") else { return }
+        videoPlayer = AVPlayer(url: url)
+        videoLayer = AVPlayerLayer(player: videoPlayer)
+        videoLayer.videoGravity = .resize
+        videoView.layer.insertSublayer(videoLayer, at: 0)
+        
+        commentLabelSection.layer.borderWidth = 0.4
+        commentLabelSection.layer.borderColor = UIColor.black.cgColor
+        commentTextView.delegate = self
+        
+        self.observer = self.videoPlayer.addPeriodicTimeObserver(forInterval: CMTimeMake(1, 600), queue: .main, using: {
+            [weak self] time in
+            if self?.videoPlayer.currentItem?.status == AVPlayerItemStatus.readyToPlay {
+                if let isPlaybackLikelyToKeepUp = self?.videoPlayer.currentItem?.isPlaybackLikelyToKeepUp {
+                    self?.videoLoaderIndicator.stopAnimating()
+                } else {
+                    self?.videoLoaderIndicator.startAnimating()
+                }
+            } else {
+                self?.videoLoaderIndicator.startAnimating()
+            }
+        })
+    }
+    
+    
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        addConstraints(to: videoView)
+        videoLayer.frame = videoView.bounds
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        videoPlayer.play()
+        setupAVPlayerObservers(self.videoPlayer)
+    }
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+        videoPlayer.pause()
+        self.observer = nil
+        self.videoPlayer.removeObserver(self, forKeyPath: "status")
+        if #available(iOS 10.0, *) {
+            self.videoPlayer.removeObserver(self, forKeyPath: "timeControlStatus")
+        } else {
+            self.videoPlayer.removeObserver(self, forKeyPath: "rate")
+        }
+    }
+    
+    
+    
+    @IBAction func videoTapGesture(_ sender: UITapGestureRecognizer) {
+        videoControllersToggle = !videoControllersToggle
+        if videoControllersToggle {
+            controllersContainer.isHidden = false
+        } else {
+            controllersContainer.isHidden = true
+        }
+    }
+    
+    
     
     @IBAction func addCommentBtn(_ sender: UIButton) {
         
@@ -43,26 +124,48 @@ class Video_VC: UIViewController {
         commentTextView.text = nil
     }
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        db = Firestore.firestore()
-        
-        //self.hideKeyBoardWhenTouchedAround()
-        
-        if prefix == nil { prefix = "Menachot_95" }
-        
-        videoTitle.text = dafName
-        
-        guard let url = URL(string: "http://shiurdiario.com/media/video/\(prefix!).mp4") else { return }
-        videoPlayer = AVPlayer(url: url)
-        videoLayer = AVPlayerLayer(player: videoPlayer)
-        videoLayer.videoGravity = .resize
-        videoView.layer.addSublayer(videoLayer)
-        
-        commentLabelSection.layer.borderWidth = 0.4
-        commentLabelSection.layer.borderColor = UIColor.black.cgColor
-        commentTextView.delegate = self
+    
+    private func setupAVPlayerObservers(_ avPlayer: AVPlayer) {
+        avPlayer.addObserver(self, forKeyPath: "status", options: [.new, .old], context: nil)
+        if #available(iOS 10.0, *) {
+            avPlayer.addObserver(self, forKeyPath: "timeControlStatus", options: [.new, .old], context: nil)
+        } else {
+            avPlayer.addObserver(self, forKeyPath: "rate", options: [.new, .old], context: nil)
+        }
+    }
+    
+    
+    override func observeValue(forKeyPath keyPath: String?, of object: Any?, change: [NSKeyValueChangeKey : Any]?, context: UnsafeMutableRawPointer?) {
+        if object is AVPlayer {
+
+            switch keyPath {
+                
+            case "status":
+                if videoPlayer.status == .readyToPlay {
+                    //videoPlayer.play()
+                }
+            case "timeControlStatus":
+                if #available(iOS 10.0, *) {
+                    if videoPlayer.timeControlStatus == .playing {
+                        print("video playing")
+                        playPauseBtn.setBackgroundImage(UIImage(named: "pause_ic"), for: .normal)
+                        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 0.5) {
+                            self.controllersContainer.isHidden = true
+                        }
+                    } else {
+                        print("video paused")
+                        playPauseBtn.setBackgroundImage(UIImage(named: "play_ic"), for: .normal)
+                    }
+                }
+            case "rate":
+                if videoPlayer.rate > 0 {
+                    print("video playing")
+                } else {
+                    print("video paused")
+                }
+            default: break
+            }
+        }
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -72,35 +175,31 @@ class Video_VC: UIViewController {
     }
     
     
+   
     
     
-    override func viewDidLayoutSubviews() {
-        super.viewDidLayoutSubviews()
-        addConstraints(to: videoView)
-        videoLayer.frame = videoView.bounds
+    
+    
+    @IBAction func backwardsBtn(_ sender: UIButton) {
     }
     
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-        videoPlayer.play()
+    @IBAction func playPauseBtn(_ sender: UIButton) {
+        playPauseToggle = !playPauseToggle
+        playPauseToggle ? videoPlayer.pause() : videoPlayer.play()
     }
     
-    @objc func displayInputView(notification: NSNotification) {
-        let info = notification.userInfo!
-        let keyboardFrame = (info[UIKeyboardFrameEndUserInfoKey] as! NSValue).cgRectValue
-        UIView.animate(withDuration: 0.3) {
-            self.commentSection_bottomAnchor.constant = keyboardFrame.height
-            self.view.layoutIfNeeded()
-        }
+    @IBAction func forwardBtn(_ sender: UIButton) {
     }
     
-    @objc func hideInputView(notification: NSNotification) {
-        UIView.animate(withDuration: 0.3) {
-            self.commentSection_bottomAnchor.constant = 0
-            self.view.layoutIfNeeded()
-        }
-    }
     
+    private func addConstraints(for container: UIStackView) {
+        container.translatesAutoresizingMaskIntoConstraints = false
+        container.heightAnchor.constraint(equalToConstant: 30).isActive = true
+        container.widthAnchor.constraint(equalToConstant: 170).isActive = true
+        container.centerXAnchor.constraint(equalTo: self.videoView.centerXAnchor).isActive = true
+        container.centerYAnchor.constraint(equalTo: self.videoView.centerYAnchor).isActive = true
+        
+    }
     
     private func addConstraints(to videoView: UIView) {
         videoView.translatesAutoresizingMaskIntoConstraints = false
@@ -141,22 +240,6 @@ extension Video_VC: UITextViewDelegate {
         commentTextView.text = "add a comment..."
     }
 }
-
-extension CMTime {
-    var durationText:String {
-        let totalSeconds = CMTimeGetSeconds(self)
-        let hours:Int = Int(totalSeconds / 3600)
-        let minutes:Int = Int(totalSeconds.truncatingRemainder(dividingBy: 3600) / 60)
-        let seconds:Int = Int(totalSeconds.truncatingRemainder(dividingBy: 60))
-        
-        if hours > 0 {
-            return String(format: "%i:%02i:%02i", hours, minutes, seconds)
-        } else {
-            return String(format: "%02i:%02i", minutes, seconds)
-        }
-    }
-}
-
 
 extension Video_VC: DafNameDelegate {
     var daf_name: String {

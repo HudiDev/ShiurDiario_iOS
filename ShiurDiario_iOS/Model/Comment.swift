@@ -16,7 +16,7 @@ struct Comment {
     
     static func fromFireBase(document: (id: String, data: [String : Any])) -> Comment? {
         
-            guard let ownerName = document.data["owner_name"] as? String,
+        guard let ownerName = document.data["owner_name"] as? String,
             let content = document.data["content"] as? String,
             let timeOfComment = document.data["time_of_comment"] as? String else { return nil }
         
