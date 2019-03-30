@@ -31,8 +31,6 @@ class Dapim_VC: UIViewController {
         collectionView.register(UINib(nibName: "MessageCVCell", bundle: nil), forCellWithReuseIdentifier: "msgCell")
         
         
-        // TODO: - create *2* urlStrings
-        
         if urlString == nil {
             urlString = "http://ws.shiurdiario.com/dafyomi.php?date=\(Utils.getCurrentDate())"
         }
