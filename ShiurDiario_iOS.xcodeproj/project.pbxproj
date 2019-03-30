@@ -43,6 +43,7 @@
 		11E58B1F21B1633500EBF17D /* DapimRepo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11E58B1E21B1633500EBF17D /* DapimRepo.swift */; };
 		11E58B2121B1662100EBF17D /* MasechtotViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11E58B2021B1662100EBF17D /* MasechtotViewModel.swift */; };
 		11E58B2321B16A3900EBF17D /* Daf_ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11E58B2221B16A3900EBF17D /* Daf_ViewModel.swift */; };
+		11EC59AC224FE7F0002D2A3B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 11EC59AB224FE7F0002D2A3B /* GoogleService-Info.plist */; };
 		11F11CB52241A8C100001521 /* CustomSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11F11CB42241A8C100001521 /* CustomSlider.swift */; };
 		11F12A8F21E3720C00430143 /* DataTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11F12A8E21E3720C00430143 /* DataTests.swift */; };
 		11F78C092236B6DB006A5935 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11F78C082236B6DB006A5935 /* LoginVC.swift */; };
@@ -52,7 +53,6 @@
 		11F800C921AF098E004614E8 /* DedicationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11F800C821AF098E004614E8 /* DedicationViewModel.swift */; };
 		11F800CB21AF0B7C004614E8 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11F800CA21AF0B7C004614E8 /* Utils.swift */; };
 		11F874F121A36BCF00CA11B4 /* SideMenuVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11F874F021A36BCF00CA11B4 /* SideMenuVC.swift */; };
-		11F97A0D2235601D00746909 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 11F97A0C2235601D00746909 /* GoogleService-Info.plist */; };
 		11F97A0F223586F300746909 /* SignUpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11F97A0E223586F300746909 /* SignUpVC.swift */; };
 		351C656D12345679031F18BE /* Pods_ShiurDiario_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C24E2ECC5537CA33F4B10B5 /* Pods_ShiurDiario_iOS.framework */; };
 		68A5AA96FB59F768D1DFC9D1 /* Pods_ShiurDiario_iOSTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 86392C445F4BE394ABD9B562 /* Pods_ShiurDiario_iOSTests.framework */; };
@@ -110,6 +110,7 @@
 		11E58B1E21B1633500EBF17D /* DapimRepo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DapimRepo.swift; sourceTree = "<group>"; };
 		11E58B2021B1662100EBF17D /* MasechtotViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasechtotViewModel.swift; sourceTree = "<group>"; };
 		11E58B2221B16A3900EBF17D /* Daf_ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Daf_ViewModel.swift; sourceTree = "<group>"; };
+		11EC59AB224FE7F0002D2A3B /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		11F11CB42241A8C100001521 /* CustomSlider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSlider.swift; sourceTree = "<group>"; };
 		11F12A8E21E3720C00430143 /* DataTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataTests.swift; sourceTree = "<group>"; };
 		11F78C082236B6DB006A5935 /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
@@ -119,7 +120,6 @@
 		11F800C821AF098E004614E8 /* DedicationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DedicationViewModel.swift; sourceTree = "<group>"; };
 		11F800CA21AF0B7C004614E8 /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 		11F874F021A36BCF00CA11B4 /* SideMenuVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuVC.swift; sourceTree = "<group>"; };
-		11F97A0C2235601D00746909 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../.Trash/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		11F97A0E223586F300746909 /* SignUpVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpVC.swift; sourceTree = "<group>"; };
 		19563A862F9061651023EE53 /* Pods-ShiurDiario_iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ShiurDiario_iOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-ShiurDiario_iOS/Pods-ShiurDiario_iOS.release.xcconfig"; sourceTree = "<group>"; };
 		52EA3D2C172DE2F8353623AF /* Pods-ShiurDiario_iOSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ShiurDiario_iOSTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ShiurDiario_iOSTests/Pods-ShiurDiario_iOSTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -173,6 +173,7 @@
 			isa = PBXGroup;
 			children = (
 				114C9CBE21A1661C00D5713E /* ShiurDiario_iOS */,
+				11EC59AB224FE7F0002D2A3B /* GoogleService-Info.plist */,
 				1156509821E36FA500A6B641 /* ShiurDiario_iOSTests */,
 				114C9CBD21A1661C00D5713E /* Products */,
 				D719F83B32CA4C262B0BE8FC /* Pods */,
@@ -200,7 +201,6 @@
 				11F800C521AF0679004614E8 /* Model */,
 				11DA70A221AFEBC900294E14 /* helpers */,
 				115650A121E3705700A6B641 /* Supporting Files */,
-				11F97A0C2235601D00746909 /* GoogleService-Info.plist */,
 			);
 			path = ShiurDiario_iOS;
 			sourceTree = "<group>";
@@ -442,9 +442,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				11F97A0D2235601D00746909 /* GoogleService-Info.plist in Resources */,
 				1122BF6A21B6975B0053E27E /* MessageCVCell.xib in Resources */,
 				114C9CCA21A1661E00D5713E /* LaunchScreen.storyboard in Resources */,
+				11EC59AC224FE7F0002D2A3B /* GoogleService-Info.plist in Resources */,
 				114C9CC721A1661E00D5713E /* Assets.xcassets in Resources */,
 				114C9CC521A1661C00D5713E /* Main.storyboard in Resources */,
 			);

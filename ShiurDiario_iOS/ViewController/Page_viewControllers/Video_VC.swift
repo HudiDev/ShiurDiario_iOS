@@ -19,7 +19,7 @@ class Video_VC: UIViewController {
     private var videoLayer: AVPlayerLayer!
     private var db: Firestore!
     private var playPauseToggle: Bool = false
-    private var videoControllersToggle: Bool = true
+    private var videoControllersToggle: Bool = false
     var observer: Any!
     
     

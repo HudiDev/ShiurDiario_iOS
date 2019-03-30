@@ -54,20 +54,20 @@ extension SideMenuVC: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
         switch indexPath.row {
-        case 1:
+        case 0:
             let vc = storyboard?.instantiateViewController(withIdentifier: "dafHayomi")
             show(vc!, sender: self)
             NotificationCenter.default.post(name: NSNotification.Name("hideMenu"), object: nil)
             break
-        case 2:
+        case 1:
             let vc = storyboard?.instantiateViewController(withIdentifier: "allMasechtot_VC")
             show(vc!, sender: self)
             break
-        case 3:
+        case 2:
             let vc = storyboard?.instantiateViewController(withIdentifier: "dedication_VC")
             show(vc!, sender: self)
             break
-        case 4:
+        case 3:
             showToast()
             //let vc = storyboard?.instantiateViewController(withIdentifier: "contact_VC")
             //show(vc!, sender: self)
