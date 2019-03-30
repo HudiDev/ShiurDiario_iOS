@@ -31,7 +31,7 @@ extension DafModel: DafViewModel {
     }
     
     var durationText: String {
-        return "Duration: \(duration)"
+        return "Duração: \(duration)"
     }
     
     var monthDay: String {
