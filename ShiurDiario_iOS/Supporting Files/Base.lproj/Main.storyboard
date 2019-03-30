@@ -751,7 +751,7 @@ Clique AQUI para mais informações.</string>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0jq-LS-BU6">
                                 <rect key="frame" x="0.0" y="607" width="375" height="60"/>
                                 <subviews>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Add Your Comment..." textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="q3S-EH-zzW">
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Adicione seu comentário..." textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="q3S-EH-zzW">
                                         <rect key="frame" x="8" y="8" width="295" height="44"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -968,7 +968,7 @@ Clique AQUI para mais informações.</string>
                                                             </subviews>
                                                         </stackView>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="07/11/2018" textAlignment="natural" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0c6-dp-RNg">
-                                                            <rect key="frame" x="260" y="20" width="72" height="16"/>
+                                                            <rect key="frame" x="260" y="9.5" width="72" height="16"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="16" id="ozd-5p-i3k"/>
                                                                 <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="72" id="pbe-Iy-Od1"/>
@@ -985,7 +985,7 @@ Clique AQUI para mais informações.</string>
                                                         <constraint firstItem="IGo-sN-s5G" firstAttribute="centerY" secondItem="587-J0-Qaz" secondAttribute="centerY" id="Je9-rr-d2E"/>
                                                         <constraint firstItem="TuZ-Cb-fFN" firstAttribute="leading" secondItem="587-J0-Qaz" secondAttribute="leading" constant="10" id="PJw-At-jxe"/>
                                                         <constraint firstItem="IGo-sN-s5G" firstAttribute="leading" secondItem="TuZ-Cb-fFN" secondAttribute="trailing" constant="15" id="blq-Ss-VVl"/>
-                                                        <constraint firstItem="0c6-dp-RNg" firstAttribute="top" secondItem="587-J0-Qaz" secondAttribute="top" constant="20" id="vTK-Lb-Way"/>
+                                                        <constraint firstItem="0c6-dp-RNg" firstAttribute="top" secondItem="587-J0-Qaz" secondAttribute="top" constant="9.5" id="vTK-Lb-Way"/>
                                                     </constraints>
                                                 </view>
                                             </subviews>

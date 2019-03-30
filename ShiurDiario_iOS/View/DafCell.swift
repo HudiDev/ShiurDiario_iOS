@@ -11,13 +11,9 @@ import UIKit
 class DafCell: UICollectionViewCell {
     
     @IBOutlet weak var dafName_label: UILabel!
-    
     @IBOutlet weak var duration_label: UILabel!
-    
     @IBOutlet weak var hebMonthDay_label: UILabel!
-    
     @IBOutlet weak var hebYear_label: UILabel!
-    
     @IBOutlet weak var date_label: UILabel!
     
 
