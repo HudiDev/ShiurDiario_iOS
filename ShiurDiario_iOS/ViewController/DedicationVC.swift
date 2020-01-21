@@ -8,7 +8,7 @@
 
 import UIKit
 
-class DedicationVC: UIViewController {
+class DedicationVC: ShiurDiarioBaseViewController {
 
     @IBOutlet weak var mainLabel: UILabel!
     @IBOutlet weak var titleLabel: UILabel!

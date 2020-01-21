@@ -8,7 +8,7 @@
 
 import UIKit
 
-class Dapim_VC: UIViewController {
+class Dapim_VC: ShiurDiarioBaseViewController {
     
     @IBOutlet weak var collectionView: UICollectionView!
     

@@ -8,7 +8,7 @@
 
 import UIKit
 
-class Masechtot_VC: UIViewController {
+class Masechtot_VC: ShiurDiarioBaseViewController {
     
     
     @IBOutlet weak var collectionView: UICollectionView!

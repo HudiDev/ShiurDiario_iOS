@@ -7,8 +7,9 @@
 //
 
 import UIKit
+import Firebase
 
-class HomeVC: UIViewController {
+class HomeVC: ShiurDiarioBaseViewController {
     
     
     
@@ -125,7 +126,20 @@ class HomeVC: UIViewController {
         
         toggleMenu()
     }
-    
+//    
+//    @IBAction func signoutBtn(_ sender: UIBarButtonItem) {
+//        
+//        guard Auth.auth().currentUser != nil else { return }
+//        
+//        do {
+//            try Auth.auth().signOut()
+//            let initialVC = self.storyboard?.instantiateInitialViewController()
+//            let appDelegate = UIApplication.shared.delegate as! AppDelegate
+//            appDelegate.window?.rootViewController = initialVC
+//        } catch _ {
+//            self.displayErrorAlert(title: "", msg: "Error occured while attempting to signout")
+//        }
+//    }
     
     func toggleMenu() {
         isSideMenuOpened = !isSideMenuOpened

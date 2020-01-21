@@ -10,7 +10,7 @@ import UIKit
 import AVKit
 import Firebase
 
-class Video_VC: UIViewController {
+class Video_VC: ShiurDiarioBaseViewController {
     
     var prefix: String?
     var dafName: String!

@@ -49,15 +49,19 @@ class LoginVC: UIViewController {
         
         Auth.auth().signIn(withEmail: emailStr, password: passwordStr) { (result, err) in
             
-            self.maskView.alpha = 0.0
-            self.loaderIndicator.stopAnimating()
-            
-            guard err == nil else {
-                self.displayErrorAlert(title: "Login Error", msg: err!.localizedDescription)
-                return
+            DispatchQueue.main.async {
+                self.maskView.alpha = 0.0
+                self.loaderIndicator.stopAnimating()
+                
+                guard err == nil else {
+                    self.displayErrorAlert(title: "Login Error", msg: err!.localizedDescription)
+                    return
+                }
+                guard result != nil else { return }
+                print("you logged in successfully")
+                guard let vc = self.storyboard?.instantiateViewController(withIdentifier: "homeVC") else { return }
+                self.navigationController?.pushViewController(vc, animated: true)
             }
-            guard result != nil else { return }
-            print("you logged in successfully")
         }
     }
     

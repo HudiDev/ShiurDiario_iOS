@@ -9,7 +9,7 @@
 import UIKit
 import PDFKit
 
-class Text_VC: UIViewController {
+class Text_VC: ShiurDiarioBaseViewController {
     
     let pdfView = PDFView()
     var prefix: String?

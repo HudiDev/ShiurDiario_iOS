@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -24,6 +24,7 @@
 		114C9CC521A1661C00D5713E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 114C9CC321A1661C00D5713E /* Main.storyboard */; };
 		114C9CC721A1661E00D5713E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 114C9CC621A1661E00D5713E /* Assets.xcassets */; };
 		114C9CCA21A1661E00D5713E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 114C9CC821A1661E00D5713E /* LaunchScreen.storyboard */; };
+		115F329F23D7A7DC00F6AD8C /* ShiurDiarioBaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 115F329E23D7A7DC00F6AD8C /* ShiurDiarioBaseViewController.swift */; };
 		117B33162235298C0075D710 /* VideoComments_VC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 117B33152235298C0075D710 /* VideoComments_VC.swift */; };
 		117B3318223529FF0075D710 /* CommentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 117B3317223529FF0075D710 /* CommentCell.swift */; };
 		11959C7D21B3E35300BEFCC6 /* DapimViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11959C7C21B3E35300BEFCC6 /* DapimViewModel.swift */; };
@@ -91,6 +92,7 @@
 		114C9CCB21A1661E00D5713E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1156509721E36FA500A6B641 /* ShiurDiario_iOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ShiurDiario_iOSTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1156509B21E36FA500A6B641 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		115F329E23D7A7DC00F6AD8C /* ShiurDiarioBaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShiurDiarioBaseViewController.swift; sourceTree = "<group>"; };
 		117B33152235298C0075D710 /* VideoComments_VC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoComments_VC.swift; sourceTree = "<group>"; };
 		117B3317223529FF0075D710 /* CommentCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentCell.swift; sourceTree = "<group>"; };
 		11959C7C21B3E35300BEFCC6 /* DapimViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DapimViewModel.swift; sourceTree = "<group>"; };
@@ -229,6 +231,7 @@
 		11DA709C21AFE07400294E14 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				115F329E23D7A7DC00F6AD8C /* ShiurDiarioBaseViewController.swift */,
 				114C9CC121A1661C00D5713E /* HomeVC.swift */,
 				11F800C321AEDEE6004614E8 /* ContactVC.swift */,
 				11F800C121ADCBD6004614E8 /* DedicationVC.swift */,
@@ -568,6 +571,7 @@
 				11F800CB21AF0B7C004614E8 /* Utils.swift in Sources */,
 				11DA70A621B014EC00294E14 /* Bindable.swift in Sources */,
 				11A4724721AABA0A001F54F6 /* Daf_Model.swift in Sources */,
+				115F329F23D7A7DC00F6AD8C /* ShiurDiarioBaseViewController.swift in Sources */,
 				1117E991223A902E00897B96 /* Comment.swift in Sources */,
 				11065CFF21A6F557002621AE /* PageVC.swift in Sources */,
 				1117E993223B09F400897B96 /* PaddingLabel.swift in Sources */,
