@@ -15,7 +15,7 @@ class MasechtotRepo {
     
     func retrieveData(completion: @escaping getDataCompletion) {
         
-        guard let url = URL(string: "http://ws.shiurdiario.com/dafyomi.php?date=2018-11-25") else { return }
+        guard let url = URL(string: "http://ws.shiurdiario.com/dafyomi.php?date=\(Utils.getCurrentDate())") else { return }
         
         URLSession.shared.dataTask(with: url) { (data, response, err) in
             
