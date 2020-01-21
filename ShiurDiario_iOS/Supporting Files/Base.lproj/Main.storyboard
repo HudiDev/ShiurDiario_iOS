@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="nA0-UK-8y3">
-    <device id="retina4_7" orientation="portrait">
-        <adaptation id="fullscreen"/>
-    </device>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="nA0-UK-8y3">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="Stack View standard spacing" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -20,16 +18,16 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cI8-Ke-MTf">
-                                <rect key="frame" x="0.0" y="64" width="377" height="1236"/>
+                                <rect key="frame" x="0.0" y="44" width="375" height="1256"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ATe-zG-B2O" userLabel="ContentView">
-                                        <rect key="frame" x="0.0" y="0.0" width="377" height="1225.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="1225.5"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xZa-tX-fvD">
-                                                <rect key="frame" x="30" y="217" width="317" height="53"/>
+                                                <rect key="frame" x="30" y="217" width="315" height="53"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Shiur Diário - a nossa meta" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k0S-cZ-Rc3">
-                                                        <rect key="frame" x="5" y="5" width="307" height="43"/>
+                                                        <rect key="frame" x="5" y="5" width="305" height="43"/>
                                                         <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="17"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
@@ -45,7 +43,7 @@
                                                 </constraints>
                                             </view>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="36" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qYE-9Q-Oqm">
-                                                <rect key="frame" x="30" y="278" width="317" height="342"/>
+                                                <rect key="frame" x="30" y="278" width="315" height="342"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="342" id="60T-6S-72h"/>
                                                 </constraints>
@@ -55,7 +53,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7P9-Y5-jcc">
-                                                <rect key="frame" x="30" y="640" width="317" height="253"/>
+                                                <rect key="frame" x="30" y="640" width="315" height="253"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="253" id="zV4-iB-Ts1"/>
                                                 </constraints>
@@ -87,7 +85,7 @@ Venha, então, conosco estudar os diamantes da Torá em português, aprender nov
                                                 </constraints>
                                             </view>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GiF-aU-kLB">
-                                                <rect key="frame" x="30" y="1027" width="317" height="98.5"/>
+                                                <rect key="frame" x="30" y="1027" width="315" height="98.5"/>
                                                 <string key="text">Dedique um ou mais shiurim ao seus entes queridos. 
 Para elevação da alma, a cura plena ou o sucesso pessoal. 
 Clique AQUI para mais informações.</string>
@@ -97,10 +95,10 @@ Clique AQUI para mais informações.</string>
                                                 <string key="userLabel">Dedique um ou mais shiurim ao seus entes queridos.  Para elevação da alma, a cura plena ou o sucesso pessoal.  Clique AQUI para mais informações.</string>
                                             </label>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="piy-GK-wm0">
-                                                <rect key="frame" x="30" y="80" width="317" height="75"/>
+                                                <rect key="frame" x="30" y="80" width="315" height="75"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Shiur Diario" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tcs-1d-nCr">
-                                                        <rect key="frame" x="5" y="5" width="307" height="65"/>
+                                                        <rect key="frame" x="5" y="5" width="305" height="65"/>
                                                         <color key="backgroundColor" red="0.67450980392156867" green="0.72941176470588232" blue="0.65490196078431373" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                         <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="49"/>
                                                         <nil key="textColor"/>
@@ -117,7 +115,7 @@ Clique AQUI para mais informações.</string>
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Hf0-vm-04n">
-                                                <rect key="frame" x="108.5" y="628" width="160" height="4"/>
+                                                <rect key="frame" x="107.5" y="628" width="160" height="4"/>
                                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="160" id="2E9-SL-kHT"/>
@@ -167,7 +165,7 @@ Clique AQUI para mais informações.</string>
                                 </constraints>
                             </scrollView>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4OS-K6-vVs">
-                                <rect key="frame" x="-250" y="64" width="250" height="1236"/>
+                                <rect key="frame" x="-250" y="44" width="250" height="1256"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="250" id="h1z-7k-rj4"/>
                                 </constraints>
@@ -217,7 +215,7 @@ Clique AQUI para mais informações.</string>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qv5-9P-pTa">
-                                <rect key="frame" x="62.5" y="63" width="250" height="584"/>
+                                <rect key="frame" x="62.5" y="43" width="250" height="604"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="OS SHIURIM DE HOJE ESTAO DEDICADOS" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8KV-yM-1sa">
                                         <rect key="frame" x="17.5" y="25" width="215" height="60"/>
@@ -298,7 +296,7 @@ Clique AQUI para mais informações.</string>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Por favor contate-nos com qualquer dúvida ou comentário" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="6" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="smM-6w-Lle">
-                                <rect key="frame" x="47.5" y="20" width="280.5" height="100"/>
+                                <rect key="frame" x="47.5" y="0.0" width="280.5" height="100"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="lessThanOrEqual" constant="315" id="a6n-w4-7ql"/>
                                     <constraint firstAttribute="height" constant="100" id="cmc-jB-Xek"/>
@@ -308,70 +306,60 @@ Clique AQUI para mais informações.</string>
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="pFw-ge-MYg">
-                                <rect key="frame" x="37.5" y="128" width="300" height="345"/>
+                                <rect key="frame" x="37.5" y="108" width="300" height="345"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Assunto" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="l4y-cF-yyc">
-                                        <rect key="frame" x="0.0" y="0.0" width="300" height="37.5"/>
-                                        <nil key="textColor"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="300" height="38"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Texto" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="uSN-vj-LpT">
-                                        <rect key="frame" x="0.0" y="42.5" width="300" height="38"/>
-                                        <nil key="textColor"/>
+                                        <rect key="frame" x="0.0" y="43" width="300" height="38.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Nome" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wjq-b7-Gau">
-                                        <rect key="frame" x="0.0" y="85.5" width="300" height="37.5"/>
-                                        <nil key="textColor"/>
+                                        <rect key="frame" x="0.0" y="86.5" width="300" height="38"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="VE1-m4-xyw">
-                                        <rect key="frame" x="0.0" y="128" width="300" height="37.5"/>
-                                        <nil key="textColor"/>
+                                        <rect key="frame" x="0.0" y="129.5" width="300" height="38.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enderco" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4ig-Wr-qOb">
-                                        <rect key="frame" x="0.0" y="170.5" width="300" height="37.5"/>
-                                        <nil key="textColor"/>
+                                        <rect key="frame" x="0.0" y="173" width="300" height="38"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="nVo-pn-lZI">
-                                        <rect key="frame" x="0.0" y="213" width="300" height="38"/>
+                                        <rect key="frame" x="0.0" y="216" width="300" height="38.5"/>
                                         <subviews>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Cidade" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="AqY-KP-dwf">
-                                                <rect key="frame" x="0.0" y="0.0" width="111" height="38"/>
-                                                <nil key="textColor"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="109.5" height="38.5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Estado" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Krj-5u-Icg">
-                                                <rect key="frame" x="119" y="0.0" width="109" height="38"/>
-                                                <nil key="textColor"/>
+                                                <rect key="frame" x="117.5" y="0.0" width="108.5" height="38.5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Pais" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="g9t-6O-9M8">
-                                                <rect key="frame" x="236" y="0.0" width="64" height="38"/>
-                                                <nil key="textColor"/>
+                                                <rect key="frame" x="234" y="0.0" width="66" height="38.5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
                                         </subviews>
                                     </stackView>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Tel" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="RVM-xZ-dsE">
-                                        <rect key="frame" x="0.0" y="256" width="300" height="37.5"/>
-                                        <nil key="textColor"/>
+                                        <rect key="frame" x="0.0" y="259.5" width="300" height="38"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Cel" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kcQ-46-Qdz">
-                                        <rect key="frame" x="0.0" y="298.5" width="300" height="46.5"/>
-                                        <nil key="textColor"/>
+                                        <rect key="frame" x="0.0" y="302.5" width="300" height="42.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
@@ -420,13 +408,13 @@ Clique AQUI para mais informações.</string>
                                 </constraints>
                             </activityIndicatorView>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iP4-wz-2Nt">
-                                <rect key="frame" x="0.0" y="90" width="375" height="577"/>
+                                <rect key="frame" x="0.0" y="70" width="375" height="597"/>
                                 <connections>
                                     <segue destination="h9q-tP-Cak" kind="embed" identifier="containerVCsegue" id="d4Q-zN-zh1"/>
                                 </connections>
                             </containerView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gld-zE-C9M" customClass="TabView" customModule="ShiurDiario_iOS" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="20" width="375" height="70"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="70"/>
                                 <subviews>
                                     <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="JsU-Fo-QvO">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="70"/>
@@ -446,7 +434,7 @@ Clique AQUI para mais informações.</string>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pAx-7f-Vtt">
-                                                            <rect key="frame" x="13" y="33" width="224" height="24"/>
+                                                            <rect key="frame" x="13" y="13" width="224" height="44"/>
                                                             <color key="backgroundColor" red="0.062274225056171417" green="0.25529485940933228" blue="0.23560461401939392" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="width" relation="lessThanOrEqual" constant="300" id="80J-3s-9ON"/>
@@ -514,7 +502,7 @@ Clique AQUI para mais informações.</string>
             <objects>
                 <tableViewController id="i0D-0E-PWD" customClass="VideoComments_VC" customModule="ShiurDiario_iOS" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="nQ1-tS-cw2">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="257"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="277"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
@@ -606,7 +594,7 @@ Clique AQUI para mais informações.</string>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="DAF VIDEO" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7f3-iq-ZQa">
-                                <rect key="frame" x="67.5" y="30" width="240" height="40"/>
+                                <rect key="frame" x="67.5" y="10" width="240" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="240" id="DKm-ST-vgY"/>
                                     <constraint firstAttribute="height" constant="40" id="PEK-sL-mCV"/>
@@ -616,7 +604,7 @@ Clique AQUI para mais informações.</string>
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zLQ-2m-Fsw">
-                                <rect key="frame" x="0.0" y="80" width="375" height="270"/>
+                                <rect key="frame" x="0.0" y="60" width="375" height="270"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BiO-v4-JFU">
                                         <rect key="frame" x="52.5" y="0.0" width="270" height="270"/>
@@ -743,7 +731,7 @@ Clique AQUI para mais informações.</string>
                                 </constraints>
                             </view>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5sB-ik-Btn">
-                                <rect key="frame" x="0.0" y="350" width="375" height="257"/>
+                                <rect key="frame" x="0.0" y="330" width="375" height="277"/>
                                 <connections>
                                     <segue destination="i0D-0E-PWD" kind="embed" identifier="commentSegue" id="Cjq-dE-QHI"/>
                                 </connections>
@@ -893,7 +881,7 @@ Clique AQUI para mais informações.</string>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Xs6-kX-HAd">
-                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="ryc-hw-znd">
                                     <size key="itemSize" width="340" height="100"/>
@@ -939,28 +927,28 @@ Clique AQUI para mais informações.</string>
                                                             </constraints>
                                                         </view>
                                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="IGo-sN-s5G">
-                                                            <rect key="frame" x="105" y="9.5" width="116.5" height="81"/>
+                                                            <rect key="frame" x="105" y="9.5" width="113.5" height="81"/>
                                                             <subviews>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Menachot 98" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sac-5x-088">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="116.5" height="18"/>
+                                                                    <rect key="frame" x="0.0" y="0.0" width="113.5" height="18"/>
                                                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                                                     <nil key="textColor"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Duration: 1:20:30" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pw8-qs-esj">
-                                                                    <rect key="frame" x="0.0" y="21" width="116.5" height="18"/>
+                                                                    <rect key="frame" x="0.0" y="21" width="113.5" height="18"/>
                                                                     <fontDescription key="fontDescription" type="system" weight="thin" pointSize="15"/>
                                                                     <nil key="textColor"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Marcheshvan 25" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sFp-QP-uaG">
-                                                                    <rect key="frame" x="0.0" y="42" width="116.5" height="18"/>
+                                                                    <rect key="frame" x="0.0" y="42" width="113.5" height="18"/>
                                                                     <fontDescription key="fontDescription" type="system" weight="ultraLight" pointSize="15"/>
                                                                     <nil key="textColor"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="5779" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kho-38-Def">
-                                                                    <rect key="frame" x="0.0" y="63" width="116.5" height="18"/>
+                                                                    <rect key="frame" x="0.0" y="63" width="113.5" height="18"/>
                                                                     <fontDescription key="fontDescription" type="system" weight="thin" pointSize="15"/>
                                                                     <nil key="textColor"/>
                                                                     <nil key="highlightedColor"/>
@@ -1044,7 +1032,7 @@ Clique AQUI para mais informações.</string>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="g5M-l6-9Hd">
-                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="2SX-cG-o59">
                                     <size key="itemSize" width="300" height="60"/>
@@ -1131,7 +1119,7 @@ Clique AQUI para mais informações.</string>
             <objects>
                 <viewController id="7Bn-R1-IEz" customClass="SideMenuVC" customModule="ShiurDiario_iOS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="AG6-Od-T7H">
-                        <rect key="frame" x="0.0" y="0.0" width="250" height="1236"/>
+                        <rect key="frame" x="0.0" y="0.0" width="250" height="1256"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="talmud copy" translatesAutoresizingMaskIntoConstraints="NO" id="lFn-p8-cbl">
@@ -1141,10 +1129,10 @@ Clique AQUI para mais informações.</string>
                                 </constraints>
                             </imageView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="50" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="wJF-OF-b2u">
-                                <rect key="frame" x="0.0" y="230" width="250" height="1006"/>
+                                <rect key="frame" x="0.0" y="230" width="250" height="1026"/>
                                 <color key="backgroundColor" red="0.99065404160000003" green="1" blue="0.96004231770000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" alpha="0.0" contentMode="scaleToFill" misplaced="YES" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="sideMenuCell" id="YAs-kb-GnY" customClass="SideMenuCell" customModule="ShiurDiario_iOS" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" alpha="0.0" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="sideMenuCell" id="YAs-kb-GnY" customClass="SideMenuCell" customModule="ShiurDiario_iOS" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="250" height="50"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="YAs-kb-GnY" id="GvP-iu-uID">
@@ -1214,22 +1202,20 @@ Clique AQUI para mais informações.</string>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="13" translatesAutoresizingMaskIntoConstraints="NO" id="1YA-NA-uGT">
-                                <rect key="frame" x="50" y="350" width="275" height="167"/>
+                                <rect key="frame" x="50" y="342" width="275" height="175"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8FL-Hx-wle">
-                                        <rect key="frame" x="0.0" y="0.0" width="275" height="30"/>
-                                        <nil key="textColor"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="275" height="34"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="eTZ-Uh-TaB">
-                                        <rect key="frame" x="0.0" y="43" width="275" height="30"/>
-                                        <nil key="textColor"/>
+                                        <rect key="frame" x="0.0" y="47" width="275" height="34"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hr8-u0-TEv">
-                                        <rect key="frame" x="0.0" y="86" width="275" height="40"/>
+                                        <rect key="frame" x="0.0" y="94" width="275" height="40"/>
                                         <color key="backgroundColor" red="0.42230373620986938" green="0.36829584836959839" blue="0.081290967762470245" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="40" id="B0h-I7-fus"/>
@@ -1244,7 +1230,7 @@ Clique AQUI para mais informações.</string>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="X4Z-e5-Kjq">
-                                        <rect key="frame" x="0.0" y="139" width="275" height="28"/>
+                                        <rect key="frame" x="0.0" y="147" width="275" height="28"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                         <state key="normal" title="create new account">
                                             <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -1256,10 +1242,10 @@ Clique AQUI para mais informações.</string>
                                 </subviews>
                             </stackView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6kC-Aa-ICD">
-                                <rect key="frame" x="0.0" y="64" width="375" height="286"/>
+                                <rect key="frame" x="0.0" y="44" width="375" height="298"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="app_iocn" translatesAutoresizingMaskIntoConstraints="NO" id="w1e-lt-Yru">
-                                        <rect key="frame" x="112.5" y="68" width="150" height="150"/>
+                                        <rect key="frame" x="112.5" y="74" width="150" height="150"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="150" id="O0Z-cQ-zZR"/>
                                             <constraint firstAttribute="width" constant="150" id="kIy-dD-GZ5"/>
@@ -1313,34 +1299,30 @@ Clique AQUI para mais informações.</string>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="13" translatesAutoresizingMaskIntoConstraints="NO" id="B5L-dw-fOh">
-                                <rect key="frame" x="50" y="314" width="275" height="253"/>
+                                <rect key="frame" x="50" y="298" width="275" height="269"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xZA-i3-g32">
-                                        <rect key="frame" x="0.0" y="0.0" width="275" height="30"/>
-                                        <nil key="textColor"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="275" height="34"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="C7q-hP-DOz">
-                                        <rect key="frame" x="0.0" y="43" width="275" height="30"/>
-                                        <nil key="textColor"/>
+                                        <rect key="frame" x="0.0" y="47" width="275" height="34"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="AP1-5Y-tI8">
-                                        <rect key="frame" x="0.0" y="86" width="275" height="30"/>
-                                        <nil key="textColor"/>
+                                        <rect key="frame" x="0.0" y="94" width="275" height="34"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="password verification" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4cZ-Nv-Aau">
-                                        <rect key="frame" x="0.0" y="129" width="275" height="30"/>
-                                        <nil key="textColor"/>
+                                        <rect key="frame" x="0.0" y="141" width="275" height="34"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lcT-1R-306">
-                                        <rect key="frame" x="0.0" y="172" width="275" height="40"/>
+                                        <rect key="frame" x="0.0" y="188" width="275" height="40"/>
                                         <color key="backgroundColor" red="0.42230373620986938" green="0.36829584836959839" blue="0.081290967762470245" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="40" id="mKG-mM-ANJ"/>
@@ -1354,7 +1336,7 @@ Clique AQUI para mais informações.</string>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uvk-yB-Ww1">
-                                        <rect key="frame" x="0.0" y="225" width="275" height="28"/>
+                                        <rect key="frame" x="0.0" y="241" width="275" height="28"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                         <state key="normal" title="already have an account?">
                                             <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -1366,10 +1348,10 @@ Clique AQUI para mais informações.</string>
                                 </subviews>
                             </stackView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SCV-er-7mC">
-                                <rect key="frame" x="0.0" y="64" width="375" height="250"/>
+                                <rect key="frame" x="0.0" y="44" width="375" height="254"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="app_iocn" translatesAutoresizingMaskIntoConstraints="NO" id="a30-F1-N0a">
-                                        <rect key="frame" x="112.5" y="50" width="150" height="150"/>
+                                        <rect key="frame" x="112.5" y="52" width="150" height="150"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="150" id="Afb-GI-o7n"/>
                                             <constraint firstAttribute="height" constant="150" id="QG4-oE-7zb"/>
@@ -1456,7 +1438,7 @@ Clique AQUI para mais informações.</string>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="nA0-UK-8y3" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="70i-09-Nd2">
-                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -1472,17 +1454,17 @@ Clique AQUI para mais informações.</string>
     <resources>
         <image name="Menachot_96" width="480" height="360"/>
         <image name="app_iocn" width="1024" height="1024"/>
-        <image name="backwards_ic" width="156.52174377441406" height="156.52174377441406"/>
-        <image name="dedication_icon" width="36.240001678466797" height="37.680000305175781"/>
-        <image name="forward_ic" width="156.52174377441406" height="156.52174377441406"/>
-        <image name="icons8-chevron-right-26" width="19.5" height="19.5"/>
+        <image name="backwards_ic" width="50" height="50"/>
+        <image name="dedication_icon" width="151" height="157"/>
+        <image name="forward_ic" width="50" height="50"/>
+        <image name="icons8-chevron-right-26" width="26" height="26"/>
         <image name="logo1" width="315" height="79"/>
         <image name="masechet_icon" width="512" height="512"/>
-        <image name="menu_bar_icon" width="18" height="18"/>
+        <image name="menu_bar_icon" width="24" height="24"/>
         <image name="play_btn_icon" width="512" height="512"/>
-        <image name="play_ic" width="156.52174377441406" height="156.52174377441406"/>
-        <image name="send_ic" width="72" height="72"/>
+        <image name="play_ic" width="50" height="50"/>
+        <image name="send_ic" width="96" height="96"/>
         <image name="slideButton" width="15" height="15"/>
-        <image name="talmud copy" width="144" height="108"/>
+        <image name="talmud copy" width="600" height="450"/>
     </resources>
 </document>
